@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microstructure on Cameron Pfiffer</title>
+    <link>/tags/microstructure/</link>
+    <description>Recent content in Microstructure on Cameron Pfiffer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Cameron Pfiffer</copyright>
+    <lastBuildDate>Sun, 16 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/microstructure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IEX&#39;s Crumbling Quote</title>
+      <link>/post/2017-05-01-iex-s-crumbling-quote/</link>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-05-01-iex-s-crumbling-quote/</guid>
+      <description>This article first appeared in the Reading University Investment Society&amp;rsquo;s April edition on April 16th, 2017.
+The Investor’s Exchange, also referred to as IEX, came to prominence in 2014 after Michael Lewis’ book Flash Boys was released. IEX was designed as an exchange to protect lumbering buy side firms from high-frequency traders and other nimble market actors.
+Their first innovation was to treat what is referred to as stale quote arbitrage.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Cameron Pfiffer</title>
+    <link>/tags/r/</link>
+    <description>Recent content in R on Cameron Pfiffer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Cameron Pfiffer</copyright>
+    <lastBuildDate>Tue, 23 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kaggle Titanic</title>
+      <link>/post/2017-05-12-kaggle-titanic/</link>
+      <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-05-12-kaggle-titanic/</guid>
+      <description>I thought I’d start getting into Kaggle to work on some non-finance data to get a feel for the messiness of real-world information. Kaggle’s introductory competition is about predicting which passengers on the Titanic are going to survive using a handful of features, so let’s launch into mucking about. This post follows a “lab book” style and is quite scattered, as I develop ideas about what to do.
+# Librarieslibrary(tidyverse)## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.</description>
+    </item>
+    
+    <item>
+      <title>Credit Risk &amp; Logistic Regression</title>
+      <link>/post/2017-05-01-credit-risk-part-1/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-05-01-credit-risk-part-1/</guid>
+      <description>I thought I’d do a little bit of analysis to showcase some credit risk analysis, using logistic regression. I’ve pulled this sample loan data from a DataCamp course on credit risk. It’s a cool class, you should check it out if you have time. In a later post, I will try this same analysis with a neural network to see if it has better predictive capabilities.
+Here’s a look at the data.</description>
+    </item>
+    
+  </channel>
+</rss>

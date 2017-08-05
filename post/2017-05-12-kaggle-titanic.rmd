@@ -1,0 +1,237 @@
+---
+title: Kaggle Titanic
+author: "Cameron Pfiffer"
+date: '2017-05-23'
+slug: ''
+categories: ["Data Science"]
+tags: ["R", "Kaggle"]
+description: 'Logistic Regression and Neural Networks to predict whether someone survived the Titanic.'
+---
+
+I thought I'd start getting into [Kaggle](www.kaggle.com) to work on some non-finance data to get a feel for the messiness of real-world information. Kaggle's introductory competition is about predicting which passengers on the Titanic are going to survive using a handful of features, so let's launch into mucking about. This post follows a "lab book" style and is quite scattered, as I develop ideas about what to do.
+
+```{r message = FALSE}
+# Libraries
+library(tidyverse)
+library(stringr)
+# Load data
+train <- read_csv("../../data/Titanic/train.csv")
+test <- read_csv("../../data/Titanic/test.csv")
+```
+
+Now let's take a look at the data. 
+
+```{r}
+str(train)
+```
+
+What I want to do first is add a couple of features. [DataCamp's excellent tutorial](https://www.datacamp.com/community/open-courses/kaggle-tutorial-on-machine-learing-the-sinking-of-the-titanic#gs.UrAze5E)[^1] on this data set uses `Title` and `FamilySize`, which I'll add now. I also thought it might be cool to separate out family names to see if certain families were likely to survive.
+
+```{r}
+# Do it with test and train, don't want to reconcile them later.
+test <- test %>% 
+  mutate(Surname = as.factor(word(test$Name, sep = fixed(","))),
+         Title = word(test$Name, start = 1, sep = fixed(".")))
+
+test$Title <- test$Title %>% 
+  str_replace("[.]", "") %>%
+  word(start = -1) %>% 
+  as.factor(.)
+
+# Remove uncommon titles
+uncommon <- test %>% 
+  group_by(Title) %>%
+  count() %>% 
+  filter (n >=5) 
+
+levels(test$Title) <- c(levels(test$Title), "Other")
+test$Title[!(test$Title %in% uncommon$Title)] <- as.factor("Other")
+test$Title <- droplevels.data.frame(test)$Title
+
+# Update embarkment location to factor
+test$Embarked <- as.factor(test$Embarked)
+
+# Gender to factor
+test$Sex <- as.factor(test$Sex)
+
+test$FamilySize <- test$Parch + test$SibSp + 1
+
+# Change training dataset
+train <- train %>% 
+  mutate(Surname = as.factor(word(train$Name, sep = fixed(","))),
+         Title = word(train$Name, start = 1, sep = fixed(".")))
+
+train$Title <- train$Title %>% 
+  str_replace("[.]", "") %>%
+  word(start = -1) %>% 
+  as.factor(.)
+
+# Remove uncommon titles
+uncommon <- train %>% 
+  group_by(Title) %>%
+  count() %>% 
+  filter (n >=5) 
+
+levels(train$Title) <- c(levels(train$Title), "Other")
+train$Title[!(train$Title %in% uncommon$Title)] <- as.factor("Other")
+train$Title <- droplevels.data.frame(train)$Title
+
+# Update embarkment location to factor
+train$Embarked <- as.factor(train$Embarked)
+
+# Gender to factor
+train$Sex <- as.factor(train$Sex)
+
+train$FamilySize <- train$Parch + train$SibSp + 1
+
+summary(train)
+```
+
+That's a lot of Anderssons! I wonder if they're related - let's check family size by surname.
+
+```{r}
+train %>% 
+  filter(Surname == "Andersson") %>% 
+  select(Name, FamilySize, Survived, SibSp, Parch)
+```
+
+They are all related - except for Erna and August, and [the whole family died](https://titanicstory.wordpress.com/2012/04/04/the-entire-andersson-family-was-lost-on-the-titanic/). This is a really sad data set.
+
+[^1]: I used random forests and decision trees as my first submissions. DataCamp's tutorial does an excellent job explaining the methodology and code, so you can check out the hyperlink above if you're interested.
+
+Na's are the bane of any good analysis, and I want to try to remove some of them. Let's try to pull out as many as we can.
+
+```{r}
+clean_age <- function(df) {
+  # Turns missing values into the average for the column.
+  NA2mean <- function(x) replace(x, is.na(x), mean(x, na.rm = TRUE))
+  df[,'Age'] <- lapply(df[,'Age'], NA2mean)
+  return(df)
+}
+
+clean_embarkment <- function(df) {
+  # The most people embarked from 'S', so I'm just setting
+  # the two missing values to 'S'.
+  df[is.na(df[,'Embarked']), 'Embarked'] <- 'S'
+  return (df)
+}
+
+test <- clean_age(test)
+train <- clean_age(train)
+
+test <- clean_embarkment(test)
+train <- clean_embarkment(train)
+```
+
+I also want to scale all my features to between 0 and 1, to make processing easier. This also means scrapping the names and turning all numerical values into numbers.
+
+```{r}
+scaler <- function(x, ...){(x - min(x, ...)) / (max(x, ...) - min(x, ...))}
+
+cleanse <- function(df) {
+  # Remove character variables
+  df <- subset(df, select = -c(Name, Ticket, Cabin, Surname))
+  
+  # If it's a prediction set or otherwise, break it out
+  if('Survived' %in% colnames(df)){
+    id <- select(df, Survived, PassengerId)
+    df <- subset(df, select = -c(Survived, PassengerId))
+  } else {
+    id <- select(df, PassengerId)
+    df <- subset(df, select = -c(PassengerId))
+  }
+  
+  # Convert factors to numbers
+  factname = c('Embarked', 'Title', 'Sex')
+  df[,factname] <- lapply(df[,factname] , as.integer)
+  
+  # Scale variables
+  df <- as.tibble(map(df, na.rm = TRUE, scaler))
+  
+  # Again, separate by labeled or not
+  if('Survived' %in% colnames(id)){
+    df$PassengerId <- id$PassengerId
+    df$Survived <- id$Survived
+  } else {
+    df$PassengerId <- id$PassengerId
+  }
+  
+  return(df)
+}
+
+train_scl <- cleanse(train)
+test_scl <- cleanse(test)
+
+summary(train_scl)
+```
+
+
+Let's start the analysis with a good old-fashioned logistic regression. Throw everything we've got into the pot.
+
+```{r}
+logit <- glm(Survived ~ Pclass + Sex + Age + SibSp + 
+               Parch + Fare + Embarked + Title,
+             family = binomial(),
+             data = train_scl,
+             na.action = na.omit)
+summary(logit)
+```
+
+Basically what the above tells us is that Pretty much everything decreases your chances of living. You start at a high level (the intercept has a coefficient of 4.6) and decrease from there. Men have a sex of 1, and women have a sex of 0, so being a man is a strong predictor of dying. The strongest indicator by far is age - being older decreases your chances of living. Let's take the testing data set and predict what we think the results are likely to be.
+
+```{r}
+# Now we predict using the model
+threshold <- 0.5
+logit_pred <- predict(logit, newdata = test_scl, type = 'response')
+hist(logit_pred)
+logit_pred <- ifelse(logit_pred > threshold, 1, 0)
+# If we're missing data, predict 0.
+logit_pred[is.na(logit_pred)] <- 0
+summary(logit_pred)
+```
+
+Cool. Let's export it and see what results we get!
+
+```{r}
+all <- data.frame(test$PassengerId, logit_pred)
+colnames(all) <- c("PassengerID", "Survived")
+write_csv(all, "../../data/Titanic/predictions/logit_prediction.csv")
+```
+
+# Neural Networks
+
+After submitting to Kaggle, this method gives me an accuracy of 76%, worse than the random forest method, which gave 79%. Let me see if a neural network is any better.
+
+```{r error=FALSE, cache=TRUE}
+library(neuralnet)
+set.seed(91)
+
+# Model the neural network
+nnet <- neuralnet(Survived ~ Pclass + Sex + Age + SibSp + 
+             Parch + Fare + Embarked + Title,
+             hidden = c(2,2,2),
+             threshold = 0.035,
+             stepmax = 400000000,
+             data = train_scl,
+             lifesign = 'full')
+
+# Predict the test set
+nnet.c <- compute(nnet, test_scl[,1:8])
+nnet.c <- nnet.c$net.result
+hist(nnet.c)
+nnet.c <- ifelse(nnet.c > threshold, 1, 0)
+# If we're missing data, predict 0.
+nnet.c[is.na(nnet.c)] <- 0
+
+summary(nnet.c)
+```
+
+```{r}
+all <- data.frame(test$PassengerId, nnet.c)
+colnames(all) <- c("PassengerID", "Survived")
+write_csv(all, "../../data/Titanic/predictions/nnet_prediction.csv")
+```
+
+I've run a lot of other computation on a variety of neural networks, with up to five layers and a variety of node amounts - I only ever matched random forest accuracy with a relatively uncomplicated neural network with three layers of two nodes, at 79%. I suspect that for this data set, predicting survival is best suited to other algorithms.
+
+
