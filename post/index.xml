@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Cameron Pfiffer</copyright>
-    <lastBuildDate>Tue, 23 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Jul 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Julia</title>
+      <link>/post/2017-07-05-julia/</link>
+      <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-07-05-julia/</guid>
+      <description>As I&amp;rsquo;m wrapping up my master&amp;rsquo;s degree, I have somehow managed to find a large amount of time to pursue personal interests. One of those interests is Julia, a technical computing language with C-comparable speed. I&amp;rsquo;m not exactly sure where I stumbled on it, but it stuck with me. Of course, the best way to learn something is to do something cool with it, and FiveThiryEight&amp;rsquo;s Riddler often tends to supply great cannon fodder for programming.</description>
+    </item>
     
     <item>
       <title>Kaggle Titanic</title>

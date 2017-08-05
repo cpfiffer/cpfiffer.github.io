@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/post/2017-07-05-julia/</loc>
+    <lastmod>2017-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2017-05-12-kaggle-titanic/</loc>
     <lastmod>2017-05-23T00:00:00+00:00</lastmod>
   </url>
@@ -48,7 +53,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-05-23T00:00:00+00:00</lastmod>
+    <lastmod>2017-07-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -71,7 +76,7 @@
   
   <url>
     <loc>/categories/general/</loc>
-    <lastmod>2017-05-13T00:00:00+00:00</lastmod>
+    <lastmod>2017-07-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -113,7 +118,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-05-23T00:00:00+00:00</lastmod>
+    <lastmod>2017-07-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -137,7 +142,7 @@
   
   <url>
     <loc>/tags/web/</loc>
-    <lastmod>2017-05-13T00:00:00+00:00</lastmod>
+    <lastmod>2017-07-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

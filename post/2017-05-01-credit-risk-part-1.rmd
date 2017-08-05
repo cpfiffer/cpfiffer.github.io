@@ -13,7 +13,7 @@ knitr::opts_chunk$set(fig.width=12, fig.height=8, warning=FALSE, message=FALSE)
 ```
 
 ```{r echo=FALSE}
-data <- readRDS("C:/Users/cpfif/Documents/blogdown/web/data/loans.rds")
+data <- readRDS("C:/Users/cpfif/Documents/cameron.pfiffer.org/web/data/loans.rds")
 ```
 
 I thought I'd do a little bit of analysis to showcase some credit risk analysis, using __logistic regression__. I've pulled this sample loan data from a DataCamp course on [credit risk](https://www.datacamp.com/courses/introduction-to-credit-risk-modeling-in-r). It's a cool class, you should check it out if you have time. In a later post, I will try this same analysis with a neural network to see if it has better predictive capabilities.
