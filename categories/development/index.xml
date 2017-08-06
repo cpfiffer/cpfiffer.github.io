@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on Cameron Pfiffer</title>
+    <link>/categories/development/</link>
+    <description>Recent content in Development on Cameron Pfiffer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Cameron Pfiffer</copyright>
+    <lastBuildDate>Sun, 06 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Brief Paper on Cointegration in Crude Oil</title>
+      <link>/post/a-brief-paper-on-cointegration-in-crude-oil/</link>
+      <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/a-brief-paper-on-cointegration-in-crude-oil/</guid>
+      <description>I&amp;rsquo;ve just finished putting the final touches on my final paper for my master&amp;rsquo;s degree, and I thought I&amp;rsquo;d write up a bit about the process. You can get the fancy LaTeX version here.
+My final summer course for the master&amp;rsquo;s program was all about Energy Finance, taught by an econometrician1. Commensurate with the professor&amp;rsquo;s experience, the final paper was along the same lines. We were allowed to choose between three different project options.</description>
+    </item>
+    
+  </channel>
+</rss>
