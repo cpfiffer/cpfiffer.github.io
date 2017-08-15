@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Cameron Pfiffer</copyright>
-    <lastBuildDate>Sun, 06 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Aug 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Development</title>
       <link>/tags/development/</link>
-      <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/development/</guid>
       <description></description>
@@ -33,7 +33,7 @@
     <item>
       <title>Golang</title>
       <link>/tags/golang/</link>
-      <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/golang/</guid>
       <description></description>
