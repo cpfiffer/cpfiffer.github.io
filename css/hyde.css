@@ -241,11 +241,17 @@ a.sidebar-nav-item:focus {
   color: #aa759f;
 }
 
-/* Brown */
+/* == Cameron Town == */
 .theme-base-0f .sidebar {
-  background-color: #8f5536;
+  background-color: #495d7c;
 }
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
-  color: #8f5536;
+  color: #495d7c;
+  background-color: rgb(249,249,249);
+}
+
+.highlight pre {
+  background-color: inherit;
+  color: #f8f8f2;
 }
