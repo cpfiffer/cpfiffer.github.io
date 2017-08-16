@@ -38,12 +38,18 @@
 
 <body class="theme-base-0d ">
 
+<link href="https://fonts.googleapis.com/css?family=Lato:100|PT+Serif" rel="stylesheet">
+<script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <a href="./"><h1>Cameron Pfiffer</h1></a>
       <p class="lead">
-       R, finance, programming, writing. 
+        
+ Programming, finance, writing. 
       </p>
     </div>
 
@@ -67,6 +73,45 @@
       
   <div class="post">
     <h1 class="post-title">
+      <a href="./post/english-pronunciation/">
+        English Pronunciation
+      </a>
+    </h1>
+
+    <span class="post-date">Wed, Aug 16, 2017</span>
+
+    <p>My last name tends to throw a lot of people off, because it has far too many f&rsquo;s and not enough real letters. While doing a bit of research on how to tell people how to best pronounce my name (it&rsquo;s &ldquo;fye-fur&rdquo;, not &ldquo;fiffer&rdquo;), I found a <a href="http://ncf.idallen.com/english.html">neat little poem</a> designed to showcase some of the strange ways English pronounces words. I sent it out to a couple of my friends from Norway and Greece and they politely declined to try a live reading. I can see why; I messed up about 15-20 words while reading it aloud.</p>
+
+<p>Here&rsquo;s an excerpt:</p>
+
+<blockquote>
+<p>Compare alien with Italian,
+Dandelion and battalion.
+Sally with ally, yea, ye,
+Eye, I, ay, aye, whey, and key.
+Say aver, but ever, fever,
+Neither, leisure, skein, deceiver.
+Heron, granary, canary.
+Crevice and device and aerie.</p>
+
+<p>Face, but preface, not efface.
+Phlegm, phlegmatic, ass, glass, bass.
+Large, but target, gin, give, verging,
+Ought, out, joust and scour, scourging.
+Ear, but earn and wear and tear
+Do not rhyme with here but ere.
+Seven is right, but so is even,
+Hyphen, roughen, nephew Stephen,
+Monkey, donkey, Turk and jerk,
+Ask, grasp, wasp, and cork and work.</p>
+</blockquote>
+
+<p>Give it a shot, and see how well you can do with the whole poem. It&rsquo;s certainly fun to do.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="./post/perfect-numbers/">
         Perfect Numbers
       </a>
@@ -75,11 +120,8 @@
     <span class="post-date">Tue, Aug 15, 2017</span>
 
     <p>I just started reading a book called <a href="https://books.google.co.uk/books/about/How_to_Prove_it.html?id=murSjwEACAAJ&amp;redir_esc=y&amp;hl=en">How to Prove It: A Structured Approach</a>, a book all about writing and understanding proofs. My unconventional background in mathematics means that I have a fair bit of terror when it comes to proofs; they have often come up on more quantitative finance courses in a tangential manner, as the proofs are often unnessecary. The fact remains that I am terrified by them, and wanted to get over my fear of proofs.</p>
-
-<p>In the process, I read a bit on <a href="https://en.wikipedia.org/wiki/Perfect_number">perfect numbers</a>. One of the proofs in the book was Euclid&rsquo;s proof about infinite primes, and I figured I should write a little bit of code to find perfect numbers, for gits and shiggles.</p>
-
-<p>Here&rsquo;s the code to compute <a href="https://en.wikipedia.org/wiki/Aliquot_sum">aliquot sums</a> in Julia, a necessary intermediate step in perfect number evaluation.</p>
-
+<p>In the process, I read a bit on <a href="https://en.wikipedia.org/wiki/Perfect_number">perfect numbers</a>. One of the proofs in the book was Euclid’s proof about infinite primes, and I figured I should write a little bit of code to find perfect numbers, for gits and shiggles.</p>
+<p>Here’s the code to compute <a href="https://en.wikipedia.org/wiki/Aliquot_sum">aliquot sums</a> in Julia, a necessary intermediate step in perfect number evaluation.</p>
 <pre><code>using Primes
 
 function aliquot(x::Int64, verbose=false)
@@ -91,16 +133,13 @@ function aliquot(x::Int64, verbose=false)
     end
     if verbose == true print(divisors) end
     return sum(divisors)
-end
-</code></pre>
-
-<p>This is a function for computing the next prime number after integer $x$.</p>
-
+end</code></pre>
+<p>This is a function for computing the next prime number after integer <span class="math inline">\(x\)</span>.</p>
 <pre><code>function next_perfect(x::Int64, limit=Inf64)
     # Given a number, find the next highest perfect number.
     found = false
     while(found==false)
-        # You can set a computational limit with the 'limit' argument.
+        # You can set a computational limit with the &#39;limit&#39; argument.
         if (x &gt;= limit) break end
         if aliquot(x) == x
             print(x, &quot; is the next perfect number.&quot;)
@@ -110,8 +149,7 @@ end
         x += 1
     end
     return x
-end
-</code></pre>
+end</code></pre>
 
   </div>
   
@@ -1019,6 +1057,8 @@ auc</code></pre>
 
 <ul>
 <li>R</li>
+<li>Julia</li>
+<li>VBA</li>
 <li>Python</li>
 <li>Matlab<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup></li>
 <li>SQL</li>
@@ -1041,7 +1081,7 @@ auc</code></pre>
 <ol>
 <li id="fn:1">Yes, this is confusing, and it makes typing up resumes very difficult.
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-<li id="fn:2">I say Matlab, but most of my experience has been with the GNU version called <a href="https://www.gnu.org/software/octave/">Octave</a>. The syntax and functions are pretty much identical, with only minor changes required to adapt.
+<li id="fn:2">I say Matlab, but most of my experience has been with the GNU version called <a href="https://www.gnu.org/software/octave/">Octave</a>. The syntax and functions are pretty much identical &ndash; though Octave is <a href="https://julialang.org/benchmarks/">far slower</a> than Matlab and everything else.
  <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
 </ol>
 </div>

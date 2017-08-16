@@ -37,12 +37,18 @@
 </head>
 
 	<body class="theme-base-0d ">
-		<div class="sidebar">
+		<link href="https://fonts.googleapis.com/css?family=Lato:100|PT+Serif" rel="stylesheet">
+<script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <a href="../../"><h1>Cameron Pfiffer</h1></a>
       <p class="lead">
-       R, finance, programming, writing. 
+        
+ Programming, finance, writing. 
       </p>
     </div>
 
@@ -65,11 +71,8 @@
 			 	<h1>Perfect Numbers</h1>
 			  <span class="post-date">Tue, Aug 15, 2017</span>
 			      <p>I just started reading a book called <a href="https://books.google.co.uk/books/about/How_to_Prove_it.html?id=murSjwEACAAJ&amp;redir_esc=y&amp;hl=en">How to Prove It: A Structured Approach</a>, a book all about writing and understanding proofs. My unconventional background in mathematics means that I have a fair bit of terror when it comes to proofs; they have often come up on more quantitative finance courses in a tangential manner, as the proofs are often unnessecary. The fact remains that I am terrified by them, and wanted to get over my fear of proofs.</p>
-
-<p>In the process, I read a bit on <a href="https://en.wikipedia.org/wiki/Perfect_number">perfect numbers</a>. One of the proofs in the book was Euclid&rsquo;s proof about infinite primes, and I figured I should write a little bit of code to find perfect numbers, for gits and shiggles.</p>
-
-<p>Here&rsquo;s the code to compute <a href="https://en.wikipedia.org/wiki/Aliquot_sum">aliquot sums</a> in Julia, a necessary intermediate step in perfect number evaluation.</p>
-
+<p>In the process, I read a bit on <a href="https://en.wikipedia.org/wiki/Perfect_number">perfect numbers</a>. One of the proofs in the book was Euclid’s proof about infinite primes, and I figured I should write a little bit of code to find perfect numbers, for gits and shiggles.</p>
+<p>Here’s the code to compute <a href="https://en.wikipedia.org/wiki/Aliquot_sum">aliquot sums</a> in Julia, a necessary intermediate step in perfect number evaluation.</p>
 <pre><code>using Primes
 
 function aliquot(x::Int64, verbose=false)
@@ -81,16 +84,13 @@ function aliquot(x::Int64, verbose=false)
     end
     if verbose == true print(divisors) end
     return sum(divisors)
-end
-</code></pre>
-
-<p>This is a function for computing the next prime number after integer $x$.</p>
-
+end</code></pre>
+<p>This is a function for computing the next prime number after integer <span class="math inline">\(x\)</span>.</p>
 <pre><code>function next_perfect(x::Int64, limit=Inf64)
     # Given a number, find the next highest perfect number.
     found = false
     while(found==false)
-        # You can set a computational limit with the 'limit' argument.
+        # You can set a computational limit with the &#39;limit&#39; argument.
         if (x &gt;= limit) break end
         if aliquot(x) == x
             print(x, &quot; is the next perfect number.&quot;)
@@ -100,8 +100,7 @@ end
         x += 1
     end
     return x
-end
-</code></pre>
+end</code></pre>
 
 			</div>
 
