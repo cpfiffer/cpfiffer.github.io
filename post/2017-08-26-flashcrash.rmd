@@ -1,0 +1,28 @@
+---
+title: The Flash Crash
+author: Cameron Pfiffer
+date: '2017-08-26'
+slug: ''
+categories: ["General"]
+tags: ["Web"]
+---
+
+[A paper](http://www.afajof.org/details/journalArticle/10546091/The-Flash-Crash-HighFrequency-Trading-in-an-Electronic-Market.html) came out in the April 2017 edition of the _Journal of Finance_ that I found to be absolutely fascinating. Normally I'd just put a link up on Twitter and move on, but leaving Facebook and Twitter have limited my ability to scream about cool papers. I thought I'd do a brief post about the paper and talk about why it's interesting to me.
+
+The abstract:
+
+>We study intraday market intermediation in an electronic market before and during a period of large and temporary selling pressure. On May 6, 2010, U.S. financial markets experienced a systemic intraday event—the Flash Crash—where a large automated selling program was rapidly executed in the E‐mini S&P 500 stock index futures market. Using audit trail transaction‐level data for the E‐mini on May 6 and the previous three days, we find that the trading pattern of the most active nondesignated intraday intermediaries (classified as High‐Frequency Traders) did not change when prices fell during the Flash Crash.
+
+The flash crash[^fc] has always been an interesting subject, because it illustrates a lesson that anyone who is involved with markets knows -- if you sell a ton of stuff, the prices go down. But perhaps more importantly, it demonstrates the highly interconnected nature of modern financial markets.
+
+During the flash crash, an institutional trader initiated an algorithm to sell an incredibly large amount of E-mini shares, a futures contract on the S&P 500. The algorithm used was a fairly simplistic strategy that aimed to trade 9% of the past minute's volume.
+
+I have a lot of feelings on this kind of strategy. It's not especially tactful, it has no regard to price or timing, and fails to adapt to changing conditions. If I'm aware of someone trading a tremendous amount of shares every minute (and assuming I can devise their strategy before they complete the trade), I might try to game the system by increasing the volume traded in the previous minute -- either by simply churning a position or taking large long positions -- and then using the foreknowledge that a large trade is about to come to take advantage. Particularly for a trade the size that the institution was trying to make (around $4.9 billion), this is a really crappy way to do it.
+
+Back to the paper. It's well worth the read. They study audit trail level data for four days during and before the flash crash in the E-mini market, and their interesting finding is that high-frequency traders didn't really change their trading behavior during the event. This is in contrast to a lot of the murmurings commonly bandied about in regards to the flash crash, where everyone mutters something to the effect of "HFTs got out, liquidity dried up, etc."
+
+The authors note that market makers, not high-frequency traders, altered their inventory holding behavior in response to changing prices. Interesting.
+
+Give it a read.
+
+[^fc]: You can read more about the flash crash in the [SEC's report](https://www.sec.gov/news/studies/2010/marketevents-report.pdf) on the matter.
