@@ -7,10 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Cameron Pfiffer</copyright>
-    <lastBuildDate>Sat, 26 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Corporate Debt</title>
+      <link>/post/corporate-debt/</link>
+      <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/corporate-debt/</guid>
+      <description>This strikes me as a strange use of corporate cash.
+Thirty US companies together have more than $800bn of fixed-income investments, according to a Financial Times analysis of their most recent filings with the US Securities and Exchange Commission.
+That’s a lot of money. You might be wondering who those thirty companies are, and it’s probably who you’d expect – tech companies with far too much cash sitting around collecting dust.</description>
+    </item>
+    
+    <item>
+      <title>The American Dream</title>
+      <link>/post/the-american-dream/</link>
+      <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/the-american-dream/</guid>
+      <description>Edmund Phelps writing at Project Syndicate:
+ What made the American Dream distinctive was neither the hope of winning the lottery nor of being buoyed by national market forces or public policy. It was the hope of achieving things, with all that that entails: drawing on one’s personal knowledge, trusting one’s intuition, venturing into the unknown. It reflected the deep need of these Americans to have the experience of succeeding at something: a craftsman’s gratification at seeing his mastery result in better work, or a merchant’s satisfaction at seeing “his ship come in.</description>
+    </item>
     
     <item>
       <title>The Flash Crash</title>
