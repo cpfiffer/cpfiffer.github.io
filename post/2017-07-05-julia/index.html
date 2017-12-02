@@ -3,7 +3,7 @@
 <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.20.6" />
+  <meta name="generator" content="Hugo 0.30.2" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -37,7 +37,7 @@
 </head>
 
 	<body class="theme-base-0f ">
-		<link href="https://fonts.googleapis.com/css?family=Lato:100|PT+Serif" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:100|PT+Serif|Lusitana" rel="stylesheet">
 <script src="//yihui.name/js/math-code.js"></script>
 <script async
 src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -109,36 +109,36 @@ src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 
 <pre><code># Test if x can be followed by y
 function valid(x, y, limit)
-    # Determine if y is a multiple of x
-    mul = multiples(x, limit) # Get multiples of x
-    index = findin(mul, y) # Find if y is in the list of x's multiples
-    if index != [] # If the index isn't zero
-        return true
-    end
+	# Determine if y is a multiple of x
+	mul = multiples(x, limit) # Get multiples of x
+	index = findin(mul, y) # Find if y is in the list of x's multiples
+	if index != [] # If the index isn't zero
+		return true
+	end
 
-    # Now determine if y is a factor of x
-    if x % y == 0
-        return true
-    end
-    return false
+	# Now determine if y is a factor of x
+	if x % y == 0
+		return true
+	end
+	return false
 end
 </code></pre>
 
 <p>Multiples generates a list of multiples and returns it.</p>
 
 <pre><code>function multiples(x, limit)
-    vals = [0]
-    for i in 1:limit
-        #print(i, &quot;\n&quot;)
-        if (i % x == 0) &amp; (i != x)
-            append!(vals, i)
-        end
-    end
-    if vals == [0]
-        print(&quot;No multiples of &quot;, x, &quot;.&quot;, &quot;\n&quot;)
-    end
+	vals = [0]
+	for i in 1:limit
+		#print(i, &quot;\n&quot;)
+		if (i % x == 0) &amp; (i != x)
+			append!(vals, i)
+		end
+	end
+	if vals == [0]
+		print(&quot;No multiples of &quot;, x, &quot;.&quot;, &quot;\n&quot;)
+	end
 
-    return vals
+	return vals
 end
 </code></pre>
 
@@ -152,17 +152,17 @@ end
 
   chain = [first]
 
-    # Pick a random number.
-    # Check if that number is valid.
-    # If it isn't pick a new one, until they're all gone.
-    testPosition = possible
-    shuffle!(testPosition)
-    for i in testPosition
-        v = valid(chain[end], i, limit)
-        if v == true
-            append!(chain, i)
-        end
-    end
+	# Pick a random number.
+	# Check if that number is valid.
+	# If it isn't pick a new one, until they're all gone.
+	testPosition = possible
+	shuffle!(testPosition)
+	for i in testPosition
+		v = valid(chain[end], i, limit)
+		if v == true
+			append!(chain, i)
+		end
+	end
 
   return chain
 end
@@ -171,14 +171,14 @@ end
 <p>Finally, the final function just runs <code>makechain</code> a bunch of times and finds the longest chain it can.</p>
 
 <pre><code>function find_longest(iterations::Int64, limit=100)
-    longest = []
-    for i in 1:iterations
-        chain = makechain(limit)
-        if length(chain) &gt; length(longest)
-            longest = chain
-        end
-    end
-    return longest
+	longest = []
+	for i in 1:iterations
+		chain = makechain(limit)
+		if length(chain) &gt; length(longest)
+			longest = chain
+		end
+	end
+	return longest
 end
 </code></pre>
 
