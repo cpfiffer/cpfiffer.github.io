@@ -7,10 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Cameron Pfiffer</copyright>
-    <lastBuildDate>Tue, 12 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Public Comment</title>
+      <link>/post/public-comment/</link>
+      <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/public-comment/</guid>
+      <description>Thought I’d just leave these here, via Matt Levine.
+Danny Munson, an 8th grader from a fictional place in Oregon:
+ Dear SEC,
+  I am a future stock investor, currently in the 8th grade at Aberdeen Middle School in Wetlawn Oregon. I whole heartily approve of the IEX plan to slow down trading.
+  Things move too fast in this world and we need to slow it down in every way we can.</description>
+    </item>
+    
+    <item>
+      <title>CFA</title>
+      <link>/post/cfa/</link>
+      <pubDate>Sat, 02 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/cfa/</guid>
+      <description>Well, I’m taking the CFA Level 1 exam in a couple of hours. It has been an extraordinarily unpleasant experience, which is partially why it has been so long since I wrote a post. I also have been working full time, meaning a lot less time for idle fancy like programming and suchlike.
+Hopefully it all shakes out well, and I will be one year down into a painful rabbit hole of study that may continue for many more.</description>
+    </item>
     
     <item>
       <title>Corporate Debt</title>
@@ -19,8 +42,8 @@
       
       <guid>/post/corporate-debt/</guid>
       <description>This strikes me as a strange use of corporate cash.
-Thirty US companies together have more than $800bn of fixed-income investments, according to a Financial Times analysis of their most recent filings with the US Securities and Exchange Commission.
-That’s a lot of money. You might be wondering who those thirty companies are, and it’s probably who you’d expect – tech companies with far too much cash sitting around collecting dust.</description>
+ Thirty US companies together have more than $800bn of fixed-income investments, according to a Financial Times analysis of their most recent filings with the US Securities and Exchange Commission.
+ That’s a lot of money. You might be wondering who those thirty companies are, and it’s probably who you’d expect – tech companies with far too much cash sitting around collecting dust.</description>
     </item>
     
     <item>
@@ -41,7 +64,7 @@
       <guid>/post/2017-08-26-flashcrash/</guid>
       <description>A paper came out in the April 2017 edition of the Journal of Finance that I found to be absolutely fascinating. Normally I’d just put a link up on Twitter and move on, but leaving Facebook and Twitter have limited my ability to scream about cool papers. I thought I’d do a brief post about the paper and talk about why it’s interesting to me.
 The abstract:
-We study intraday market intermediation in an electronic market before and during a period of large and temporary selling pressure.</description>
+ We study intraday market intermediation in an electronic market before and during a period of large and temporary selling pressure.</description>
     </item>
     
     <item>
@@ -88,7 +111,7 @@ My final summer course for the master&amp;rsquo;s program was all about Energy F
       
       <guid>/post/2017-05-12-kaggle-titanic/</guid>
       <description>I thought I’d start getting into Kaggle to work on some non-finance data to get a feel for the messiness of real-world information. Kaggle’s introductory competition is about predicting which passengers on the Titanic are going to survive using a handful of features, so let’s launch into mucking about. This post follows a “lab book” style and is quite scattered, as I develop ideas about what to do.
-# Librarieslibrary(tidyverse)## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.</description>
+# Libraries library(tidyverse) ## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.</description>
     </item>
     
     <item>

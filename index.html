@@ -3,7 +3,7 @@
 <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.20.6" />
+  <meta name="generator" content="Hugo 0.31.1" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -75,6 +75,69 @@ src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 <div class="posts">
 
       
+  <div class="post">
+    <h1 class="post-title">
+      <a href="./post/public-comment/">
+        Public Comment
+      </a>
+    </h1>
+
+    <span class="post-date">Wed, Dec 13, 2017</span>
+
+    <p>Thought I’d just leave these here, via <a href="https://www.bloomberg.com/view/articles/2017-12-13/regulatory-comments-and-ceo-skill">Matt Levine</a>.</p>
+<p><a href="https://www.sec.gov/comments/10-222/10222-274.htm">Danny Munson</a>, an 8th grader from a fictional place in Oregon:</p>
+<blockquote>
+<p>Dear SEC,</p>
+</blockquote>
+<blockquote>
+<p>I am a future stock investor, currently in the 8th grade at Aberdeen Middle School in Wetlawn Oregon. I whole heartily approve of the IEX plan to slow down trading.</p>
+</blockquote>
+<blockquote>
+<p>Things move too fast in this world and we need to slow it down in every way we can. Take my school for instance. When we stand in line to pay for our lunch, we have two cashiers to pick from. There is Mr. Fields, who was recently fired from a data entry job. I heard he made some creepy comments to one of his female co-workers. But that isn’t important. Mr. Fields can work that cash register like nobodies business. Even when twice as long, most kids will get in Mr. Fields line. Me, on the other hand. I prefer to get in Josephine’s line. She used to work at the DMV before failing a drug test. I always get in her line. Sure, it takes me much longer, but she will always give me a compliment and ask me about my day.</p>
+</blockquote>
+<blockquote>
+<p>In conclusion, IEX should be rewarded for slowing everything down and moving things backward. Cause backwards is awesome</p>
+</blockquote>
+<blockquote>
+<p>Thank you for your time.</p>
+</blockquote>
+<p>Then, several days later, <a href="https://www.sec.gov/comments/10-222/10222-275.htm">Emma Hibernia</a> (supposedly a kid from the same school) responds to Danny’s comment.</p>
+<blockquote>
+<p>Dear SEC:</p>
+</blockquote>
+<blockquote>
+<p>I saw that letter Danny Mulson wrote to you. The Whole School Saw It. You need to know that Danny Mulson NEVER tells you everything he just tells you what HE wants you to know.</p>
+</blockquote>
+<blockquote>
+<p>OK Mr. Fields is fast. BUT Mr. Fields also takes 10 cents from everybody he checks out and when you complain about it he just laughs and says it’s part of his job and everybody gets paid for their job so he should too. I thought he already got paid? But he said it wasn’t enough. And suppose you want TWO milks well the first milk will cost you one price and then he charges MORE for the second one and you say they were all there to start with and the price tag was the same for ALL of them and he just says things change. WHAT CHANGED??</p>
+</blockquote>
+<blockquote>
+<p>And Mr. Fields is creepy too just like Danny said but he didn’t tell you everything at all. Mr. Fields got the cafeteria manager to make the GIRLS go down one ramp to the registers and the BOYS go down another ramp and the girls ramp is LOWER so instead of looking at us at eye level he gets to look down at us. Do you get what I mean?? So we complained to the cafeteria managers and they said it makes everything BETTER? And even though I begged her NOT TO my mother complained to the school board and they said they would put it on the agenda for like some meeting a gillion years from now after they talked about parking and everybody is already DEAD.</p>
+</blockquote>
+<blockquote>
+<p>Very truly yours,</p>
+</blockquote>
+<blockquote>
+<p>Emma</p>
+</blockquote>
+<p>Sometimes the world <em>is</em> a good place.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="./post/cfa/">
+        CFA
+      </a>
+    </h1>
+
+    <span class="post-date">Sat, Dec 2, 2017</span>
+
+    <p>Well, I’m taking the CFA Level 1 exam in a couple of hours. It has been an extraordinarily unpleasant experience, which is partially why it has been so long since I wrote a post. I also have been working full time, meaning a lot less time for idle fancy like programming and suchlike.</p>
+<p>Hopefully it all shakes out well, and I will be one year down into a painful rabbit hole of study that may continue for many more.</p>
+
+  </div>
+  
   <div class="post">
     <h1 class="post-title">
       <a href="./post/corporate-debt/">
@@ -317,36 +380,36 @@ end</code></pre>
 
 <pre><code># Test if x can be followed by y
 function valid(x, y, limit)
-    # Determine if y is a multiple of x
-    mul = multiples(x, limit) # Get multiples of x
-    index = findin(mul, y) # Find if y is in the list of x's multiples
-    if index != [] # If the index isn't zero
-        return true
-    end
+	# Determine if y is a multiple of x
+	mul = multiples(x, limit) # Get multiples of x
+	index = findin(mul, y) # Find if y is in the list of x's multiples
+	if index != [] # If the index isn't zero
+		return true
+	end
 
-    # Now determine if y is a factor of x
-    if x % y == 0
-        return true
-    end
-    return false
+	# Now determine if y is a factor of x
+	if x % y == 0
+		return true
+	end
+	return false
 end
 </code></pre>
 
 <p>Multiples generates a list of multiples and returns it.</p>
 
 <pre><code>function multiples(x, limit)
-    vals = [0]
-    for i in 1:limit
-        #print(i, &quot;\n&quot;)
-        if (i % x == 0) &amp; (i != x)
-            append!(vals, i)
-        end
-    end
-    if vals == [0]
-        print(&quot;No multiples of &quot;, x, &quot;.&quot;, &quot;\n&quot;)
-    end
+	vals = [0]
+	for i in 1:limit
+		#print(i, &quot;\n&quot;)
+		if (i % x == 0) &amp; (i != x)
+			append!(vals, i)
+		end
+	end
+	if vals == [0]
+		print(&quot;No multiples of &quot;, x, &quot;.&quot;, &quot;\n&quot;)
+	end
 
-    return vals
+	return vals
 end
 </code></pre>
 
@@ -360,17 +423,17 @@ end
 
   chain = [first]
 
-    # Pick a random number.
-    # Check if that number is valid.
-    # If it isn't pick a new one, until they're all gone.
-    testPosition = possible
-    shuffle!(testPosition)
-    for i in testPosition
-        v = valid(chain[end], i, limit)
-        if v == true
-            append!(chain, i)
-        end
-    end
+	# Pick a random number.
+	# Check if that number is valid.
+	# If it isn't pick a new one, until they're all gone.
+	testPosition = possible
+	shuffle!(testPosition)
+	for i in testPosition
+		v = valid(chain[end], i, limit)
+		if v == true
+			append!(chain, i)
+		end
+	end
 
   return chain
 end
@@ -379,14 +442,14 @@ end
 <p>Finally, the final function just runs <code>makechain</code> a bunch of times and finds the longest chain it can.</p>
 
 <pre><code>function find_longest(iterations::Int64, limit=100)
-    longest = []
-    for i in 1:iterations
-        chain = makechain(limit)
-        if length(chain) &gt; length(longest)
-            longest = chain
-        end
-    end
-    return longest
+	longest = []
+	for i in 1:iterations
+		chain = makechain(limit)
+		if length(chain) &gt; length(longest)
+			longest = chain
+		end
+	end
+	return longest
 end
 </code></pre>
 

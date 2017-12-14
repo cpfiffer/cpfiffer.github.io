@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Cameron Pfiffer</copyright>
-    <lastBuildDate>Sat, 02 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Public Comment</title>
+      <link>/post/public-comment/</link>
+      <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/public-comment/</guid>
+      <description>Thought I’d just leave these here, via Matt Levine.
+Danny Munson, an 8th grader from a fictional place in Oregon:
+ Dear SEC,
+  I am a future stock investor, currently in the 8th grade at Aberdeen Middle School in Wetlawn Oregon. I whole heartily approve of the IEX plan to slow down trading.
+  Things move too fast in this world and we need to slow it down in every way we can.</description>
+    </item>
     
     <item>
       <title>CFA</title>
