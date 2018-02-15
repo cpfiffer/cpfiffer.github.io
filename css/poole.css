@@ -50,7 +50,7 @@ body {
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 @media (min-width: 38em) {
   html {
@@ -83,6 +83,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   color: #313131;
   text-rendering: optimizeLegibility;
+  font-family: "Lato", sans-serif;
 }
 h1 {
   font-size: 2rem;
@@ -311,10 +312,12 @@ tbody tr:nth-child(odd) th {
 .post-title,
 .post-title a {
   color: #303030;
+  text-decoration: none;
 }
 .page-title,
 .post-title {
   margin-top: 0;
+  text-decoration: none;
 }
 
 /* Meta data line below post title */
@@ -323,6 +326,7 @@ tbody tr:nth-child(odd) th {
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
+  font-family: sans-serif;
 }
 
 /* Related posts */
