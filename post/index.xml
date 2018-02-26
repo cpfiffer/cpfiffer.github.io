@@ -1,46 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Cameron Pfiffer</title>
+    <title>Posts on A Hugo website</title>
     <link>/post/</link>
-    <description>Recent content in Posts on Cameron Pfiffer</description>
+    <description>Recent content in Posts on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Cameron Pfiffer</copyright>
-    <lastBuildDate>Wed, 13 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Public Comment</title>
-      <link>/post/public-comment/</link>
-      <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/post/public-comment/</guid>
-      <description>Thought I’d just leave these here, via Matt Levine.
-Danny Munson, an 8th grader from a fictional place in Oregon:
- Dear SEC,
-  I am a future stock investor, currently in the 8th grade at Aberdeen Middle School in Wetlawn Oregon. I whole heartily approve of the IEX plan to slow down trading.
-  Things move too fast in this world and we need to slow it down in every way we can.</description>
-    </item>
-    
-    <item>
-      <title>CFA</title>
-      <link>/post/cfa/</link>
-      <pubDate>Sat, 02 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/post/cfa/</guid>
-      <description>Well, I’m taking the CFA Level 1 exam in a couple of hours. It has been an extraordinarily unpleasant experience, which is partially why it has been so long since I wrote a post. I also have been working full time, meaning a lot less time for idle fancy like programming and suchlike.
-Hopefully it all shakes out well, and I will be one year down into a painful rabbit hole of study that may continue for many more.</description>
-    </item>
-    
-    <item>
       <title>Corporate Debt</title>
-      <link>/post/corporate-debt/</link>
+      <link>/2017/09/12/corporate-debt/</link>
       <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/corporate-debt/</guid>
+      <guid>/2017/09/12/corporate-debt/</guid>
       <description>This strikes me as a strange use of corporate cash.
  Thirty US companies together have more than $800bn of fixed-income investments, according to a Financial Times analysis of their most recent filings with the US Securities and Exchange Commission.
  That’s a lot of money. You might be wondering who those thirty companies are, and it’s probably who you’d expect – tech companies with far too much cash sitting around collecting dust.</description>
@@ -48,20 +24,20 @@ Hopefully it all shakes out well, and I will be one year down into a painful rab
     
     <item>
       <title>The American Dream</title>
-      <link>/post/the-american-dream/</link>
+      <link>/2017/09/03/the-american-dream/</link>
       <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/the-american-dream/</guid>
+      <guid>/2017/09/03/the-american-dream/</guid>
       <description>Edmund Phelps writing at Project Syndicate:
  What made the American Dream distinctive was neither the hope of winning the lottery nor of being buoyed by national market forces or public policy. It was the hope of achieving things, with all that that entails: drawing on one’s personal knowledge, trusting one’s intuition, venturing into the unknown. It reflected the deep need of these Americans to have the experience of succeeding at something: a craftsman’s gratification at seeing his mastery result in better work, or a merchant’s satisfaction at seeing “his ship come in.</description>
     </item>
     
     <item>
       <title>The Flash Crash</title>
-      <link>/post/2017-08-26-flashcrash/</link>
+      <link>/2017/08/26/the-flash-crash/</link>
       <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-08-26-flashcrash/</guid>
+      <guid>/2017/08/26/the-flash-crash/</guid>
       <description>A paper came out in the April 2017 edition of the Journal of Finance that I found to be absolutely fascinating. Normally I’d just put a link up on Twitter and move on, but leaving Facebook and Twitter have limited my ability to scream about cool papers. I thought I’d do a brief post about the paper and talk about why it’s interesting to me.
 The abstract:
  We study intraday market intermediation in an electronic market before and during a period of large and temporary selling pressure.</description>
@@ -69,117 +45,117 @@ The abstract:
     
     <item>
       <title>English Pronunciation</title>
-      <link>/post/english-pronunciation/</link>
+      <link>/2017/08/16/english-pronunciation/</link>
       <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/english-pronunciation/</guid>
+      <guid>/2017/08/16/english-pronunciation/</guid>
       <description>My last name tends to throw a lot of people off, because it has far too many f&amp;rsquo;s and not enough real letters. While doing a bit of research on how to tell people how to best pronounce my name (it&amp;rsquo;s &amp;ldquo;fye-fur&amp;rdquo;, not &amp;ldquo;fiffer&amp;rdquo;), I found a neat little poem designed to showcase some of the strange ways English pronounces words. I sent it out to a couple of my friends from Norway and Greece and they politely declined to try a live reading.</description>
     </item>
     
     <item>
       <title>Perfect Numbers</title>
-      <link>/post/perfect-numbers/</link>
+      <link>/2017/08/15/perfect-numbers/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/perfect-numbers/</guid>
+      <guid>/2017/08/15/perfect-numbers/</guid>
       <description>I just started reading a book called How to Prove It: A Structured Approach, a book all about writing and understanding proofs. My unconventional background in mathematics means that I have a fair bit of terror when it comes to proofs; they have often come up on more quantitative finance courses in a tangential manner, as the proofs are often unnessecary. The fact remains that I am terrified by them, and wanted to get over my fear of proofs.</description>
     </item>
     
     <item>
       <title>A Brief Paper on Cointegration in Crude Oil</title>
-      <link>/post/2017-08-06-a-brief-paper-on-cointegration-in-crude-oil/</link>
+      <link>/2017/08/06/a-brief-paper-on-cointegration-in-crude-oil/</link>
       <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-08-06-a-brief-paper-on-cointegration-in-crude-oil/</guid>
+      <guid>/2017/08/06/a-brief-paper-on-cointegration-in-crude-oil/</guid>
       <description>I&amp;rsquo;ve just finished putting the final touches on my final paper for my master&amp;rsquo;s degree, and I thought I&amp;rsquo;d write up a bit about the process. You can get the fancy LaTeX version here.
 My final summer course for the master&amp;rsquo;s program was all about Energy Finance, taught by an econometrician1. Commensurate with the professor&amp;rsquo;s experience, the final paper was along the same lines. We were allowed to choose between three different project options.</description>
     </item>
     
     <item>
       <title>Julia</title>
-      <link>/post/2017-07-05-julia/</link>
+      <link>/2017/07/05/julia/</link>
       <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-07-05-julia/</guid>
+      <guid>/2017/07/05/julia/</guid>
       <description>As I&amp;rsquo;m wrapping up my master&amp;rsquo;s degree, I have somehow managed to find a large amount of time to pursue personal interests. One of those interests is Julia, a technical computing language with C-comparable speed. I&amp;rsquo;m not exactly sure where I stumbled on it, but it stuck with me. Of course, the best way to learn something is to do something cool with it, and FiveThiryEight&amp;rsquo;s Riddler often tends to supply great cannon fodder for programming.</description>
     </item>
     
     <item>
       <title>Kaggle Titanic</title>
-      <link>/post/2017-05-12-kaggle-titanic/</link>
+      <link>/2017/05/23/kaggle-titanic/</link>
       <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-05-12-kaggle-titanic/</guid>
+      <guid>/2017/05/23/kaggle-titanic/</guid>
       <description>I thought I’d start getting into Kaggle to work on some non-finance data to get a feel for the messiness of real-world information. Kaggle’s introductory competition is about predicting which passengers on the Titanic are going to survive using a handful of features, so let’s launch into mucking about. This post follows a “lab book” style and is quite scattered, as I develop ideas about what to do.
 # Libraries library(tidyverse) ## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.</description>
     </item>
     
     <item>
       <title>The Rise of DIY Quants</title>
-      <link>/post/2017-05-16-the-rise-of-diy-quants/</link>
+      <link>/2017/05/16/the-rise-of-diy-quants/</link>
       <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-05-16-the-rise-of-diy-quants/</guid>
+      <guid>/2017/05/16/the-rise-of-diy-quants/</guid>
       <description>This post first appeared in the May 2017 edition of the Reading University Investment Society newspaper - you can find a copy of the whole paper here.
 Modern finance is a constantly evolving field. In the 1970s after Black-Scholes published their seminal paper, derivatives in their current form (for primitive derivatives are found as far back as in ancient Sumerian culture) became common and ubiquitous. Approximately ten years later, we saw the rise of the first quantitative powerhouse Renaissance Technologies, a firm that to this day makes absurd profits.</description>
     </item>
     
     <item>
       <title>Github Pages</title>
-      <link>/post/2017-05-13-github-pages/</link>
+      <link>/2017/05/13/github-pages/</link>
       <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-05-13-github-pages/</guid>
+      <guid>/2017/05/13/github-pages/</guid>
       <description>I recently moved my site away from zeit, and migrated it to GitHub Pages. It&amp;rsquo;s much easier to maintain the site with git than with zeit&amp;rsquo;s now feature, which is a little too high-powered for my tases.
 I&amp;rsquo;ve also changed the theme to a modified version of paperback. The colors were originally all sepia tone, and I liked the current color scheme and typography.</description>
     </item>
     
     <item>
       <title>Credit Risk &amp; Logistic Regression</title>
-      <link>/post/2017-05-01-credit-risk-part-1/</link>
+      <link>/2017/05/01/credit-risk--logistic-regression/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-05-01-credit-risk-part-1/</guid>
+      <guid>/2017/05/01/credit-risk--logistic-regression/</guid>
       <description>I thought I’d do a little bit of analysis to showcase some credit risk analysis, using logistic regression. I’ve pulled this sample loan data from a DataCamp course on credit risk. It’s a cool class, you should check it out if you have time. In a later post, I will try this same analysis with a neural network to see if it has better predictive capabilities.
 Here’s a look at the data.</description>
     </item>
     
     <item>
       <title>I made a newspaper</title>
-      <link>/post/2017-05-01-i-made-a-newspaper/</link>
+      <link>/2017/05/01/i-made-a-newspaper/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-05-01-i-made-a-newspaper/</guid>
+      <guid>/2017/05/01/i-made-a-newspaper/</guid>
       <description>A couple of my friends here at the University of Reading came up with an excellent idea to start a financial newspaper. The concept was that the society1 would collect articles on investing and other things finance and publish them in a monthly paper. Being one of the few native English speakers with an interest in editing and journalism, I was selected to run the paper as Chief Editor.
 I&amp;rsquo;m very proud of the results, you can find the finished version of the April edition here.</description>
     </item>
     
     <item>
       <title>Introduction</title>
-      <link>/post/2017-04-30-hugo-and-blogdown/</link>
+      <link>/2017/04/30/introduction/</link>
       <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-04-30-hugo-and-blogdown/</guid>
+      <guid>/2017/04/30/introduction/</guid>
       <description>Hello! I&amp;rsquo;ve just finished building this site with Hugo and blogdown, an excellent R package built up by the folks at RStudio. The first iteration of this site is being hosted by zeit, a super interesting cloud company. Deployment takes about a minute, unlike the absolute nightmare that is Google Cloud. They take Dockerfiles as well, something that I haven&amp;rsquo;t had any experience with until lately.
 As this is the first blog post here, I just thought I&amp;rsquo;d lay out a bit of why I built this.</description>
     </item>
     
     <item>
       <title>Federal Funds Hike</title>
-      <link>/post/2017-05-01-federal-funds-hike/</link>
+      <link>/2017/04/16/federal-funds-hike/</link>
       <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-05-01-federal-funds-hike/</guid>
+      <guid>/2017/04/16/federal-funds-hike/</guid>
       <description>This article first appeared in the Reading University Investment Society&amp;rsquo;s April edition on April 16th, 2017.
 Last month, the Federal Reserve raised the short-term interest rate target range by 0.25%, to a range of 0.75% to 1%. This is in line with the central bank’s “slow and steady” approach to rate increases after a decade of historically low interest rates, and is the third such rate increase since June of 2006.</description>
     </item>
     
     <item>
       <title>IEX&#39;s Crumbling Quote</title>
-      <link>/post/2017-05-01-iex-s-crumbling-quote/</link>
+      <link>/2017/04/16/iexs-crumbling-quote/</link>
       <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-05-01-iex-s-crumbling-quote/</guid>
+      <guid>/2017/04/16/iexs-crumbling-quote/</guid>
       <description>This article first appeared in the Reading University Investment Society&amp;rsquo;s April edition on April 16th, 2017.
 The Investor’s Exchange, also referred to as IEX, came to prominence in 2014 after Michael Lewis’ book Flash Boys was released. IEX was designed as an exchange to protect lumbering buy side firms from high-frequency traders and other nimble market actors.
 Their first innovation was to treat what is referred to as stale quote arbitrage.</description>

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Journalsim on Cameron Pfiffer</title>
+    <title>Journalsim on A Hugo website</title>
     <link>/tags/journalsim/</link>
-    <description>Recent content in Journalsim on Cameron Pfiffer</description>
+    <description>Recent content in Journalsim on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Cameron Pfiffer</copyright>
     <lastBuildDate>Tue, 16 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/journalsim/index.xml" rel="self" type="application/rss+xml" />
@@ -14,10 +13,10 @@
     
     <item>
       <title>The Rise of DIY Quants</title>
-      <link>/post/2017-05-16-the-rise-of-diy-quants/</link>
+      <link>/2017/05/16/the-rise-of-diy-quants/</link>
       <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-05-16-the-rise-of-diy-quants/</guid>
+      <guid>/2017/05/16/the-rise-of-diy-quants/</guid>
       <description>This post first appeared in the May 2017 edition of the Reading University Investment Society newspaper - you can find a copy of the whole paper here.
 Modern finance is a constantly evolving field. In the 1970s after Black-Scholes published their seminal paper, derivatives in their current form (for primitive derivatives are found as far back as in ancient Sumerian culture) became common and ubiquitous. Approximately ten years later, we saw the rise of the first quantitative powerhouse Renaissance Technologies, a firm that to this day makes absurd profits.</description>
     </item>

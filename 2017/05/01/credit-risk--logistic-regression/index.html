@@ -1,0 +1,315 @@
+
+<span class="camerons_logo">
+    <a href="/">
+      <span class = "blog_logo">
+         <img src="/banner.png" alt="Blog Logo" style="height: 200px; width:200px;">
+      </span>
+      
+    </a>
+</span>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+<title>A Hugo website - Credit Risk &amp; Logistic Regression</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="An analysis of loan data using logistic regression and R.">
+<meta name="keywords" content="">
+<meta name="author" content="A Hugo website">
+<meta name="generator" content="Hugo 0.36.1" />
+
+  
+
+
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/tuftesque.css">
+<style>
+body {
+  
+    background-color:  white;
+  
+}
+</style>
+
+
+
+<script>
+
+</script>
+
+
+</head>
+
+<body>
+<div id="layout" class="pure-g">
+<article class="pure-u-1">
+<section>
+  <h1 class="content-title">
+  
+  <a href="/2017/05/01/credit-risk--logistic-regression/">Credit Risk &amp; Logistic Regression</a>
+  
+  </h1>
+  
+  
+  
+  <span class="content-meta">
+    
+  
+  
+  
+  <i class="fa fa-user">&nbsp;</i><span class="author">
+    &nbsp;Cameron Pfiffer</span> <br>
+    
+  
+  
+  
+  <i class="fa fa-calendar"></i>
+    &nbsp;May 1, 2017
+  
+  
+  
+  &nbsp;<i class="fa fa-clock-o"></i>
+    &nbsp;7 min read
+  
+  
+  
+  <br>
+    <i class="fa fa-tags"> </i>
+    
+    <a  href="/categories/data-science">Data Science</a>
+    
+    
+    </span>
+    
+    
+    </section>
+
+
+<section><p>I thought I’d do a little bit of analysis to showcase some credit risk analysis, using <strong>logistic regression</strong>. I’ve pulled this sample loan data from a DataCamp course on <a href="https://www.datacamp.com/courses/introduction-to-credit-risk-modeling-in-r">credit risk</a>. It’s a cool class, you should check it out if you have time. In a later post, I will try this same analysis with a neural network to see if it has better predictive capabilities.</p>
+<p>Here’s a look at the data. You can see we have all kinds of valuable information we can use in determining whether someone is likely to default - people with high rates and low credit scores are more likely to default, while people who own their homes and have had long term employment grades are less likely to default. We also have a column called <code>loan_status</code>, which is a boolean value indicating whether that particular borrower has defaulted.</p>
+<pre class="r"><code>head(data)</code></pre>
+<pre><code>##   loan_status loan_amnt int_rate grade emp_length home_ownership
+## 1           0      5000    10.65     B         10           RENT
+## 2           0      2400       NA     C         25           RENT
+## 3           0     10000    13.49     C         13           RENT
+## 4           0      5000       NA     A          3           RENT
+## 5           0      3000       NA     E          9           RENT
+## 6           0     12000    12.69     B         11            OWN
+##   annual_inc age
+## 1      24000  33
+## 2      12252  31
+## 3      49200  24
+## 4      36000  39
+## 5      48000  24
+## 6      75000  28</code></pre>
+<div id="logistic-regression" class="section level1">
+<h1>Logistic Regression</h1>
+<p>If you’re unfamiliar with logistic regression, that’s alright. What it does (in broad strokes) is allow you to predict a value <strong>between 1 and 0</strong>, and provide you with a degree of certainty. For example, if we ran a logistic regression on a bunch of variables, and then found relevant coefficients, we could use the features of a particular borrower to determine what level of risk they have. A lender could take appropriate measures with someone with a very low chance (0.02) of default by providing them with lower rates, or by simply not lending to someone with a very high chance of default (0.99).</p>
+<p>Now we should tidy up some of the data and get rid of any rows with <code>NA</code>s. There are more efficient ways of dealing with this problem, but for our purposes we only lose about 3,000 observations, bringing us to about 25,000 observations. This is enough by most measures to build a rudimentary predictive model.</p>
+<pre class="r"><code>#Filter out rows with any NAs.
+data &lt;- data[complete.cases(data),]
+head(data)</code></pre>
+<pre><code>##   loan_status loan_amnt int_rate grade emp_length home_ownership
+## 1           0      5000    10.65     B         10           RENT
+## 3           0     10000    13.49     C         13           RENT
+## 6           0     12000    12.69     B         11            OWN
+## 7           1      9000    13.49     C          0           RENT
+## 8           0      3000     9.91     B          3           RENT
+## 9           1     10000    10.65     B          3           RENT
+##   annual_inc age
+## 1      24000  33
+## 3      49200  24
+## 6      75000  28
+## 7      30000  22
+## 8      15000  22
+## 9     100000  28</code></pre>
+<p>Let’s split our dataset into two pieces, 60/40. This allows us to design a model with the 60% dataset and test it on the 40% dataset. If I was performing more exploratory analysis, I’d split the 40 in half, one for messing around in and the other for testing, but I’m pretty much skipping right to the modeling for now.</p>
+<pre class="r"><code>set.seed(9090)
+bound &lt;- floor((nrow(data)/4)*3)
+data &lt;- data[sample(nrow(data)),]
+train &lt;- data[1:bound,]
+test &lt;- data[(bound+1):nrow(data),]</code></pre>
+<p>Now to the preliminary model. We can use the R’s built-in functions to handle this. See below a summary of the output.</p>
+<pre class="r"><code>model &lt;- glm(loan_status ~., family = binomial(link=&#39;logit&#39;), data = train)
+summary(model)</code></pre>
+<pre><code>## 
+## Call:
+## glm(formula = loan_status ~ ., family = binomial(link = &quot;logit&quot;), 
+##     data = train)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -1.1467  -0.5358  -0.4416  -0.3374   3.3591  
+## 
+## Coefficients:
+##                       Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)         -3.006e+00  2.151e-01 -13.976  &lt; 2e-16 ***
+## loan_amnt           -2.241e-06  4.141e-06  -0.541  0.58839    
+## int_rate             9.058e-02  2.301e-02   3.936 8.29e-05 ***
+## gradeB               3.338e-01  1.084e-01   3.080  0.00207 ** 
+## gradeC               4.932e-01  1.569e-01   3.143  0.00167 ** 
+## gradeD               5.809e-01  1.995e-01   2.911  0.00360 ** 
+## gradeE               5.946e-01  2.505e-01   2.374  0.01760 *  
+## gradeF               8.550e-01  3.343e-01   2.558  0.01053 *  
+## gradeG               1.242e+00  4.367e-01   2.844  0.00446 ** 
+## emp_length           5.405e-03  3.655e-03   1.479  0.13920    
+## home_ownershipOTHER  7.172e-01  3.331e-01   2.153  0.03130 *  
+## home_ownershipOWN   -1.000e-01  9.608e-02  -1.041  0.29795    
+## home_ownershipRENT  -1.647e-02  5.329e-02  -0.309  0.75723    
+## annual_inc          -5.325e-06  7.722e-07  -6.896 5.36e-12 ***
+## age                 -5.048e-03  3.911e-03  -1.291  0.19685    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 13297  on 19177  degrees of freedom
+## Residual deviance: 12761  on 19163  degrees of freedom
+## AIC: 12791
+## 
+## Number of Fisher Scoring iterations: 5</code></pre>
+<p>Now, we test our accuracy. How well does our model predict loan status? The below code spits out the accuracy when we test our model on the <code>test</code> dataframe, and we get a result of 89%. Not bad!</p>
+<pre class="r"><code>fit &lt;- predict(model, newdata = test, type = &quot;response&quot;)
+fit &lt;- ifelse(fit &gt; 0.5, 1, 0)
+error &lt;- mean(fit != test$loan_status)
+print(paste( &quot;Accuracy is: &quot;, 1 - error))</code></pre>
+<pre><code>## [1] &quot;Accuracy is:  0.893477240732051&quot;</code></pre>
+<p>This <a href="https://datascienceplus.com/perform-logistic-regression-in-r/">lovely blogpost</a> recommends plotting the true positive vs. false positives. The code for that is below. The plot shows a nearly straight line, which means we really aren’t especially predictive - the output at the bottom of 0.66 similarly shows the same. We’d like this value to be closer to one to indicate predictive ability.</p>
+<pre class="r"><code>library(ROCR)
+p &lt;- predict(model, newdata = test, type = &quot;response&quot;)
+pr &lt;- prediction(p, test$loan_status)
+prf &lt;- performance(pr, measure = &quot;tpr&quot;, x.measure = &quot;fpr&quot;)
+plot(prf)</code></pre>
+<p><img src="/post/2017-05-01-credit-risk-part-1_files/figure-html/unnamed-chunk-7-1.png" width="1152" /></p>
+<pre class="r"><code>auc &lt;- performance(pr, measure=&quot;auc&quot;)
+auc &lt;- auc@y.values[[1]]
+auc</code></pre>
+<pre><code>## [1] 0.6606138</code></pre>
+<p>But we’ve skipped a couple of important steps in modeling. The model summary shows a litany of variables that really aren’t that predictive; we need to take them out. We’re going to leave anything with a <code>.</code> or any number of asterisks (<code>*</code>) in, because they are significant. A 10% significant will suffice for me.</p>
+<pre class="r"><code>model2 &lt;- glm(loan_status ~ int_rate + grade + emp_length +
+                (home_ownership==&#39;OTHER&#39;) + annual_inc + age, 
+              family = binomial(link=&#39;logit&#39;), 
+              data = train)
+summary(model2)</code></pre>
+<pre><code>## 
+## Call:
+## glm(formula = loan_status ~ int_rate + grade + emp_length + (home_ownership == 
+##     &quot;OTHER&quot;) + annual_inc + age, family = binomial(link = &quot;logit&quot;), 
+##     data = train)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -1.1355  -0.5361  -0.4424  -0.3373   3.3724  
+## 
+## Coefficients:
+##                                 Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)                   -3.030e+00  2.117e-01 -14.309  &lt; 2e-16 ***
+## int_rate                       8.976e-02  2.300e-02   3.903 9.51e-05 ***
+## gradeB                         3.324e-01  1.082e-01   3.071  0.00213 ** 
+## gradeC                         4.950e-01  1.569e-01   3.155  0.00161 ** 
+## gradeD                         5.807e-01  1.994e-01   2.912  0.00359 ** 
+## gradeE                         5.941e-01  2.501e-01   2.375  0.01755 *  
+## gradeF                         8.522e-01  3.338e-01   2.553  0.01067 *  
+## gradeG                         1.230e+00  4.358e-01   2.822  0.00478 ** 
+## emp_length                     5.473e-03  3.593e-03   1.523  0.12767    
+## home_ownership == &quot;OTHER&quot;TRUE  7.319e-01  3.316e-01   2.208  0.02728 *  
+## annual_inc                    -5.386e-06  6.847e-07  -7.867 3.65e-15 ***
+## age                           -5.070e-03  3.911e-03  -1.296  0.19490    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 13297  on 19177  degrees of freedom
+## Residual deviance: 12762  on 19166  degrees of freedom
+## AIC: 12786
+## 
+## Number of Fisher Scoring iterations: 5</code></pre>
+<p>Now to test accuracy. It basically has yielded no meaningful change in predictive ability - but then again, that’s hard to do. All we’ve done is create a more parsimonious model in line with current thinking in statistics and econometrics.</p>
+<pre class="r"><code>fit &lt;- predict(model2, newdata = test, type = &quot;response&quot;)
+fit &lt;- ifelse(fit &gt; 0.5, 1, 0)
+error &lt;- mean(fit != test$loan_status)
+print(paste( &quot;Accuracy is: &quot;, 1 - error))</code></pre>
+<pre><code>## [1] &quot;Accuracy is:  0.893477240732051&quot;</code></pre>
+<p>Finally, we plot the cure we showed before. Again, no real difference, but we can feel better that we have a smaller model with less “junk” floating around.</p>
+<pre class="r"><code>library(ROCR)
+p &lt;- predict(model2, newdata = test, type = &quot;response&quot;)
+pr &lt;- prediction(p, test$loan_status)
+prf &lt;- performance(pr, measure = &quot;tpr&quot;, x.measure = &quot;fpr&quot;)
+plot(prf)</code></pre>
+<p><img src="/post/2017-05-01-credit-risk-part-1_files/figure-html/unnamed-chunk-10-1.png" width="1152" /></p>
+<pre class="r"><code>auc &lt;- performance(pr, measure=&quot;auc&quot;)
+auc &lt;- auc@y.values[[1]]
+auc</code></pre>
+<pre><code>## [1] 0.661003</code></pre>
+<p>Thanks for taking the time to read this post. Check out later posts where I use neural networks to look at this same dataset. It’ll be fun for the whole family!</p>
+<hr />
+</div>
+</section>
+<section>
+  
+
+  
+
+
+
+  
+
+
+      
+  <footer class="page-footer">
+		<hr>
+		<ul class="page-footer-menu">
+		
+		</ul>
+
+  
+
+	<div class="copyright">
+	<p>
+    
+      &copy;2018
+    .
+    All rights reserved.
+    
+  </p>
+</div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</footer>
+
+</section>
+</article>
+</div>
+</body>
+</html>

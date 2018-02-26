@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Me on Cameron Pfiffer</title>
+    <title>Me on A Hugo website</title>
     <link>/tags/me/</link>
-    <description>Recent content in Me on Cameron Pfiffer</description>
+    <description>Recent content in Me on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Cameron Pfiffer</copyright>
     <lastBuildDate>Thu, 05 May 2016 21:48:51 -0700</lastBuildDate>
     
 	<atom:link href="/tags/me/index.xml" rel="self" type="application/rss+xml" />

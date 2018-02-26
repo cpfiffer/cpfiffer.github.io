@@ -3,87 +3,77 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/public-comment/</loc>
-    <lastmod>2017-12-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/cfa/</loc>
-    <lastmod>2017-12-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/corporate-debt/</loc>
+    <loc>/2017/09/12/corporate-debt/</loc>
     <lastmod>2017-09-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/the-american-dream/</loc>
+    <loc>/2017/09/03/the-american-dream/</loc>
     <lastmod>2017-09-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2017-08-26-flashcrash/</loc>
+    <loc>/2017/08/26/the-flash-crash/</loc>
     <lastmod>2017-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/english-pronunciation/</loc>
+    <loc>/2017/08/16/english-pronunciation/</loc>
     <lastmod>2017-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/perfect-numbers/</loc>
+    <loc>/2017/08/15/perfect-numbers/</loc>
     <lastmod>2017-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2017-08-06-a-brief-paper-on-cointegration-in-crude-oil/</loc>
+    <loc>/2017/08/06/a-brief-paper-on-cointegration-in-crude-oil/</loc>
     <lastmod>2017-08-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2017-07-05-julia/</loc>
+    <loc>/2017/07/05/julia/</loc>
     <lastmod>2017-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2017-05-12-kaggle-titanic/</loc>
+    <loc>/2017/05/23/kaggle-titanic/</loc>
     <lastmod>2017-05-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2017-05-16-the-rise-of-diy-quants/</loc>
+    <loc>/2017/05/16/the-rise-of-diy-quants/</loc>
     <lastmod>2017-05-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2017-05-13-github-pages/</loc>
+    <loc>/2017/05/13/github-pages/</loc>
     <lastmod>2017-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2017-05-01-credit-risk-part-1/</loc>
+    <loc>/2017/05/01/credit-risk--logistic-regression/</loc>
     <lastmod>2017-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2017-05-01-i-made-a-newspaper/</loc>
+    <loc>/2017/05/01/i-made-a-newspaper/</loc>
     <lastmod>2017-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2017-04-30-hugo-and-blogdown/</loc>
+    <loc>/2017/04/30/introduction/</loc>
     <lastmod>2017-04-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2017-05-01-federal-funds-hike/</loc>
+    <loc>/2017/04/16/federal-funds-hike/</loc>
     <lastmod>2017-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2017-05-01-iex-s-crumbling-quote/</loc>
+    <loc>/2017/04/16/iexs-crumbling-quote/</loc>
     <lastmod>2017-04-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -94,7 +84,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-12-13T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -159,7 +149,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-12-13T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
