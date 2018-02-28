@@ -1,14 +1,17 @@
 ---
-title: Business Cards
-author: ~
+title: "Business Cards"
+exceprt: "Some of my business cards."
+author: "Cameron Pfiffer"
 date: '2018-02-27'
 slug: business-cards
 categories: []
 tags: []
-draft: yes
+draft: false
 ---
 
-A couple months ago while I was bumming around London trying to get people to give me work, I made some (I think) really cool business card designs. I made a couple of different card designs that shared the same front and had varying backs. I have gotten some pretty good feedback whenever I've given these out. 
+A couple months ago while I was bumming around London trying to get people to give me work, I made some (I think) really cool business card designs. I made a couple of different card designs that shared the same front and had varying backs. I have gotten some pretty good feedback whenever I've given these out.
+
+All the designs are made by me in Adobe Illustrator. You can get similar cards made at [moo.com](moo.com).
 
 ### Front
 `r tufte::margin_note("Boilerplate front matter.")`
