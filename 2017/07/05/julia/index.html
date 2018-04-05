@@ -22,7 +22,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="Cameron&#39;s Blog">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.38" />
 
   
 
@@ -127,10 +127,10 @@ body {
 <p>There really doesn&rsquo;t appear to be an easy answer to the problem &ndash; my brother noted this:</p>
 
 <blockquote>
-<p>Friend of mine says that traversing a directed graph is NP-Complete, so brute-force is the way to do it. Probably<sup class="footnote-ref" id="fnref:a14987c3"><a rel="footnote" href="#fn:a14987c3">1</a></sup>.</p>
+<p>Friend of mine says that traversing a directed graph is NP-Complete, so brute-force is the way to do it. Probably<sup class="footnote-ref" id="fnref:a14987c3"><a href="#fn:a14987c3">1</a></sup>.</p>
 </blockquote>
 
-<p>I thought it seemed like a perfect time to try out Julia. The past two weeks or so I&rsquo;ve been idly combing through Julia&rsquo;s <a href="https://docs.julialang.org/en/stable/">fantastic documentation</a>, and I&rsquo;ve been really impressed by the syntax<sup class="footnote-ref" id="fnref:110a8281"><a rel="footnote" href="#fn:110a8281">2</a></sup> and ease at which you can handle very fast processes.</p>
+<p>I thought it seemed like a perfect time to try out Julia. The past two weeks or so I&rsquo;ve been idly combing through Julia&rsquo;s <a href="https://docs.julialang.org/en/stable/">fantastic documentation</a>, and I&rsquo;ve been really impressed by the syntax<sup class="footnote-ref" id="fnref:110a8281"><a href="#fn:110a8281">2</a></sup> and ease at which you can handle very fast processes.</p>
 
 <p>What I wanted to do was basically try and brute force the problem. Here&rsquo;s my pseudocode.</p>
 
@@ -178,7 +178,7 @@ end
 end
 </code></pre>
 
-<p>These two functions are called by <code>makechain</code>, which picks the first number<sup class="footnote-ref" id="fnref:f0d5da3f"><a rel="footnote" href="#fn:f0d5da3f">3</a></sup>, and then tests if subsequent random numbers are valid. When it runs out of valid numbers, it spits out the answer.</p>
+<p>These two functions are called by <code>makechain</code>, which picks the first number<sup class="footnote-ref" id="fnref:f0d5da3f"><a href="#fn:f0d5da3f">3</a></sup>, and then tests if subsequent random numbers are valid. When it runs out of valid numbers, it spits out the answer.</p>
 
 <pre><code>function makechain(limit::Int64)
   possible = Array(1:limit)
