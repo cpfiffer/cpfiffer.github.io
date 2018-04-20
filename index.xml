@@ -6,10 +6,19 @@
     <description>Recent content on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PhD</title>
+      <link>/2018/04/19/phd/</link>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/04/19/phd/</guid>
+      <description>I’m going to be a PhD student at the University of Oregon! I am looking forward to working with some spectacularly bright people.</description>
+    </item>
     
     <item>
       <title>Scientific Papers</title>
