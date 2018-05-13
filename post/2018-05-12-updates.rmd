@@ -1,0 +1,40 @@
+---
+title: "Updates"
+date: 2018-05-12T15:08:05-07:00
+draft: false
+---
+
+```{r echo=FALSE, include=FALSE}
+library(dplyr)
+library(maps)
+```
+
+I'm trying to get better about writing more things. To that end, I figured I should post some general updates on the things I've done lately.
+
+## New York
+
+My [brother](qpfiffer.com) and I just got back from a week-long trip to upstate New York to see our grandmother. She's a cool lady, and we figured since we're both sort of adults with jobs we should drop in. I raced BMX a little bit, wiped out a bit, and generally had a good time with cool folks. I also had the advantage of driving down to Palmyra/Hershey Pennsylvania to seet my cousins, three of whom are traditionally brilliant and one of which is at the fantastic [Milton Hershey School](https://www.mhskids.org/).
+
+```{r fig-margin, fig.margin=TRUE, echo=FALSE}
+map('state', region ='new york')
+```
+_New York State_
+
+## University of Oregon Visit
+
+```{r echo=FALSE}
+map("state", "Oregon")
+data(us.cities)
+eugene = us.cities %>%
+  filter(name == "Eugene OR")
+map.cities(eugene, country="OR")
+```
+_Eugene, OR -- Home of the University of Oregon_
+
+I had previously mentioned that I was fortunate enough to be accepted to a PhD program at the University of Oregon, a superb school with some brilliant people. I drove down to Eugene this past Friday to introduce myself to everyone. I was honestly a bit afraid that my market microstructure interests would be swept under the rug to work on whatever the faculty was most skilled in[^1], but that was very quickly laid to rest when I spoke with everyone. I'm perhaps the happiest I have been in a long time, and I drove the two hours home with a bit of a grin on my face.
+
+[^1]: Primarily corporate finance, asset management, and asset pricing. Mostly on the empirical side.
+
+## Chapel
+
+Commensurate with my inability to focus on any particular piece of software for more than a week, I spent a good portion of the past couple days messing around with [Chapel](https://github.com/chapel-lang/chapel), Cray's simple parallel solution. It was probably the most substantive interation I've ever had with a sort-of-C language. Man, it is incredibly simple to do some otherwise complicated parallelization feats, and it's all first class. My issue with it is that it seems like it may die long before it ever catches on -- it's been in development for years now and the package ecosystem is miniscule.
