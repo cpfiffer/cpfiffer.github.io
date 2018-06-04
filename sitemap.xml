@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/2018/06/03/rust--more/</loc>
+    <lastmod>2018-06-03T21:01:18-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2018/05/22/down-with-business/</loc>
     <lastmod>2018-05-22T05:39:43-07:00</lastmod>
   </url>
@@ -114,7 +119,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-05-22T05:39:43-07:00</lastmod>
+    <lastmod>2018-06-03T21:01:18-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -179,7 +184,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-05-22T05:39:43-07:00</lastmod>
+    <lastmod>2018-06-03T21:01:18-07:00</lastmod>
     <priority>0</priority>
   </url>
   

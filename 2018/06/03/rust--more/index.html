@@ -15,7 +15,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
 <head>
-<title>Cameron&#39;s Blog - Scientific Papers</title>
+<title>Cameron&#39;s Blog - Rust &amp; More</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,7 +72,7 @@ body {
 <section>
   <h1 class="content-title">
   
-  <a href="/2018/04/05/scientific-papers/">Scientific Papers</a>
+  <a href="/2018/06/03/rust--more/">Rust &amp; More</a>
   
   </h1>
   
@@ -90,12 +90,12 @@ body {
   
   
   <i class="fa fa-calendar"></i>
-    &nbsp;Apr 5, 2018
+    &nbsp;Jun 3, 2018
   
   
   
   &nbsp;<i class="fa fa-clock-o"></i>
-    &nbsp;1 min read
+    &nbsp;2 min read
   
   
   
@@ -105,15 +105,18 @@ body {
     </section>
 
 
-<section><p>An <a href="https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/">excellent article</a> from the Atlantic explores the way that computational essays haven&rsquo;t seemed to penetrate academia. There&rsquo;s some information about the contest between open source and for-profit tools, like this:</p>
-
-<blockquote>
-<p>But it’s hard to sell the scientific community on a piece of commercial software. Even though Wolfram Research has given away a free Mathematica notebook viewer for years, and even though most major universities already have a site license that lets their students and faculty use Mathematica freely, it might be too much to ask publishers to abandon PDFs, an open format, for a proprietary product.</p>
-</blockquote>
-
-<p>Fair point. Why use Mathematica when you have Jupyter, which gives you access to R (in which this post is written), Julia, Python, and nearly any other worthwhile language?</p>
-
-<p>The broader point is about the failings in take up in the scientific community. Honestly, it&rsquo;s one of those blatantly obvious points I don&rsquo;t ever think about. There&rsquo;s very little reason to publish the same droll LaTeX paper when you can spit out a highly interactive web document even just a PDF that exposes some of your code &ndash; it&rsquo;s just about providing information and making sure people <em>understand</em> it.</p>
+<section><p>For the past two or so weeks I’ve been spending a lot of time writing <a href="https://www.rust-lang.org/">Rust</a>. Rust is a really spectacularly designed language with perhaps the greatest package manager<label for="tufte-mn-" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-" class="margin-toggle"><span class="marginnote">It’s called <a href="https://crates.io/">Cargo</a>.</span> I have ever experienced.</p>
+<p>Rust is fascinating to me because it’s one of my first true compiled languages. In contrast to the other languages I’m somewhat good at:</p>
+<ul>
+<li>R (mostly interpereted)</li>
+<li>Python (interpereted)</li>
+<li>C# (JIT compiled)</li>
+<li>Julia (JIT compiled)</li>
+</ul>
+<p>I am only passingly familiar with C and have mostly repressed C++, so Rust was both new and refreshing to me. The workflows are strikingly different – with Julia or R or what have you, I go through a very rapid iterative process. Write something, run it, see what worked, fix it, move on to the next issue. It’s very slapdash.</p>
+<p>With Rust (and, I presume other compiled languages), I have to stop and <em>think</em> a lot more about what I’m doing and how I’m doing it. This is a bit more important in Rust because of the concept of <strong>ownership</strong>, an entirely bizarre concept of who owns what thing in any given program.</p>
+<p>My (admittedly frail) understanding of ownership is that everything that exists in a program is owned by a varible. Once that variable goes out of scope, the memory allocated goes with it. It’s how Rust manages memory safety. It has a pretty steep learning curve initially, but once you’ve learned it it’s almost effortless to use.</p>
+<p>All in all, it’s a spectacular language. Fast, too. And ultra strongly typed with none of the rigid puritanical stuff that comes with Haskell.</p>
 </section>
 <section>
   
