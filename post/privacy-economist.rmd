@@ -1,0 +1,10 @@
+---
+title: "Privacy Economist"
+author: "Cameron Pfiffer"
+date: 2018-06-06T05:33:04-07:00
+draft: false
+---
+
+Via [The Economist](https://www.economist.com/technology-quarterly/2018-05-02/justice?utm_campaign=Data_Elixir&utm_medium=email&utm_source=Data_Elixir_185):
+
+>Some people argue that those who have done nothing wrong need not worry. But that justifies limitless state surveillance, and risks a chilling effect on citizens’ fundamental civil liberties. After all, if you are not planning crimes while talking on the phone, why not just let police officers listen to every call? Police need oversight not because they are bad people but because maintaining the appropriate balance between liberty and security requires constant vigilance by engaged citizens. This is doubly true for new technologies that make police better at their jobs when policy, due process and public opinion have not caught up. 

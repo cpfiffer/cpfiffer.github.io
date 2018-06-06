@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Jun 2018 21:01:18 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 06 Jun 2018 05:33:04 -0700</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Privacy Economist</title>
+      <link>/2018/06/06/privacy-economist/</link>
+      <pubDate>Wed, 06 Jun 2018 05:33:04 -0700</pubDate>
+      
+      <guid>/2018/06/06/privacy-economist/</guid>
+      <description>Via The Economist:
+ Some people argue that those who have done nothing wrong need not worry. But that justifies limitless state surveillance, and risks a chilling effect on citizens’ fundamental civil liberties. After all, if you are not planning crimes while talking on the phone, why not just let police officers listen to every call? Police need oversight not because they are bad people but because maintaining the appropriate balance between liberty and security requires constant vigilance by engaged citizens.</description>
+    </item>
     
     <item>
       <title>Rust &amp; More</title>
