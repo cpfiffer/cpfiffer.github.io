@@ -1,0 +1,13 @@
+---
+title: "Deep Learning Is Insufficient"
+author: "Cameron Pfiffer"
+date: 2018-06-08T06:20:22-07:00
+draft: false
+---
+
+Via [Gary Marcus](https://arxiv.org/abs/1801.00631):
+
+>Thus, for example, in a system like Lerer et al’s (2016) efforts to learn about the physics of falling towers, there is no prior knowledge of physics (beyond what is implied in convolution). Newton’s laws, for example, are not explicitly encoded; the system instead (to some limited degree) approximates them by learning contingencies from raw, pixel level data. As I note in a forthcoming paper in innate (Marcus, in prep) researchers in deep learning appear to have a very strong bias against including prior knowledge even 
+when (as in the case of physics) that prior knowledge is well known.  
+
+Marcus' article contains a wide variety of detailed critiques on why he believes that deep learning is flawed in a lot of ways -- namely, that it is not the end-all-be-all of artificial intelligence, only that it is a component part of future generalized intelligence. It's a wonderful read.

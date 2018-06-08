@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Jun 2018 05:33:04 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 08 Jun 2018 06:20:22 -0700</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deep Learning Is Insufficient</title>
+      <link>/2018/06/08/deep-learning-is-insufficient/</link>
+      <pubDate>Fri, 08 Jun 2018 06:20:22 -0700</pubDate>
+      
+      <guid>/2018/06/08/deep-learning-is-insufficient/</guid>
+      <description>Via Gary Marcus:
+ Thus, for example, in a system like Lerer et al’s (2016) efforts to learn about the physics of falling towers, there is no prior knowledge of physics (beyond what is implied in convolution). Newton’s laws, for example, are not explicitly encoded; the system instead (to some limited degree) approximates them by learning contingencies from raw, pixel level data. As I note in a forthcoming paper in innate (Marcus, in prep) researchers in deep learning appear to have a very strong bias against including prior knowledge even when (as in the case of physics) that prior knowledge is well known.</description>
+    </item>
     
     <item>
       <title>Privacy Economist</title>
