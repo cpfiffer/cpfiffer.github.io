@@ -32,6 +32,16 @@
     </item>
     
     <item>
+      <title>Privacy Economist</title>
+      <link>/privacy-economist/</link>
+      <pubDate>Wed, 06 Jun 2018 05:33:04 -0700</pubDate>
+      
+      <guid>/privacy-economist/</guid>
+      <description>Via The Economist:
+ Some people argue that those who have done nothing wrong need not worry. But that justifies limitless state surveillance, and risks a chilling effect on citizens’ fundamental civil liberties. After all, if you are not planning crimes while talking on the phone, why not just let police officers listen to every call? Police need oversight not because they are bad people but because maintaining the appropriate balance between liberty and security requires constant vigilance by engaged citizens.</description>
+    </item>
+    
+    <item>
       <title>Rust &amp; More</title>
       <link>/2018/06/03/rust--more/</link>
       <pubDate>Sun, 03 Jun 2018 21:01:18 -0700</pubDate>
@@ -256,9 +266,9 @@ Their first innovation was to treat what is referred to as stale quote arbitrage
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
       
       <guid>/about/</guid>
-      <description>I&amp;rsquo;m looking for work! If you need a financial analyst, data scientist, or just a quick learner, you can contact me at cpfiffer@gmail.com.
-I&amp;rsquo;m a graduate student in finance. I also play with code, and occasionally piano. This is a little website I built, partly as a portfolio of some of the stuff I can do, but also because it&amp;rsquo;s fun.
-I have a master&amp;rsquo;s in finance from the ICMA Centre at the Henley Business School (which itself is part of the University of Reading1) Nominally, my degree is in corporate finance, though I&amp;rsquo;ve studied most business disciplines.</description>
+      <description>&amp;#8853;  &amp;#8853; It&amp;rsquo;s me! I&amp;rsquo;m a graduate student in finance. I also play with code and pianos.
+I have a master&amp;rsquo;s in finance from the ICMA Centre at the Henley Business School (which itself is part of the University of Reading). Come fall, I will be a PhD student at the University of Oregon studying finance.
+My interests are pretty broad in finance, but in general I tend to favor situations where technology is involed:</description>
     </item>
     
   </channel>
