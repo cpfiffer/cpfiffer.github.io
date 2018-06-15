@@ -628,6 +628,7 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
   body {
     width: 100% !important;
     padding-left: 5% !important;
+    padding-right: 5% !important;
   }
 
 }
@@ -636,7 +637,7 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
 @media all and (max-width: 760px) {
 
   pre {
-   width: 85%;
+   width: 100%;
   }
   pre code {
     width: 90% !important;
