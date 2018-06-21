@@ -6,10 +6,20 @@
     <description>Recent content on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Jun 2018 06:51:27 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jun 2018 06:56:21 -0700</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Links</title>
+      <link>/links/</link>
+      <pubDate>Wed, 20 Jun 2018 06:56:21 -0700</pubDate>
+      
+      <guid>/links/</guid>
+      <description> Miscellaneous links I think are good.
+Books Data Science  Forecasting: Principles and Practice R for Data Science  Machine Learning &amp;amp; AI  Neural Networks and Deep Learning Deep Learning  Math  Calculus  Services Media  Plex  News  The Wall Street Journal Washington Post FiveThirtyEight  </description>
+    </item>
     
     <item>
       <title>Good Book</title>
