@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/2018/06/25/information-theory/</loc>
+    <lastmod>2018-06-25T21:30:55-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/links/</loc>
     <lastmod>2018-06-20T06:56:21-07:00</lastmod>
   </url>
@@ -19,11 +24,6 @@
   
   <url>
     <loc>/2018/06/06/privacy-economist/</loc>
-    <lastmod>2018-06-06T05:33:04-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/privacy-economist/</loc>
     <lastmod>2018-06-06T05:33:04-07:00</lastmod>
   </url>
   
@@ -144,7 +144,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-06-20T06:56:21-07:00</lastmod>
+    <lastmod>2018-06-25T21:30:55-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -209,7 +209,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-06-20T06:51:27-07:00</lastmod>
+    <lastmod>2018-06-25T21:30:55-07:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Jun 2018 06:51:27 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jun 2018 21:30:55 -0700</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Information Theory</title>
+      <link>/2018/06/25/information-theory/</link>
+      <pubDate>Mon, 25 Jun 2018 21:30:55 -0700</pubDate>
+      
+      <guid>/2018/06/25/information-theory/</guid>
+      <description>&amp;#8853; An Introduction to Information Theory by John R. Pierce. I&amp;rsquo;ve recently been perusing an introductory text of information theory. Information theory is one of those things that I have always wanted to look into but never gotten around to &amp;ndash; but now I am an adult with real things to try not to do, so I figured what the hell.
+Information theory is the scientific study of how information can be quantified, stored, and communicated efficiently.</description>
+    </item>
     
     <item>
       <title>Good Book</title>

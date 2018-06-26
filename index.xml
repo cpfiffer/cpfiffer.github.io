@@ -6,10 +6,20 @@
     <description>Recent content on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Jun 2018 06:56:21 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jun 2018 21:30:55 -0700</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Information Theory</title>
+      <link>/2018/06/25/information-theory/</link>
+      <pubDate>Mon, 25 Jun 2018 21:30:55 -0700</pubDate>
+      
+      <guid>/2018/06/25/information-theory/</guid>
+      <description>&amp;#8853; An Introduction to Information Theory by John R. Pierce. I&amp;rsquo;ve recently been perusing an introductory text of information theory. Information theory is one of those things that I have always wanted to look into but never gotten around to &amp;ndash; but now I am an adult with real things to try not to do, so I figured what the hell.
+Information theory is the scientific study of how information can be quantified, stored, and communicated efficiently.</description>
+    </item>
     
     <item>
       <title>Links</title>
@@ -46,16 +56,6 @@ Books Data Science  Forecasting: Principles and Practice R for Data Science  Mac
       <pubDate>Wed, 06 Jun 2018 05:33:04 -0700</pubDate>
       
       <guid>/2018/06/06/privacy-economist/</guid>
-      <description>Via The Economist:
- Some people argue that those who have done nothing wrong need not worry. But that justifies limitless state surveillance, and risks a chilling effect on citizens’ fundamental civil liberties. After all, if you are not planning crimes while talking on the phone, why not just let police officers listen to every call? Police need oversight not because they are bad people but because maintaining the appropriate balance between liberty and security requires constant vigilance by engaged citizens.</description>
-    </item>
-    
-    <item>
-      <title>Privacy Economist</title>
-      <link>/privacy-economist/</link>
-      <pubDate>Wed, 06 Jun 2018 05:33:04 -0700</pubDate>
-      
-      <guid>/privacy-economist/</guid>
       <description>Via The Economist:
  Some people argue that those who have done nothing wrong need not worry. But that justifies limitless state surveillance, and risks a chilling effect on citizens’ fundamental civil liberties. After all, if you are not planning crimes while talking on the phone, why not just let police officers listen to every call? Police need oversight not because they are bad people but because maintaining the appropriate balance between liberty and security requires constant vigilance by engaged citizens.</description>
     </item>
