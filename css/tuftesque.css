@@ -262,8 +262,8 @@ html {
 
 body {
   width: 100%;
-  /* margin-left: 10%; */
-  /* margin-right: 10%; */
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 25%;
   padding-right: 25%;
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif !important;
