@@ -270,11 +270,11 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 25%;
+  padding-right: 25%;
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif !important;
   background-color: #fffff8;
-  color: #111;
+  color: #333;
   max-width: 1400px;
   counter-reset: sidenote-counter;
 }
@@ -332,7 +332,7 @@ section {
 }
 
 p, ol, ul {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 p {
