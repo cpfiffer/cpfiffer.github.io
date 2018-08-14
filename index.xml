@@ -6,10 +6,20 @@
     <description>Recent content on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Jul 2018 19:36:58 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 13 Aug 2018 21:14:11 -0700</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Interesting Papers</title>
+      <link>/2018/08/13/interesting-papers/</link>
+      <pubDate>Mon, 13 Aug 2018 21:14:11 -0700</pubDate>
+      
+      <guid>/2018/08/13/interesting-papers/</guid>
+      <description>Via arXiv:
+ We develop a large-scale deep learning model to predict price movements from limit order book (LOB) data of cash equities. The architecture utilises convolutional filters to capture the spatial structure of the limit order books as well as LSTM modules to capture longer time dependencies. The model is trained using electronic market quotes from the London Stock Exchange. Our model delivers a remarkably stable out-of-sample prediction accuracy for a variety of instruments and outperforms existing methods such as Support Vector Machines, standard Multilayer Perceptrons, as well as other previously proposed convolutional neural network (CNN) architectures.</description>
+    </item>
     
     <item>
       <title>Why Finance</title>

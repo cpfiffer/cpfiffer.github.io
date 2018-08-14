@@ -165,8 +165,8 @@ label.margin-toggle {
 
 
 #homepage{
-  width: 50%;
-  margin: 0 auto;
+  width: 100%;
+  margin: auto auto;
   color: #111111;
 }
 
@@ -196,6 +196,7 @@ h1 {
 h4.content-title{
   margin-top: 0;
   padding-left: 0% !important;
+  margin: auto;
 }
 
 
