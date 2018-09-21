@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Sep 2018 18:33:01 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 20 Sep 2018 20:58:31 -0700</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dat Site</title>
+      <link>/2018/09/20/dat-site/</link>
+      <pubDate>Thu, 20 Sep 2018 20:58:31 -0700</pubDate>
+      
+      <guid>/2018/09/20/dat-site/</guid>
+      <description>This site is now accessible via the peer-to-peer browser Beaker via dat://cameron.pfiffer.org or directly at dat://d9bb03a966c47ea49469c48111085635a6388a532dfe671cab057688560ff3e4/.</description>
+    </item>
     
     <item>
       <title>Math Camp - Week 2</title>
