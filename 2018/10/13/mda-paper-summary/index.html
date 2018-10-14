@@ -1,0 +1,195 @@
+
+<span class="camerons_logo">
+      <span class = "blog_logo">
+        <h1> Cameron's Blog </h1>
+         
+      </span>
+      <h3> <i> Finance, statistics, data, and other trash </i> </h3>
+      <h4><a href="/"> Blog </a> ∘ <a href="/about"> About </a> ∘ <a href="/links"> Links </a> ∘ <a href="https://github.com/cpfiffer"> Github </a> </h4>
+      
+</span>
+
+<hr>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+<title>Cameron&#39;s Blog - MD&amp;A Paper Summary</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Cameron&#39;s Blog">
+<meta name="generator" content="Hugo 0.49.2" />
+
+  
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/tuftesque.css">
+<style>
+body {
+  
+    background-color:  white;
+  
+}
+</style>
+
+
+
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+</head>
+
+<body>
+<div id="layout" class="pure-g">
+<article class="pure-u-1">
+<section>
+  <div class="content-row">
+
+  <div class="content-row-title">
+  
+  <a href="/2018/10/13/mda-paper-summary/">MD&amp;A Paper Summary</a>
+  
+
+  &nbsp;
+  
+  &nbsp;
+  
+  <span class="index-date">
+  &nbsp;Oct 13, 2018
+  </span class="index-date">
+</div>
+  
+</div>
+<hr>
+  
+  <span class="content-meta">
+
+  
+
+
+
+
+  
+
+  
+    </span>
+    
+    
+    </section>
+
+
+
+<section><p><strong>This was written as a summary for an interesting paper I read for a class on whether or not the MD&amp;A section of financial statements can be predictive of bankruptcy.</strong></p>
+
+<label for="paper-source" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="paper-source" class="margin-toggle"/>
+<span class="marginnote">Mayew, William J., Mani Sethuraman, and Mohan Venkatachalam. <em>MD&amp;A Disclosure and the Firm’s Ability to Continue as a Going Concern</em>. The Accounting Review 90, no. 4 (July 2015): 1621–51. <a href="https://doi.org/10.2308/accr-50983">https://doi.org/10.2308/accr-50983</a>.</span>
+
+
+<p>Mayew, Sethuraman and Venkatachalam (2015) present a study on the role that the textual properties of a firm&rsquo;s MD&amp;A section plays in predicting bankruptcy. The research topic came about primarily to inform the debate on whether or not the FASB should require management to assess if the firm is a going concern, though it is more interesting in general for the methodology by which they analyze the MD&amp;A text.</p>
+
+<p>Prior to this paper, literature focused on small samples to determine whether MD&amp;A was predictive of bankruptcy. Mayew et al. use a fairly substantial sample size to broadly describe the predictive capacity of MD&amp;A disclosures. They include numerous other predictive factors, such as the auditor&rsquo;s opinion and the financials. They were able to accomplish this by using almost entirely automated techniques<sup class="footnote-ref" id="fnref:automated"><a href="#fn:automated">1</a></sup>, a contribution to the literature in itself. This paper also joins a litany of others in the bankruptcy prediction space.</p>
+
+<p>Given a collection of textual data (MD&amp;A) can one predict the likelihood of a firm entering bankruptcy? Mayew et al. answer this in a straightforward manner. The probability of a firm going bankrupt next year is determined by estimating a hazard model, which can be used to estimate the probability of a firm failing in a given time frame. I found it interesting (based on my limited knowledge of hazard models) that their hazard model can be reduced so succintly to a simple regression.</p>
+
+<label for="lough" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="lough" class="margin-toggle"/>
+<span class="marginnote">Loughran, Tim and McDonald, Bill, <em>When is a Liability not a Liability? Textual Analysis, Dictionaries, and 10-Ks</em> (March 4, 2010). Journal of Finance, Forthcoming. Available at SSRN: <a href="https://ssrn.com/abstract=1331573">https://ssrn.com/abstract=1331573</a></span>
+
+
+<p>Mayew et al. use three primary variables sourced from the MD&amp;A text. <em>GC_MGMT</em> is coded as a 1 when the management has expressed a going concern. This coding was performed manually, and the appendix provides some examples of what was considered to be an expression of going concern. <em>POSMDA(%)</em> represents the percentage of positive words in the MD&amp;A, and <em>NEGMDA(%)</em> represents the percentage of negative words in the MD&amp;A. Words are determined to be positive or negative as provided in Loughran and McDonald (2011) who created an alternative list of positive and negative words that are applicable in financial contexts.</p>
+
+<p>The above MD&amp;A independent variables are used to predict <em>BRUPT</em>, which is coded as a one when a firm goes bankrupt the following year and zero otherwise. Mayew et al. use numerous other variables, such as the auditor&rsquo;s going concern opinion or sales to total assets. In my opinion, these are not exceptionally important to the main finding of the paper, except insofar as they demonstrate the incremental predictive ability of the MD&amp;A text.</p>
+
+<p>The sample includes 460 bankrupt firms between 1995 and 2012, as well as the accompanying MD&amp;A, auditor&rsquo;s reports, and financial variables for each firm-year. There is an additional 42,265 non-bankrupt firm-years as a baseline. This sample would appear to be soundly assembled. 460 bankrupt firms is a fairly substantial sample size to estimate on.</p>
+
+<p>Mayew et al. present striking results for models constructed only on <em>GC_MGMT</em>, <em>POSMDA(%)</em>, and <em>NEGMDA(%)</em>. The model has a pseudo-R$^2$ of 14.58%, with very high significance for each variable. The highest parameter estimate was on <em>GC_MGMT</em> with -2.880<sup class="footnote-ref" id="fnref:gc"><a href="#fn:gc">2</a></sup>, which indicates that an expression of going concern is highly explanatory of a firm&rsquo;s future bankruptcy. Perhaps more importantly, the parameters estimate declines to only 2.096 when all the financial variables are included.</p>
+
+<p>The author&rsquo;s paper generally well supports the idea that MD&amp;A disclosures contain information relevant to predicting a bankruptcy, even using fairly simlistic methods. Taking the percentage of positive and negative words and determining whether the management has expressed a going concern have proved to be powerful predictors. The model inclusive of the auditor&rsquo;s opinion, the MD&amp;A variables, and financial variables proved to be well-fit with a Pseudo-R$^2$ of 21.13%.</p>
+
+<p>While this is an interesting finding, there is much more that could be done in this space. The natural-language processing space in machine learning has experienced tremendous growth in the past several years, and I suspect that applications from that space would apply well to MD&amp;A analysis.</p>
+
+<label for="nlp" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="nlp" class="margin-toggle"/>
+<span class="marginnote">Kraus, Mathias, and Stefan Feuerriegel. <em>Decision Support from Financial Disclosures with Deep Neural Networks and Transfer Learning</em>. Decision Support Systems 104 (December 2017): 38–48. <a href="https://doi.org/10.1016/j.dss.2017.10.001">https://doi.org/10.1016/j.dss.2017.10.001</a>.</span>
+
+
+<p>For example, Kraus et al. apply a variety of deep learning techniques traditionally used to model arbitrary text sequences, such as recurrent (RNN) and long-term short-memory (LTSM) neural networks. These architectures may address issues that Mayew et al. generate with their modeling technique.</p>
+
+<p>A key issue with Mayew et al. is that using <em>POSMDA(%)</em> and <em>NEGMDA(%)</em> discard any possibility of understanding the <em>context</em> of a word and the context of the words around it. The phrase &ldquo;Our performance was spectacular&rdquo; and &ldquo;Our performance was not spectacular&rdquo; are nearly identical, but have radically different meanings. LTSM and RNN networks can model the relationship between words for exceptionally long sentences, paragraphs, and documents, and better improve on Mayew et al.&rsquo;s predictive variables. Kraus et al. demonstrated a test sample accuracy of 57%<sup class="footnote-ref" id="fnref:kraus-table"><a href="#fn:kraus-table">3</a></sup> on classifying the direction of a stock return after the release of a financial disclosure. With some modifications, the entirety of the model could be used to predict Mayew et al.&rsquo;s bankruptcy variable.</p>
+
+<p>Additionally, it is possible to include the text of the auditor&rsquo;s opinion in the same model type to increase predictive power. It would be interesting to see if there was additional information that could be gathered from the opinion that was more comprehensive than whether or not the auditor had expressed a material going concern.</p>
+
+<p>Financial variables as well could be included, though in a less straightforward manner. An optimal solution would be to design a deep learning architecture such that the relationship between the lexical structure of the MD&amp;A and the entire time-series of current and previous financial variables could be discerned. This is a markedly more complex topic as it would seem to require numerous compositional models.</p>
+
+<p>Mayew et al. demonstrate using pleasantly straightforward methods the fact that brankrupcty can be predicted by the content of the MD&amp;A. This confirms an intuitive understanding of the paper&rsquo;s topic, which is that management often knows more about the firm than do average investors, and that financial variables do not necessarily contain all the information necessary to get a holistic understanding of the firm.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:automated">Much of the manual work seems to have been related to manually coding whether or not the management had expressed a going concern.
+ <a class="footnote-return" href="#fnref:automated"><sup>[return]</sup></a></li>
+<li id="fn:gc">Sourced from Table 3, column 4.
+ <a class="footnote-return" href="#fnref:gc"><sup>[return]</sup></a></li>
+<li id="fn:kraus-table">This is located in Table 2, column 2.
+ <a class="footnote-return" href="#fnref:kraus-table"><sup>[return]</sup></a></li>
+</ol>
+</div>
+</section>
+<section>
+  
+
+
+      
+  <footer class="page-footer">
+		<hr>
+		<ul class="page-footer-menu">
+		
+		</ul>
+
+  
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</footer>
+
+</section>
+</article>
+</div>
+</body>
+</html>
