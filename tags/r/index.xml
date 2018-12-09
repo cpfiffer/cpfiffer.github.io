@@ -23,10 +23,10 @@
     
     <item>
       <title>Credit Risk &amp; Logistic Regression</title>
-      <link>/2017/05/01/credit-risk--logistic-regression/</link>
+      <link>/2017/05/01/credit-risk-logistic-regression/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/05/01/credit-risk--logistic-regression/</guid>
+      <guid>/2017/05/01/credit-risk-logistic-regression/</guid>
       <description>I thought I’d do a little bit of analysis to showcase some credit risk analysis, using logistic regression. I’ve pulled this sample loan data from a DataCamp course on credit risk. It’s a cool class, you should check it out if you have time. In a later post, I will try this same analysis with a neural network to see if it has better predictive capabilities.
 Here’s a look at the data.</description>
     </item>

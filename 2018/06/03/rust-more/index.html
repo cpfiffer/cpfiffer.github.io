@@ -15,7 +15,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
 <head>
-<title>Cameron&#39;s Blog - I made a newspaper</title>
+<title>Cameron&#39;s Blog - Rust &amp; More</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,7 +73,7 @@ body {
 
   <div class="content-row-title">
   
-  <a href="/2017/05/01/i-made-a-newspaper/">I made a newspaper</a>
+  <a href="/2018/06/03/rust-more/">Rust &amp; More</a>
   
 
   &nbsp;
@@ -81,7 +81,7 @@ body {
   &nbsp;
   
   <span class="index-date">
-  &nbsp;May 1, 2017
+  &nbsp;Jun 3, 2018
   </span class="index-date">
 </div>
   
@@ -104,20 +104,21 @@ body {
 
 
 
-<section><p>A couple of my friends here at the University of Reading came up with an excellent idea to start a financial newspaper. The concept was that the society<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup> would collect articles on investing and other things finance and publish them in a monthly paper. Being one of the few native English speakers with an interest in editing and journalism, I was selected to run the paper as Chief Editor.</p>
+<section>
 
-<p>I&rsquo;m very proud of the results, you can find the finished version of the April edition <a href="https://www.dropbox.com/s/vicfm15cza2gt8u/RUIS-April.pdf?dl=0">here</a>. I wrote a couple articles, about the <a href="/2017/04/16/2017-05-01-federal-funds-hike/">federal funds hike</a> and <a href="/2017/04/16/2017-05-01-iex-s-crumbling-quote/">IEX</a>. I also wrote a lovely editors note, available in the full edition.</p>
 
-<p>We intend to release at least a few more editions before we all graduate, and we&rsquo;ll see how they turn out.</p>
-<div class="footnotes">
-
-<hr />
-
-<ol>
-<li id="fn:1">That&rsquo;s what they call &ldquo;clubs&rdquo; in the UK.
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-</ol>
-</div>
+<p>For the past two or so weeks I’ve been spending a lot of time writing <a href="https://www.rust-lang.org/">Rust</a>. Rust is a really spectacularly designed language with perhaps the greatest package manager<label for="tufte-mn-" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-" class="margin-toggle"><span class="marginnote">It’s called <a href="https://crates.io/">Cargo</a>.</span> I have ever experienced.</p>
+<p>Rust is fascinating to me because it’s one of my first true compiled languages. In contrast to the other languages I’m somewhat good at:</p>
+<ul>
+<li>R (mostly interpereted)</li>
+<li>Python (interpereted)</li>
+<li>C# (JIT compiled)</li>
+<li>Julia (JIT compiled)</li>
+</ul>
+<p>I am only passingly familiar with C and have mostly repressed C++, so Rust was both new and refreshing to me. The workflows are strikingly different – with Julia or R or what have you, I go through a very rapid iterative process. Write something, run it, see what worked, fix it, move on to the next issue. It’s very slapdash.</p>
+<p>With Rust (and, I presume other compiled languages), I have to stop and <em>think</em> a lot more about what I’m doing and how I’m doing it. This is a bit more important in Rust because of the concept of <strong>ownership</strong>, an entirely bizarre concept of who owns what thing in any given program.</p>
+<p>My (admittedly frail) understanding of ownership is that everything that exists in a program is owned by a varible. Once that variable goes out of scope, the memory allocated goes with it. It’s how Rust manages memory safety. It has a pretty steep learning curve initially, but once you’ve learned it it’s almost effortless to use.</p>
+<p>All in all, it’s a spectacular language. Fast, too. And ultra strongly typed with none of the rigid puritanical stuff that comes with Haskell.</p>
 </section>
 <section>
   

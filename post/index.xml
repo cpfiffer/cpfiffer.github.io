@@ -32,20 +32,20 @@
     
     <item>
       <title>Math Camp - Week 2</title>
-      <link>/2018/09/09/math-camp---week-2/</link>
+      <link>/2018/09/09/math-camp-week-2/</link>
       <pubDate>Sun, 09 Sep 2018 18:33:01 -0700</pubDate>
       
-      <guid>/2018/09/09/math-camp---week-2/</guid>
+      <guid>/2018/09/09/math-camp-week-2/</guid>
       <description>The second week of math camp has been finished up. This week, we got into the nuts and bolts of matrices, eigenvalue decompositions, and a couple other linear algebra-type things. I will say, I did not think that I would be spending so much time doing homework &amp;ndash; everyone I knew said something along the lines of &amp;ldquo;only two hours a day? Sounds easy.&amp;rdquo;
 Turns out, I have spent at least 4+ hours a day on miscellaneous math homework.</description>
     </item>
     
     <item>
       <title>Math Camp - Week 1</title>
-      <link>/2018/09/02/math-camp---week-1/</link>
+      <link>/2018/09/02/math-camp-week-1/</link>
       <pubDate>Sun, 02 Sep 2018 18:33:01 -0700</pubDate>
       
-      <guid>/2018/09/02/math-camp---week-1/</guid>
+      <guid>/2018/09/02/math-camp-week-1/</guid>
       <description>At the University of Oregon, all the economist and economist-light &amp;#8853; Here, &amp;ldquo;economist-light&amp;rdquo; just means all the business school disciplines; finance, marketing, accounting, etc. folks take a three week math camp designed to get them up to speed on everything they could ever possibly hope to know about the mathematics used in economics.
 Math camp started on Wednesday, August 29th, and so far I have had three math camp sessions which have shown me how little I know about absolutely anything.</description>
     </item>
@@ -111,10 +111,10 @@ Information theory is the scientific study of how information can be quantified,
     
     <item>
       <title>Rust &amp; More</title>
-      <link>/2018/06/03/rust--more/</link>
+      <link>/2018/06/03/rust-more/</link>
       <pubDate>Sun, 03 Jun 2018 21:01:18 -0700</pubDate>
       
-      <guid>/2018/06/03/rust--more/</guid>
+      <guid>/2018/06/03/rust-more/</guid>
       <description>For the past two or so weeks I’ve been spending a lot of time writing Rust. Rust is a really spectacularly designed language with perhaps the greatest package manager⊕It’s called Cargo. I have ever experienced.
 Rust is fascinating to me because it’s one of my first true compiled languages. In contrast to the other languages I’m somewhat good at:
  R (mostly interpereted) Python (interpereted) C# (JIT compiled) Julia (JIT compiled)  I am only passingly familiar with C and have mostly repressed C++, so Rust was both new and refreshing to me.</description>
@@ -279,10 +279,10 @@ I&amp;rsquo;ve also changed the theme to a modified version of paperback. The co
     
     <item>
       <title>Credit Risk &amp; Logistic Regression</title>
-      <link>/2017/05/01/credit-risk--logistic-regression/</link>
+      <link>/2017/05/01/credit-risk-logistic-regression/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/05/01/credit-risk--logistic-regression/</guid>
+      <guid>/2017/05/01/credit-risk-logistic-regression/</guid>
       <description>I thought I’d do a little bit of analysis to showcase some credit risk analysis, using logistic regression. I’ve pulled this sample loan data from a DataCamp course on credit risk. It’s a cool class, you should check it out if you have time. In a later post, I will try this same analysis with a neural network to see if it has better predictive capabilities.
 Here’s a look at the data.</description>
     </item>
