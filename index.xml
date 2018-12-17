@@ -6,10 +6,20 @@
     <description>Recent content on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Oct 2018 17:34:17 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 17 Dec 2018 07:28:24 -0800</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Selection mechanism design</title>
+      <link>/2018/12/17/selection-mechanism-design/</link>
+      <pubDate>Mon, 17 Dec 2018 07:28:24 -0800</pubDate>
+      
+      <guid>/2018/12/17/selection-mechanism-design/</guid>
+      <description>&amp;#8853; Dewhurst, David Rushing, Michael Vincent Arnold, and Colin Michael Van Oort, 2018, Selection mechanism design affects volatility in a market of evolving zero-intelligence agents, arXiv:1812.05657 [cs, q-fin]. Here&amp;rsquo;s an interesting paper from Dewherst, Arnold, and Van Oort published to arXiv. Dewherst et al. use an evolving multi-agent landscape to model evolutionary selection mechanisms applicable to markets.
+&amp;#8853; Lo, Andrew W, 2004, The Adaptive Markets Hypothesis, Journal of Portfolio Management, 15.</description>
+    </item>
     
     <item>
       <title>MD&amp;A Paper Summary</title>

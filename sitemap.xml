@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/2018/12/17/selection-mechanism-design/</loc>
+    <lastmod>2018-12-17T07:28:24-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2018/10/13/mda-paper-summary/</loc>
     <lastmod>2018-10-13T17:34:17-07:00</lastmod>
   </url>
@@ -173,13 +178,20 @@
   </url>
   
   <url>
+    <loc>/categories/adaptive-markets/</loc>
+    <lastmod>2018-12-17T07:28:24-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2018-10-13T17:34:17-07:00</lastmod>
+    <lastmod>2018-12-17T07:28:24-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
+    <lastmod>2018-12-17T07:28:24-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -239,7 +251,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-10-13T17:34:17-07:00</lastmod>
+    <lastmod>2018-12-17T07:28:24-08:00</lastmod>
     <priority>0</priority>
   </url>
   

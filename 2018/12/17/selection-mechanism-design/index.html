@@ -1,0 +1,168 @@
+
+<span class="camerons_logo">
+      <span class = "blog_logo">
+        <h1> Cameron's Blog </h1>
+         
+      </span>
+      <h3> <i> Finance, statistics, data, and other trash </i> </h3>
+      <h4><a href="/"> Blog </a> ∘ <a href="/about"> About </a> ∘ <a href="/links"> Links </a> ∘ <a href="https://github.com/cpfiffer"> Github </a> </h4>
+      
+</span>
+
+<hr>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+<title>Cameron&#39;s Blog - Selection mechanism design</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Cameron&#39;s Blog">
+<meta name="generator" content="Hugo 0.52" />
+
+  
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/tuftesque.css">
+<style>
+body {
+  
+    background-color:  white;
+  
+}
+</style>
+
+
+
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+</head>
+
+<body>
+<div id="layout" class="pure-g">
+<article class="pure-u-1">
+<section>
+  <div class="content-row">
+
+  <div class="content-row-title">
+  
+  <a href="/2018/12/17/selection-mechanism-design/">Selection mechanism design</a>
+  
+
+  &nbsp;
+  
+  &nbsp;
+  
+  <span class="index-date">
+  &nbsp;Dec 17, 2018
+  </span class="index-date">
+</div>
+  
+</div>
+  
+  <span class="content-meta">
+
+  
+
+
+
+
+  
+
+  
+    </span>
+    
+    
+    </section>
+
+
+
+<section><label for="source" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="source" class="margin-toggle"/>
+<span class="marginnote">Dewhurst, David Rushing, Michael Vincent Arnold, and Colin Michael Van Oort, 2018, Selection mechanism design affects volatility in a market of evolving zero-intelligence agents, arXiv:1812.05657 [cs, q-fin].</span>
+
+
+<p><a href="https://arxiv.org/abs/1812.05657">Here&rsquo;s an interesting paper</a> from Dewherst, Arnold, and Van Oort published to arXiv. Dewherst et al. use an evolving multi-agent landscape to model evolutionary selection mechanisms applicable to markets.</p>
+
+<label for="amg" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="amg" class="margin-toggle"/>
+<span class="marginnote">Lo, Andrew W, 2004, The Adaptive Markets Hypothesis, Journal of Portfolio Management, 15.</span>
+
+
+<p>Choosing a representative selection mechanism is somewhat important if you follow Andrew Lo&rsquo;s Adaptive Markets Hypothesis, where financial agents are weeded out in response to changing market conditions. Deherst et al. examine three selection mechanisms.</p>
+
+<label for="fba" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="fba" class="margin-toggle"/>
+<span class="marginnote">The authors use frequent batch auctions instread of continuous dual auctions. I&rsquo;m a big fan of frequent batch auctions, and you can read more about them in the <a href="https://faculty.chicagobooth.edu/eric.budish/research/HFT-FrequentBatchAuctions.pdf">Budish, Cramton and Shim (2015) paper</a>.</span>
+
+
+<p>The first is a global quantile-based measure, where the bottom 10% of all agents are eliminated when a selection event occurs. The second is a localized variant, where agents in a subsample are kept in the environment according to the probability</p>
+
+<p>$$p_i(t)=\frac{π_i(t)}{∑{π_j}}$$</p>
+
+<p>where $π_i$ is the fitness of agent $i$. This can be understood as awarding higher retention probabilities to agents with a high share of the sampled agent&rsquo;s fitness. The final metric uses the first metric with probability ½ and the second metric with probability ½.</p>
+
+<p>The agents have risk aversion, and are allowed to &ldquo;innovate&rdquo; by drawing their parameters from distributions unaffected by existing agents. If you don&rsquo;t innovate, you draw your parameters from a distribution represented by agents who were not removed.</p>
+
+<p>The results show that the quantile metric creates agents with higher average profitability, but that the localized variant has a higher correlation between micro and macro volatility.</p>
+
+<p>I&rsquo;m not quite sold at the end of the paper as to their selection mechanism, but I think it&rsquo;s an interesting vein of research.</p>
+</section>
+<section>
+  
+
+
+      
+  <footer class="page-footer">
+		<hr>
+		<ul class="page-footer-menu">
+		
+		</ul>
+
+  
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</footer>
+
+</section>
+</article>
+</div>
+</body>
+</html>
