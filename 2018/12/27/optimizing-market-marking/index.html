@@ -1,0 +1,191 @@
+
+<span class="camerons_logo">
+      <span class = "blog_logo">
+        <h1> Cameron's Blog </h1>
+         
+      </span>
+      <h3> <i> Finance, statistics, data, and other trash </i> </h3>
+      <h4><a href="/"> Blog </a> ∘ <a href="/about"> About </a> ∘ <a href="/links"> Links </a> ∘ <a href="https://github.com/cpfiffer"> Github </a> </h4>
+      
+</span>
+
+<hr>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+<title>Cameron&#39;s Blog - Optimizing Market Marking</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Cameron&#39;s Blog">
+<meta name="generator" content="Hugo 0.53" />
+
+  
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/tuftesque.css">
+<style>
+body {
+  
+    background-color:  white;
+  
+}
+</style>
+
+
+
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+</head>
+
+<body>
+<div id="layout" class="pure-g">
+<article class="pure-u-1">
+<section>
+  <div class="content-row">
+
+  <div class="content-row-title">
+  
+  <a href="/2018/12/27/optimizing-market-marking/">Optimizing Market Marking</a>
+  
+
+  &nbsp;
+  
+  &nbsp;
+  
+  <span class="index-date">
+  &nbsp;Dec 27, 2018
+  </span class="index-date">
+</div>
+  
+</div>
+  
+  <span class="content-meta">
+
+  
+
+
+
+
+  
+
+  
+    </span>
+    
+    
+    </section>
+
+
+
+<section>
+
+<p>Apparently I&rsquo;ve been on a kick reading some of these reinforcement learning/market making papers. Yagna Patel published an interesting paper on arXiv<sup class="footnote-ref" id="fnref:arxiv"><a href="#fn:arxiv">1</a></sup> discussing the application of a reinforcement learning agent to market making, one of my favorite topics. Market making, that is, not necessarily reinforcement learning.</p>
+
+<h1 id="why">Why</h1>
+
+<p>As Patel points out, there&rsquo;s three big concerns that users of machine learning in finance have to watch out for.</p>
+
+<ol>
+<li>Time. Significantly complex models take a while to make predictions.</li>
+<li>Accuracy. Predictive accuracy in financial markets can be low.</li>
+<li>Policy. Even if you have a model that shows a 55% chance of a uptick in price, how do you define policy to act on that information? More importantly, how do you define a policy that adapts to a changing fitness landscape?</li>
+</ol>
+
+<p>The overall goal here is to determine whether reinforcement learning is useful in market making.</p>
+
+<h1 id="what">What</h1>
+
+<p>From the abstract:</p>
+
+<blockquote>
+<p>In this paper, reinforcement learning is applied to the problem of optimizing market making. A multi-agent reinforcement learning framework is used to optimally place limit orders that lead to successful trades. The framework consists of two agents. The macro-agent optimizes on making
+the decision to buy, sell, or hold an asset. The micro-agent optimizes on placing limit orders within the limit order book. For the context of this paper, the proposed framework is applied and studied on the Bitcoin cryptocurrency market. The goal of this paper is to show that reinforcement learning is a viable strategy that can be applied to complex problems (with complex environments) such as market making.</p>
+</blockquote>
+
+<p>Patel essentially presents a two-stage RL model for tackling trading, though he fails to actually approach market making methods.</p>
+
+<h1 id="how">How</h1>
+
+<p>Patel somewhat misses the point on what market makers do in how his model is set up. There are two components. The first is the macro agent, which decides whether to <em>buy</em>, <em>sell</em>, or <em>hold</em>. The second component is a micro agent, which determines where to place the macro agent&rsquo;s buy or sell order. The missed point is that market makers shouldn&rsquo;t really be deciding whether to buy or sell; their goal is to place both buy and sell orders optimally within the order book, such that they minimize adverse selection and inventory risk. This macro agent design fails to model that behaviour, and already the paper has failed to answer the question as to whether RL can be applied to market making.</p>
+
+<p>Patel also chooses to use discrete-time modeling, for this reason:</p>
+
+<blockquote>
+<p>As noted in the problem statement, discrete time-steps are chosen (rather than continuous time-steps) for the  reason that continuous time-steps would not be possible in the real world since the WebSocket data itself arrives at discrete time-steps.</p>
+</blockquote>
+
+<p>I don&rsquo;t know that I buy that. Lots of microstructure folk (the crazy ones, anyway) use continuous time for this kind of thing, even though the WebSocket feeds are discrete. I suspect that it would be hard to model, so I can accept this.</p>
+
+<p>As this is a RL paper, the choice of reward function is somewhat important. The micro agent is evaluated against VWAP, which strikes me as odd. I&rsquo;m not sure this framework of a macro and micro agent works that well, as the micro agent should be making choices based on probabilities of informed trading and such.</p>
+
+<h1 id="thoughts">Thoughts</h1>
+
+<p>All in all, this is a really interesting paper, but it kind of misses the mark on market making. I&rsquo;d like to see something closer to the finance literature on this.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:arxiv">Where none of the best finance papers go. This is something of a sorry state of affairs &mdash; I really love the machine learning/microstructure papers that end up on arXiv, but many of the other papers are of an extremely low quality.
+ <a class="footnote-return" href="#fnref:arxiv"><sup>[return]</sup></a></li>
+</ol>
+</div>
+</section>
+<section>
+  
+
+
+      
+  <footer class="page-footer">
+		<hr>
+		<ul class="page-footer-menu">
+		
+		</ul>
+
+  
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</footer>
+
+</section>
+</article>
+</div>
+</body>
+</html>
