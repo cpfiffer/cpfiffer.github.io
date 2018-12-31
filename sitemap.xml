@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/2018/12/31/stock-prediction-with-news/</loc>
+    <lastmod>2018-12-31T06:15:40-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2018/12/27/optimizing-market-marking/</loc>
     <lastmod>2018-12-27T16:48:26-08:00</lastmod>
   </url>
@@ -190,7 +195,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-12-27T16:48:26-08:00</lastmod>
+    <lastmod>2018-12-31T06:15:40-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -256,7 +261,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-12-27T16:48:26-08:00</lastmod>
+    <lastmod>2018-12-31T06:15:40-08:00</lastmod>
     <priority>0</priority>
   </url>
   

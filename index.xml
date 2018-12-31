@@ -6,10 +6,20 @@
     <description>Recent content on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Dec 2018 16:48:26 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 31 Dec 2018 06:15:40 -0800</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stock Prediction With News</title>
+      <link>/2018/12/31/stock-prediction-with-news/</link>
+      <pubDate>Mon, 31 Dec 2018 06:15:40 -0800</pubDate>
+      
+      <guid>/2018/12/31/stock-prediction-with-news/</guid>
+      <description>&amp;#8853; Sardelich, Marcelo, and Suresh Manandhar, 2018, Multimodal deep learning for short-term stock volatility prediction, arXiv:1812.10479 [cs, q-fin, stat]. I&amp;rsquo;m always interested in seeing more people apply natural language processing to financial statements and headlines. A lot of the accounting literature where those kinds of tools are most likely to be useful uses very primitive techniques for textual analysis.
+So I was delighted to read this paper by Marcelo and Manandhar on arXiv where the authors gather headlines and attempt volatility forecasting.</description>
+    </item>
     
     <item>
       <title>Optimizing Market Marking</title>
@@ -17,9 +27,8 @@
       <pubDate>Thu, 27 Dec 2018 16:48:26 -0800</pubDate>
       
       <guid>/2018/12/27/optimizing-market-marking/</guid>
-      <description>Apparently I&amp;rsquo;ve been on a kick reading some of these reinforcement learning/market making papers. Yagna Patel published an interesting paper on arXiv1 discussing the application of a reinforcement learning agent to market making, one of my favorite topics. Market making, that is, not necessarily reinforcement learning.
-Why As Patel points out, there&amp;rsquo;s three big concerns that users of machine learning in finance have to watch out for.
- Time. Significantly complex models take a while to make predictions.</description>
+      <description>&amp;#8853; Patel, Yagna, 2018, Optimizing Market Making using Multi-Agent Reinforcement Learning, arXiv:1812.10252 [cs, q-fin, stat]. Apparently I&amp;rsquo;ve been on a kick reading some of these reinforcement learning/market making papers. Yagna Patel published an interesting paper on arXiv1 discussing the application of a reinforcement learning agent to market making, one of my favorite topics. Market making, that is, not necessarily reinforcement learning.
+Why As Patel points out, there&amp;rsquo;s three big concerns that users of machine learning in finance have to watch out for.</description>
     </item>
     
     <item>
