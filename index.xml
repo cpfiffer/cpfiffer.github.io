@@ -6,10 +6,20 @@
     <description>Recent content on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Dec 2018 06:15:40 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 01 Jan 2019 12:31:22 -0800</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2018 Retrospective</title>
+      <link>/2019/01/01/2018-retrospective/</link>
+      <pubDate>Tue, 01 Jan 2019 12:31:22 -0800</pubDate>
+      
+      <guid>/2019/01/01/2018-retrospective/</guid>
+      <description>It&amp;rsquo;s a new year, and I&amp;rsquo;ve gathered some notes from the year gone by.
+Achievements  Became a C# software developer. Went to Miami. Passed CFA Level One. Learned Rust, got better at Julia, introduced myself to OCaml, Haskell, and Chapel. Started a PhD. Visited my grandmother in upstate New York with my brother. Built and designed a tool to detect outlier performance in investment activities. Endured a lot of Southern Oregon&amp;rsquo;s wildfire smoke.</description>
+    </item>
     
     <item>
       <title>Stock Prediction With News</title>
@@ -377,6 +387,15 @@ Their first innovation was to treat what is referred to as stale quote arbitrage
       <description>&amp;#8853;  &amp;#8853; It&amp;rsquo;s me! I&amp;rsquo;m a graduate student in finance. I also play with code and pianos.
 I am a PhD student at the University of Oregon studying finance. I have a master&amp;rsquo;s in finance from the ICMA Centre at the Henley Business School (which itself is part of the University of Reading), and a BSc in Technical Theater from Southern Oregon University.
 My interests are pretty broad in finance, but in general I tend to favor situations where technology is involed:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/notes/order-cancellation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/order-cancellation/</guid>
+      <description>Notes on Order Cancellation Subrahmanyam, Zeng (2016) Notes  HFT firms do not cancel orders more frequently than others, when you look at the top 50 price levels. Uses 116 stocks on NASDAQ during Q1 2011. HFT dominates cancellations at the top three price levels. Order executions are similar between HFT and non-HFT at approximately 50 price levels. Median order rest time:     HFT 0.53 2.15 6.</description>
     </item>
     
   </channel>
