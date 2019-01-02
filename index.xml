@@ -390,7 +390,16 @@ My interests are pretty broad in finance, but in general I tend to favor situati
     </item>
     
     <item>
-      <title></title>
+      <title>Dataset Wishlist</title>
+      <link>/notes/wanted-datasets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/wanted-datasets/</guid>
+      <description> LOBSTER for limit order book reconstruction.  </description>
+    </item>
+    
+    <item>
+      <title>Order Cancellation</title>
       <link>/notes/order-cancellation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

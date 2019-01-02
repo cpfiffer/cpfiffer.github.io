@@ -193,10 +193,6 @@
   </url>
   
   <url>
-    <loc>/notes/order-cancellation/</loc>
-  </url>
-  
-  <url>
     <loc>/categories/adaptive-markets/</loc>
     <lastmod>2018-12-17T07:28:24-08:00</lastmod>
     <priority>0</priority>
@@ -218,6 +214,10 @@
     <loc>/categories/data-science/</loc>
     <lastmod>2017-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/notes/wanted-datasets/</loc>
   </url>
   
   <url>
@@ -271,6 +271,10 @@
   <url>
     <loc>/notes/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/notes/order-cancellation/</loc>
   </url>
   
   <url>
