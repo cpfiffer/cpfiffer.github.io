@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Jan 2019 12:31:22 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jan 2019 08:08:25 -0800</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AFA Webcasts</title>
+      <link>/2019/01/08/afa-webcasts/</link>
+      <pubDate>Tue, 08 Jan 2019 08:08:25 -0800</pubDate>
+      
+      <guid>/2019/01/08/afa-webcasts/</guid>
+      <description>From Susan Athey&amp;rsquo;s luncheon address on machine learning to the AFA:
+ &amp;hellip; and so we have to then develop on top of that best practices for analyzing a black box algorithm. And there&amp;rsquo;s not really like a science and convention on that. If somebody writes a difference-in-difference paper, there&amp;rsquo;s ten things you should do &amp;ndash; There are best practices, and we know how to evaluate whether you should believe the results or not.</description>
+    </item>
     
     <item>
       <title>2018 Retrospective</title>
