@@ -22,7 +22,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="Cameron&#39;s Blog">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.55.0" />
 
   
 
@@ -117,10 +117,9 @@ body {
 
 <section><p><strong>This was written as a summary for an interesting paper I read for a class on whether or not the MD&amp;A section of financial statements can be predictive of bankruptcy.</strong></p>
 
-<label for="paper-source" class="margin-toggle">&#8853;</label>
+<p><label for="paper-source" class="margin-toggle">&#8853;</label>
 <input type="checkbox" id="paper-source" class="margin-toggle"/>
-<span class="marginnote">Mayew, William J., Mani Sethuraman, and Mohan Venkatachalam. <em>MD&amp;A Disclosure and the Firm’s Ability to Continue as a Going Concern</em>. The Accounting Review 90, no. 4 (July 2015): 1621–51. <a href="https://doi.org/10.2308/accr-50983">https://doi.org/10.2308/accr-50983</a>.</span>
-
+<span class="marginnote"> Mayew, William J., Mani Sethuraman, and Mohan Venkatachalam. <em>MD&amp;A Disclosure and the Firm’s Ability to Continue as a Going Concern</em>. The Accounting Review 90, no. 4 (July 2015): 1621–51. <a href="https://doi.org/10.2308/accr-50983">https://doi.org/10.2308/accr-50983</a>.</span></p>
 
 <p>Mayew, Sethuraman and Venkatachalam (2015) present a study on the role that the textual properties of a firm&rsquo;s MD&amp;A section plays in predicting bankruptcy. The research topic came about primarily to inform the debate on whether or not the FASB should require management to assess if the firm is a going concern, though it is more interesting in general for the methodology by which they analyze the MD&amp;A text.</p>
 
@@ -128,10 +127,9 @@ body {
 
 <p>Given a collection of textual data (MD&amp;A) can one predict the likelihood of a firm entering bankruptcy? Mayew et al. answer this in a straightforward manner. The probability of a firm going bankrupt next year is determined by estimating a hazard model, which can be used to estimate the probability of a firm failing in a given time frame. I found it interesting (based on my limited knowledge of hazard models) that their hazard model can be reduced so succintly to a simple regression.</p>
 
-<label for="lough" class="margin-toggle">&#8853;</label>
+<p><label for="lough" class="margin-toggle">&#8853;</label>
 <input type="checkbox" id="lough" class="margin-toggle"/>
-<span class="marginnote">Loughran, Tim and McDonald, Bill, <em>When is a Liability not a Liability? Textual Analysis, Dictionaries, and 10-Ks</em> (March 4, 2010). Journal of Finance, Forthcoming. Available at SSRN: <a href="https://ssrn.com/abstract=1331573">https://ssrn.com/abstract=1331573</a></span>
-
+<span class="marginnote"> Loughran, Tim and McDonald, Bill, <em>When is a Liability not a Liability? Textual Analysis, Dictionaries, and 10-Ks</em> (March 4, 2010). Journal of Finance, Forthcoming. Available at SSRN: <a href="https://ssrn.com/abstract=1331573">https://ssrn.com/abstract=1331573</a>  </span></p>
 
 <p>Mayew et al. use three primary variables sourced from the MD&amp;A text. <em>GC_MGMT</em> is coded as a 1 when the management has expressed a going concern. This coding was performed manually, and the appendix provides some examples of what was considered to be an expression of going concern. <em>POSMDA(%)</em> represents the percentage of positive words in the MD&amp;A, and <em>NEGMDA(%)</em> represents the percentage of negative words in the MD&amp;A. Words are determined to be positive or negative as provided in Loughran and McDonald (2011) who created an alternative list of positive and negative words that are applicable in financial contexts.</p>
 
@@ -145,10 +143,9 @@ body {
 
 <p>While this is an interesting finding, there is much more that could be done in this space. The natural-language processing space in machine learning has experienced tremendous growth in the past several years, and I suspect that applications from that space would apply well to MD&amp;A analysis.</p>
 
-<label for="nlp" class="margin-toggle">&#8853;</label>
+<p><label for="nlp" class="margin-toggle">&#8853;</label>
 <input type="checkbox" id="nlp" class="margin-toggle"/>
-<span class="marginnote">Kraus, Mathias, and Stefan Feuerriegel. <em>Decision Support from Financial Disclosures with Deep Neural Networks and Transfer Learning</em>. Decision Support Systems 104 (December 2017): 38–48. <a href="https://doi.org/10.1016/j.dss.2017.10.001">https://doi.org/10.1016/j.dss.2017.10.001</a>.</span>
-
+<span class="marginnote"> Kraus, Mathias, and Stefan Feuerriegel. <em>Decision Support from Financial Disclosures with Deep Neural Networks and Transfer Learning</em>. Decision Support Systems 104 (December 2017): 38–48. <a href="https://doi.org/10.1016/j.dss.2017.10.001">https://doi.org/10.1016/j.dss.2017.10.001</a>. </span></p>
 
 <p>For example, Kraus et al. apply a variety of deep learning techniques traditionally used to model arbitrary text sequences, such as recurrent (RNN) and long-term short-memory (LTSM) neural networks. These architectures may address issues that Mayew et al. generate with their modeling technique.</p>
 

@@ -8,6 +8,18 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <lastmod>2019-01-08T08:08:25-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2019-01-08T08:08:25-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2019/01/01/2018-retrospective/</loc>
     <lastmod>2019-01-01T12:31:22-08:00</lastmod>
   </url>
@@ -20,6 +32,18 @@
   <url>
     <loc>/2018/12/27/optimizing-market-marking/</loc>
     <lastmod>2018-12-27T16:48:26-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/adaptive-markets/</loc>
+    <lastmod>2018-12-17T07:28:24-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2018-12-17T07:28:24-08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -128,8 +152,26 @@
   </url>
   
   <url>
+    <loc>/categories/general/</loc>
+    <lastmod>2017-08-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2017-08-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2017/08/26/the-flash-crash/</loc>
     <lastmod>2017-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/web/</loc>
+    <lastmod>2017-08-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -153,13 +195,55 @@
   </url>
   
   <url>
+    <loc>/categories/data-science/</loc>
+    <lastmod>2017-05-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/kaggle/</loc>
+    <lastmod>2017-05-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2017/05/23/kaggle-titanic/</loc>
     <lastmod>2017-05-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2017-05-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/finance/</loc>
+    <lastmod>2017-05-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/journalsim/</loc>
+    <lastmod>2017-05-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/quant/</loc>
+    <lastmod>2017-05-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2017/05/16/the-rise-of-diy-quants/</loc>
     <lastmod>2017-05-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/writing/</loc>
+    <lastmod>2017-05-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -178,6 +262,12 @@
   </url>
   
   <url>
+    <loc>/tags/journalism/</loc>
+    <lastmod>2017-05-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2017/04/30/introduction/</loc>
     <lastmod>2017-04-30T00:00:00+00:00</lastmod>
   </url>
@@ -193,77 +283,8 @@
   </url>
   
   <url>
-    <loc>/about/</loc>
-    <lastmod>2016-05-05T21:48:51-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/adaptive-markets/</loc>
-    <lastmod>2018-12-17T07:28:24-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-01-08T08:08:25-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2018-12-17T07:28:24-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/data-science/</loc>
-    <lastmod>2017-05-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/notes/wanted-datasets/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/finance/</loc>
-    <lastmod>2017-05-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/general/</loc>
-    <lastmod>2017-08-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/interest-rates/</loc>
     <lastmod>2017-04-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/journalism/</loc>
-    <lastmod>2017-05-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/journalsim/</loc>
-    <lastmod>2017-05-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/kaggle/</loc>
-    <lastmod>2017-05-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/me/</loc>
-    <lastmod>2016-05-05T21:48:51-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -274,48 +295,27 @@
   </url>
   
   <url>
+    <loc>/about/</loc>
+    <lastmod>2016-05-05T21:48:51-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/me/</loc>
+    <lastmod>2016-05-05T21:48:51-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/notes/wanted-datasets/</loc>
+  </url>
+  
+  <url>
     <loc>/notes/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/notes/order-cancellation/</loc>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2019-01-08T08:08:25-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/quant/</loc>
-    <lastmod>2017-05-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2017-05-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2017-05-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/web/</loc>
-    <lastmod>2017-08-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/writing/</loc>
-    <lastmod>2017-05-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

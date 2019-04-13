@@ -37,7 +37,8 @@ Achievements  Became a C# software developer. Went to Miami. Passed CFA Level On
       <pubDate>Mon, 31 Dec 2018 06:15:40 -0800</pubDate>
       
       <guid>/2018/12/31/stock-prediction-with-news/</guid>
-      <description>&amp;#8853; Sardelich, Marcelo, and Suresh Manandhar, 2018, Multimodal deep learning for short-term stock volatility prediction, arXiv:1812.10479 [cs, q-fin, stat]. I&amp;rsquo;m always interested in seeing more people apply natural language processing to financial statements and headlines. A lot of the accounting literature where those kinds of tools are most likely to be useful uses very primitive techniques for textual analysis.
+      <description>&amp;#8853; Sardelich, Marcelo, and Suresh Manandhar, 2018, Multimodal deep learning for short-term stock volatility prediction, arXiv:1812.10479 [cs, q-fin, stat]. 
+I&amp;rsquo;m always interested in seeing more people apply natural language processing to financial statements and headlines. A lot of the accounting literature where those kinds of tools are most likely to be useful uses very primitive techniques for textual analysis.
 So I was delighted to read this paper by Marcelo and Manandhar on arXiv where the authors gather headlines and attempt volatility forecasting.</description>
     </item>
     
@@ -47,7 +48,8 @@ So I was delighted to read this paper by Marcelo and Manandhar on arXiv where th
       <pubDate>Thu, 27 Dec 2018 16:48:26 -0800</pubDate>
       
       <guid>/2018/12/27/optimizing-market-marking/</guid>
-      <description>&amp;#8853; Patel, Yagna, 2018, Optimizing Market Making using Multi-Agent Reinforcement Learning, arXiv:1812.10252 [cs, q-fin, stat]. Apparently I&amp;rsquo;ve been on a kick reading some of these reinforcement learning/market making papers. Yagna Patel published an interesting paper on arXiv1 discussing the application of a reinforcement learning agent to market making, one of my favorite topics. Market making, that is, not necessarily reinforcement learning.
+      <description>&amp;#8853; Patel, Yagna, 2018, Optimizing Market Making using Multi-Agent Reinforcement Learning, arXiv:1812.10252 [cs, q-fin, stat].
+Apparently I&amp;rsquo;ve been on a kick reading some of these reinforcement learning/market making papers. Yagna Patel published an interesting paper on arXiv1 discussing the application of a reinforcement learning agent to market making, one of my favorite topics. Market making, that is, not necessarily reinforcement learning.
 Why As Patel points out, there&amp;rsquo;s three big concerns that users of machine learning in finance have to watch out for.</description>
     </item>
     
@@ -57,7 +59,8 @@ Why As Patel points out, there&amp;rsquo;s three big concerns that users of mach
       <pubDate>Mon, 17 Dec 2018 07:28:24 -0800</pubDate>
       
       <guid>/2018/12/17/selection-mechanism-design/</guid>
-      <description>&amp;#8853; Dewhurst, David Rushing, Michael Vincent Arnold, and Colin Michael Van Oort, 2018, Selection mechanism design affects volatility in a market of evolving zero-intelligence agents, arXiv:1812.05657 [cs, q-fin]. Here&amp;rsquo;s an interesting paper from Dewherst, Arnold, and Van Oort published to arXiv. Dewherst et al. use an evolving multi-agent landscape to model evolutionary selection mechanisms applicable to markets.
+      <description>&amp;#8853; Dewhurst, David Rushing, Michael Vincent Arnold, and Colin Michael Van Oort, 2018, Selection mechanism design affects volatility in a market of evolving zero-intelligence agents, arXiv:1812.05657 [cs, q-fin].
+Here&amp;rsquo;s an interesting paper from Dewherst, Arnold, and Van Oort published to arXiv. Dewherst et al. use an evolving multi-agent landscape to model evolutionary selection mechanisms applicable to markets.
 &amp;#8853; Lo, Andrew W, 2004, The Adaptive Markets Hypothesis, Journal of Portfolio Management, 15.</description>
     </item>
     
@@ -68,7 +71,8 @@ Why As Patel points out, there&amp;rsquo;s three big concerns that users of mach
       
       <guid>/2018/10/13/mda-paper-summary/</guid>
       <description>This was written as a summary for an interesting paper I read for a class on whether or not the MD&amp;amp;A section of financial statements can be predictive of bankruptcy.
-&amp;#8853; Mayew, William J., Mani Sethuraman, and Mohan Venkatachalam. MD&amp;amp;A Disclosure and the Firm’s Ability to Continue as a Going Concern. The Accounting Review 90, no. 4 (July 2015): 1621–51. https://doi.org/10.2308/accr-50983. Mayew, Sethuraman and Venkatachalam (2015) present a study on the role that the textual properties of a firm&amp;rsquo;s MD&amp;amp;A section plays in predicting bankruptcy.</description>
+&amp;#8853; Mayew, William J., Mani Sethuraman, and Mohan Venkatachalam. MD&amp;amp;A Disclosure and the Firm’s Ability to Continue as a Going Concern. The Accounting Review 90, no. 4 (July 2015): 1621–51. https://doi.org/10.2308/accr-50983.
+Mayew, Sethuraman and Venkatachalam (2015) present a study on the role that the textual properties of a firm&amp;rsquo;s MD&amp;amp;A section plays in predicting bankruptcy.</description>
     </item>
     
     <item>
@@ -96,7 +100,7 @@ Turns out, I have spent at least 4+ hours a day on miscellaneous math homework.<
       <pubDate>Sun, 02 Sep 2018 18:33:01 -0700</pubDate>
       
       <guid>/2018/09/02/math-camp-week-1/</guid>
-      <description>At the University of Oregon, all the economist and economist-light &amp;#8853; Here, &amp;ldquo;economist-light&amp;rdquo; just means all the business school disciplines; finance, marketing, accounting, etc. folks take a three week math camp designed to get them up to speed on everything they could ever possibly hope to know about the mathematics used in economics.
+      <description>At the University of Oregon, all the economist and economist-light &amp;#8853; Here, &amp;ldquo;economist-light&amp;rdquo; just means all the business school disciplines; finance, marketing, accounting, etc.  folks take a three week math camp designed to get them up to speed on everything they could ever possibly hope to know about the mathematics used in economics.
 Math camp started on Wednesday, August 29th, and so far I have had three math camp sessions which have shown me how little I know about absolutely anything.</description>
     </item>
     
@@ -126,7 +130,8 @@ To that end, I&amp;rsquo;ve collected some of my thoughts on finance, why I pers
       <pubDate>Mon, 25 Jun 2018 21:30:55 -0700</pubDate>
       
       <guid>/2018/06/25/information-theory/</guid>
-      <description>&amp;#8853; An Introduction to Information Theory by John R. Pierce. I&amp;rsquo;ve recently been perusing an introductory text of information theory. Information theory is one of those things that I have always wanted to look into but never gotten around to &amp;ndash; but now I am an adult with real things to try not to do, so I figured what the hell.
+      <description>&amp;#8853; An Introduction to Information Theory by John R. Pierce. 
+I&amp;rsquo;ve recently been perusing an introductory text of information theory. Information theory is one of those things that I have always wanted to look into but never gotten around to &amp;ndash; but now I am an adult with real things to try not to do, so I figured what the hell.
 Information theory is the scientific study of how information can be quantified, stored, and communicated efficiently.</description>
     </item>
     
