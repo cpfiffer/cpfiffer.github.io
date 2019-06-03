@@ -206,9 +206,13 @@ div.content-row{
 }
 
 div.content-row-title{
-  /* float: left; */
   margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+div.content-row-date{
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 span.index-date {
@@ -703,4 +707,10 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
 nav ul {
   padding-left: 0;
   list-style-type: none;
+}
+
+.title-container {
+  /* align-items: center; */
+  justify-content: space-between;
+  display: flex;
 }
