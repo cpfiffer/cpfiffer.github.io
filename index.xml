@@ -6,10 +6,21 @@
     <description>Recent content on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Jan 2019 08:08:25 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Jun 2019 18:09:08 +0200</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Switzerland: Day 1</title>
+      <link>/2019/06/24/switzerland-day-1/</link>
+      <pubDate>Mon, 24 Jun 2019 18:09:08 +0200</pubDate>
+      
+      <guid>/2019/06/24/switzerland-day-1/</guid>
+      <description>&amp;#8853; A picture of Lugano from some balcony somewhere.
+Today was the first day of the market microstructure summer school, where Albert Menkveld and Thierry Foucault teach the theory and empirics of market microstructure. It&amp;rsquo;s held in Lugano, Switzerland, a large city in the Italian-speaking canton of Ticino.
+Thierry began the week with theory1, primarily on determinants of the bid-ask spread, as well as how asymmetric information is applied in many of the classic models.</description>
+    </item>
     
     <item>
       <title>AFA Webcasts</title>
