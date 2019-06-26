@@ -1,0 +1,150 @@
+
+<span class="camerons_logo">
+      <span class = "blog_logo">
+        <h1> Cameron's Blog </h1>
+         
+      </span>
+      <h3> <i> Finance, statistics, data, and other trash </i> </h3>
+      <h4><a href="/"> Blog </a> ∘ <a href="/about"> About </a> ∘ <a href="/links"> Links </a> ∘ <a href="https://github.com/cpfiffer"> Github </a> ∘  <a href="/notes"> Notes </a></h4>
+      
+</span>
+
+<hr>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+<title>Cameron&#39;s Blog - Switzerland: Day 2</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Cameron&#39;s Blog">
+<meta name="generator" content="Hugo 0.55.6" />
+
+  
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/tuftesque.css">
+<style>
+body {
+  
+    background-color:  white;
+  
+}
+</style>
+
+
+  
+</head>
+
+<body>
+<div id="layout" class="pure-g">
+<article class="pure-u-1">
+<h1> Switzerland: Day 2 </h1>
+
+
+
+
+<span class="toc">
+    <header>
+    <h2>Contents</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#glosten-1994">Glosten (1994)</a></li>
+</ul></li>
+</ul>
+</nav>
+</span>
+
+
+<section>
+
+<p><label for="glosten" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="glosten" class="margin-toggle"/>
+<span class="marginnote"> Glosten, Lawrence R., 1994, Is the Electronic Open Limit Order Book Inevitable?, <em>The Journal of Finance</em> 49, 1127–1161. </span></p>
+
+<p><label for="miller" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="miller" class="margin-toggle"/>
+<span class="marginnote"> Vayanos, Dimitri, 1999, Strategic Trading and Welfare in a Dynamic Market, <em>Review of Economic Studies</em> 66, 219–254. </span></p>
+
+<p><label for="miller" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="miller" class="margin-toggle"/>
+<span class="marginnote"> Grossman, Sanford J., and Merton H. Miller, 1988, Liquidity and Market Structure, <em>The Journal of Finance</em> 43, 617–633. </span></p>
+
+<p>Today was the final lecture series on microstructural theory. We covered models of the limit order book, primarily Glosten (1994), and a model of inventory holding costs and imperfect competition among dealers. The dealer competition model was based on Vayanos (1999) and (I think) Grossman and Miller (1988).</p>
+
+<p>I&rsquo;m generally quite pleased with my level of understanding of both microeconomics and microstructure. I didn&rsquo;t feel lost or unable to grasp the model&rsquo;s steps at any point &mdash; several times I was able to infer potential next steps, and I suspect one time I may even have been right. Many models fall out of very general equilibrium conditions and simple first order conditions, so it&rsquo;s fairly straightforward to adapt the general microeconomics tools.</p>
+
+<h2 id="glosten-1994">Glosten (1994)</h2>
+
+<p>I think that the most complex model we reviewed is that of the Glosten (1994) paper. It&rsquo;s a three-period model, which is generally fairly simple. In this case, the complexity comes from the mental jumps you must make to find the intuition in how expectations are form. The model has some very interesting predictions on how people decide to place order in limit order books based on execution belief and adverse selection risk. Orders accumulate at various levels on the price grid, such that the price at any particular point ($A^k$ for the $k^{th}$ ask or $B^k$ for the $k^{th}$ bid) satisfies</p>
+
+<p>$$
+A_k = E[V \space \vert \space q \ge Y_k^*]
+$$</p>
+
+<p>where $V$ is the valuation of some asset, and $q$ is the size of a market order that arrives in the second period. The term $Y^*_k$ represents the cumulative quantity available up to price $A_k$ (or $B_k$).</p>
+
+<p>This equilibrium condition comes out of each trader&rsquo;s decisions. A trader looks at each price level, and decides whether adding to the quantity at that price level is likely to be profitable.  If it is not, because the adverse selection risk is too high or there are too many orders on the book already, the trader goes to the next price level and repeats the process.</p>
+
+<p>A couple of interesting points arise from this particular model. First, the Glosten (1994) model explains why there might be unfilled price levels in the order book. At any given price level, the expectation is formed based on <em>cumulative</em> quantity on offer. If the cumulative quantity at price levels below satisfies the condition $q \ge Y_k^*$ for several levels of $k$, then those levels will be unfilled. Second, this model predicts that informed traders never submit small orders, but I think this is largely a byproduct of the fact that the model does not consider strategic optimization. Thierry noted that this is common to many models, and that it makes since, considering the complexity involved in optimizing the behavior of multiple agent types.</p>
+
+<hr />
+
+<p>Tomorrow, five students will be presenting their papers.</p>
+</section>
+<section>
+  <footer class="page-footer">
+		<hr>
+		<ul class="page-footer-menu">
+		
+		</ul>
+
+  
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</footer>
+
+</section>
+</article>
+</div>
+</body>
+</html>

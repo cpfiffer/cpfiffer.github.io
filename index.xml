@@ -6,10 +6,22 @@
     <description>Recent content on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Jun 2019 18:09:08 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 25 Jun 2019 18:38:51 +0200</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Switzerland: Day 2</title>
+      <link>/2019/06/25/switzerland-day-2/</link>
+      <pubDate>Tue, 25 Jun 2019 18:38:51 +0200</pubDate>
+      
+      <guid>/2019/06/25/switzerland-day-2/</guid>
+      <description>&amp;#8853; Glosten, Lawrence R., 1994, Is the Electronic Open Limit Order Book Inevitable?, The Journal of Finance 49, 1127–1161. 
+&amp;#8853; Vayanos, Dimitri, 1999, Strategic Trading and Welfare in a Dynamic Market, Review of Economic Studies 66, 219–254. 
+&amp;#8853; Grossman, Sanford J., and Merton H. Miller, 1988, Liquidity and Market Structure, The Journal of Finance 43, 617–633. 
+Today was the final lecture series on microstructural theory. We covered models of the limit order book, primarily Glosten (1994), and a model of inventory holding costs and imperfect competition among dealers.</description>
+    </item>
     
     <item>
       <title>Switzerland: Day 1</title>
