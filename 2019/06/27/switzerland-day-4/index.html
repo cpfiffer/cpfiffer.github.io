@@ -1,0 +1,138 @@
+
+<span class="camerons_logo">
+      <span class = "blog_logo">
+        <h1> Cameron's Blog </h1>
+         
+      </span>
+      <h3> <i> Finance, statistics, data, and other trash </i> </h3>
+      <h4><a href="/"> Blog </a> ∘ <a href="/about"> About </a> ∘ <a href="/links"> Links </a> ∘ <a href="https://github.com/cpfiffer"> Github </a> ∘  <a href="/notes"> Notes </a></h4>
+      
+</span>
+
+<hr>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+<title>Cameron&#39;s Blog - Switzerland: Day 4</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Cameron&#39;s Blog">
+<meta name="generator" content="Hugo 0.55.6" />
+
+  
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/tuftesque.css">
+<style>
+body {
+  
+    background-color:  white;
+  
+}
+</style>
+
+
+  
+</head>
+
+<body>
+<div id="layout" class="pure-g">
+<article class="pure-u-1">
+<h1> Switzerland: Day 4 </h1>
+
+
+
+
+
+<section><p><label for="book" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="book" class="margin-toggle"/>
+<span class="marginnote"> See <a href="https://www.amazon.com/Empirical-Market-Microstructure-Institutions-Econometrics/dp/0195301641">here</a> for a link to purchase Joel&rsquo;s book. It&rsquo;s a good one. </span></p>
+
+<p>Today was the first day of the empirical session with <a href="https://albertjmenkveld.com/">Albert Menkveld</a> . We covered the first couple chapters of Joel Hasbrouck&rsquo;s excellent book.</p>
+
+<p><label for="roll" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="roll" class="margin-toggle"/>
+<span class="marginnote"> Roll, Richard, 1984, A Simple Implicit Measure of the Effective Bid-Ask Spread in an Efficient Market, <em>The Journal of Finance</em> 39, 1127–1139. </span></p>
+
+<p>We started with the general Roll (1984) model, which is a really straightforward way to think about how order processing costs make it into the bid-ask spread. Basically, it is assumed that trade prices $p^t$ have a random walk with drift evolution, such that</p>
+
+<p>$$
+p_t = p_{t-1} + \mu + u_t
+$$</p>
+
+<p>Hasbrouck notes that the drift term $\mu$ is largely unnessecary, especially since at micro-scale it&rsquo;s hard to have any notion of expected return.</p>
+
+<p>The model above is expanded upon by including an efficient price (fundamental value) $m_t$, which is a martingale:</p>
+
+<p>$$
+m_t = m_{t-1} + u_t
+$$</p>
+
+<p>Prices are then a noisy proxy of the true value, as a function of a cost that market makers need to recoup for processing orders</p>
+
+<p>$$
+p_t = m_t + q_tc
+$$</p>
+
+<p>where $c$ is a fixed per-trade cost incurred by the dealer and $q_t$ is an indicator for a buy or sell ($+1$ for a buy and $-1$ for a sell).</p>
+
+<p><label for="hasbrouck-2009 " class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="hasbrouck-2009 " class="margin-toggle"/>
+<span class="marginnote"> Hasbrouck, Joel, 2009, Trading Costs and Returns for U.S. Equities: Estimating Effective Costs from Daily Data, <em>The Journal of Finance</em> 64, 1445–1477. </span></p>
+
+<p>It&rsquo;s a good model. I&rsquo;m particularly interested in how Hasbrouck (2009) approaches trying to approximate the $c$ variable, as he uses a Gibbs sampler to run a Bayesian linear regression. Given my association with <a href="https://turing.ml">Turing.jl</a>, I can&rsquo;t help but feel that there is a hierarchical model that would provide a better structural estimate of things like adverse selection cost and order processing cost. That&rsquo;d need a more sophisticated model than the Roll model, however, and I&rsquo;m not quite sure I&rsquo;m up to the task (yet).</p>
+</section>
+<section>
+  <footer class="page-footer">
+		<hr>
+		<ul class="page-footer-menu">
+		
+		</ul>
+
+  
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</footer>
+
+</section>
+</article>
+</div>
+</body>
+</html>

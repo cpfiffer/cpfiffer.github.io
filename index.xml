@@ -6,17 +6,29 @@
     <description>Recent content on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Jun 2019 17:46:48 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 27 Jun 2019 19:47:24 +0200</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Switerland: Day 3</title>
-      <link>/2019/06/26/switerland-day-3/</link>
+      <title>Switzerland: Day 4</title>
+      <link>/2019/06/27/switzerland-day-4/</link>
+      <pubDate>Thu, 27 Jun 2019 19:47:24 +0200</pubDate>
+      
+      <guid>/2019/06/27/switzerland-day-4/</guid>
+      <description>&amp;#8853; See here for a link to purchase Joel&amp;rsquo;s book. It&amp;rsquo;s a good one. 
+Today was the first day of the empirical session with Albert Menkveld . We covered the first couple chapters of Joel Hasbrouck&amp;rsquo;s excellent book.
+&amp;#8853; Roll, Richard, 1984, A Simple Implicit Measure of the Effective Bid-Ask Spread in an Efficient Market, The Journal of Finance 39, 1127–1139. 
+We started with the general Roll (1984) model, which is a really straightforward way to think about how order processing costs make it into the bid-ask spread.</description>
+    </item>
+    
+    <item>
+      <title>Switzerland: Day 3</title>
+      <link>/2019/06/26/switzerland-day-3/</link>
       <pubDate>Wed, 26 Jun 2019 17:46:48 +0200</pubDate>
       
-      <guid>/2019/06/26/switerland-day-3/</guid>
+      <guid>/2019/06/26/switzerland-day-3/</guid>
       <description>Not much news today. We had the morning off, presumably so that some students could work on their presentations. The afternoon included five presentations, generally covering
  A theoretical examination of the impacts of financial transaction taxes The effect of speed bumps on market liquidity The asymmetric returns volatility effect (theory and empirics) Determinants of market fragmentation The effects of primary issuance on secondary market liquidity  The presentation quality was pretty excellent, overall.</description>
     </item>
