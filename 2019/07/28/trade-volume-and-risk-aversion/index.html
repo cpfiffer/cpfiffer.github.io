@@ -1,0 +1,143 @@
+
+<span class="camerons_logo">
+      <span class = "blog_logo">
+        <h1> Cameron's Blog </h1>
+         
+      </span>
+      <h3> <i> Finance, statistics, data, and other trash </i> </h3>
+      <h4><a href="/"> Blog </a> ∘ <a href="/about"> About </a> ∘ <a href="/links"> Links </a> ∘ <a href="https://github.com/cpfiffer"> Github </a> ∘  <a href="/notes"> Notes </a></h4>
+      
+</span>
+
+<hr>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+<title>Cameron&#39;s Blog - Trade Volume and Risk Aversion</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Cameron&#39;s Blog">
+<meta name="generator" content="Hugo 0.56.0" />
+
+  
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/tuftesque.css">
+<style>
+body {
+  
+    background-color:  white;
+  
+}
+</style>
+
+
+  
+</head>
+
+<body>
+<div id="layout" class="pure-g">
+<article class="pure-u-1">
+<h1> Trade Volume and Risk Aversion </h1>
+
+
+
+
+<span class="toc">
+    <header>
+    <h2>Contents</h2>
+    </header>
+    
+</span>
+
+
+<section><p>Rob Ready here at the University of Oregon recommended that I read John Cochrane&rsquo;s blog post on <a href="https://johnhcochrane.blogspot.com/2016/10/volume-and-information.html">why anyone actually trades</a>. I had not read it before, and finally had some time to do so after my full-bodied sprint to Baltimore and back.</p>
+
+<p>The post helped me gel an idea of information-based market activity that I started to think about in Switzerland but was unable to formalize. Cochrane points to a lot of mechanisms that people have used to induce trading, such as preference shocks, noise traders, or overconfidence. Obviously some of these are more reasonable than others.  I have met professional traders from big institutions and they certainly seem to be a little overconfident.</p>
+
+<p>But Cochrane dances near a concept that would explain much of the trading behavior we observe:</p>
+
+<blockquote>
+<p>We know what this huge volume of trading is about. It’s about
+information, not preference shocks. Information seems to need trades to
+percolate into prices. We just don’t understand why.</p>
+</blockquote>
+
+<p>Information is, in my view, the only real reason anyone should trade, but I think my formulation of &ldquo;information&rdquo; is significantly broader than many others. Noise traders can be explained by the information they posess &ndash; a client has just asked for cash, so the noise trader must sell some of the client&rsquo;s assets. This is fundamentally an information  story!</p>
+
+<p>It is also something I would consider private information. The firm knows something that most other firms do not, which is that they need to liquidate the asset even though their absolute perspective on the value of the asset is unchanged. Only their relative valuation has changed. The firm&rsquo;s value from holding the asset has dramatically increased, because they face consequences for <em>not</em> selling the asset and returning the funds.</p>
+
+<p>The perception of value is also an important concept, which in my view is exclusively driven by information. Two firms, a hedge fund and a pension fund, both have sets of information about all securities available. A piece of information might be that Tesla is actually a company, that it is trading at $228.04 right now, or that the pension fund manager owns a Tesla and quite likes the product. It might be that the hedge fund manager saw Elon Musk pick his nose at an In-N-Out twenty years ago, and believes that Elon Musk has limited self control. These are all pieces of information with different levels of usefulness, but collectively, they allow market agents to construct an estimate of an efficient price. If both firms have exactly the same information sets, we should never expect trades. Their perception of absolute value is given only by all the little tidbits they have, and having the same tidbits mean that perceptions should be identical.</p>
+
+<p>We can throw some math on here to make this more specific. Consider two firms, $x$ and $y$, each with access to a subset of some global information set $I$, given by $I_x$ and $I_y$ respectively.</p>
+
+<p>Assume that each firm determines the fundamental value of a security $X$ using a function $f(\cdot)$, which is a deterministic function shared by both firms. Let $f(I) = X^*$ be the true fundamental value of the asset. If $I_x = I_y$, then $f(I_x) = f(I_y)$. We cannot reallly say much in general about cases where $I_x \sub I_y$, since it&rsquo;s possible that the additional information held by $y$ increases or decreases their understanding of fundamental value.</p>
+
+<p>The problem with this set construction is that sets are often very difficult to work with. What&rsquo;s the actual value of having an additional element of information? Well, ultimately, it reduces your level of uncertainty about how much of $I$ you actually observe!</p>
+
+<p>Being good Bayesians, both firms $x$ and $y$ know that they only have some subset of the true information set. Suppose their valuations are given by distributions $G_x(I_x)$ and $G_y(I_y)$, with $G(I) = X^<em>$. Neither of these distributions actually have to be centered around $X^</em>$. They can be lumpy, multimodal, whatever &ndash; all we care about is the fact that the variance of your beliefs is much higher if you have less information.</p>
+
+<p>Returning to our statements on $f(\cdot)$, what can we say about the case where $I_x \sub I_y$? Well, only that $\text{var}(G_x) &lt;\text{var}(G_y)$. That is, acquiring new information reduces your uncertainty about what you know and what you know you don&rsquo;t know.</p>
+
+<p>I&rsquo;m going to leave this here for a moment because I have some work to do, but here are some next steps when I get around to it:</p>
+
+<ol>
+<li>Link this set construction to market prices.</li>
+<li>By what mechanism exactly do trades allows others to make inferences about the information sets of others?</li>
+<li>What&rsquo;s a dynamic programming extension look like? I.e., if some agents are generally better at acquiring information than others, how might other agents form expectations about their expectations over time?</li>
+</ol>
+</section>
+<section>
+  <footer class="page-footer">
+		<hr>
+		<ul class="page-footer-menu">
+		
+		</ul>
+
+  
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</footer>
+
+</section>
+</article>
+</div>
+</body>
+</html>
