@@ -3,15 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/2020/03/24/bayesian-econometrics/</loc>
+    <lastmod>2020-03-24T09:21:25-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2019-07-28T09:21:25-07:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-03-24T09:21:25-07:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-07-28T09:21:25-07:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-03-24T09:21:25-07:00</lastmod>
   </url>
   
   <url>
@@ -67,13 +70,11 @@
   <url>
     <loc>/categories/adaptive-markets/</loc>
     <lastmod>2018-12-17T07:28:24-08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
     <lastmod>2018-12-17T07:28:24-08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -184,13 +185,11 @@
   <url>
     <loc>/categories/general/</loc>
     <lastmod>2017-08-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <lastmod>2017-08-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -201,7 +200,6 @@
   <url>
     <loc>/tags/web/</loc>
     <lastmod>2017-08-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -227,13 +225,11 @@
   <url>
     <loc>/categories/data-science/</loc>
     <lastmod>2017-05-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/kaggle/</loc>
     <lastmod>2017-05-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -244,25 +240,21 @@
   <url>
     <loc>/tags/r/</loc>
     <lastmod>2017-05-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/finance/</loc>
     <lastmod>2017-05-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/journalsim/</loc>
     <lastmod>2017-05-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/quant/</loc>
     <lastmod>2017-05-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -273,7 +265,6 @@
   <url>
     <loc>/categories/writing/</loc>
     <lastmod>2017-05-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -294,7 +285,6 @@
   <url>
     <loc>/tags/journalism/</loc>
     <lastmod>2017-05-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -315,13 +305,11 @@
   <url>
     <loc>/tags/interest-rates/</loc>
     <lastmod>2017-04-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/microstructure/</loc>
     <lastmod>2017-04-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -332,7 +320,6 @@
   <url>
     <loc>/tags/me/</loc>
     <lastmod>2016-05-05T21:48:51-07:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -341,7 +328,6 @@
   
   <url>
     <loc>/notes/</loc>
-    <priority>0</priority>
   </url>
   
   <url>

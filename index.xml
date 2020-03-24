@@ -6,10 +6,19 @@
     <description>Recent content on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jul 2019 09:21:25 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 09:21:25 -0700</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bayesian Econometrics</title>
+      <link>/2020/03/24/bayesian-econometrics/</link>
+      <pubDate>Tue, 24 Mar 2020 09:21:25 -0700</pubDate>
+      
+      <guid>/2020/03/24/bayesian-econometrics/</guid>
+      <description>Introduction Since I&amp;rsquo;m in social distancing mode, I figured it would be a good time to write a blog post on Bayesian methods and financial economics. I have written a post in quite a while, as the past year and a half or so have been a busy time for me. The finance PhD takes up most of my time, as well as my work on Turing.jl, a probabilistic programming language (PPL) for Julia.</description>
+    </item>
     
     <item>
       <title>Trade Volume and Information</title>
