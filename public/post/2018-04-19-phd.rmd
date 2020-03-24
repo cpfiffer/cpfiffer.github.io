@@ -1,0 +1,10 @@
+---
+title: PhD
+author: Cameron Pfiffer
+date: '2018-04-19'
+slug: phd
+categories: []
+tags: []
+---
+
+I'm going to be a PhD student at the [University of Oregon](https://business.uoregon.edu/phd/concentrations/finance)! I am looking forward to working with some spectacularly bright people.

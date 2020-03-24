@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cameron&#39;s Blog</title>
+    <link>/</link>
+    <description>Recent content on Cameron&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Mar 2020 09:21:25 -0700</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bayesian Econometrics</title>
+      <link>/2020/03/24/bayesian-econometrics/</link>
+      <pubDate>Tue, 24 Mar 2020 09:21:25 -0700</pubDate>
+      
+      <guid>/2020/03/24/bayesian-econometrics/</guid>
+      <description>Introduction Since I&amp;rsquo;m in social distancing mode, I figured it would be a good time to write a blog post on Bayesian methods and financial economics. I have written a post in quite a while, as the past year and a half or so have been a busy time for me. The finance PhD takes up most of my time, as well as my work on Turing.jl, a probabilistic programming language (PPL) for Julia.</description>
+    </item>
+    
+    <item>
+      <title>Trade Volume and Information</title>
+      <link>/2019/07/28/trade-volume-and-information/</link>
+      <pubDate>Sun, 28 Jul 2019 09:21:25 -0700</pubDate>
+      
+      <guid>/2019/07/28/trade-volume-and-information/</guid>
+      <description>Rob Ready here at the University of Oregon recommended that I read John Cochrane&amp;rsquo;s blog post on why anyone actually trades. I had not read it before, and finally had some time to do so after my full-bodied sprint to Baltimore and back.
+The post helped me gel an idea of information-based market activity that I started to think about in Switzerland but was unable to formalize. Cochrane points to a lot of mechanisms that people have used to induce trading, such as preference shocks, noise traders, or overconfidence.</description>
+    </item>
+    
+    <item>
+      <title>JuliaCon</title>
+      <link>/2019/07/26/juliacon/</link>
+      <pubDate>Fri, 26 Jul 2019 04:11:59 -0700</pubDate>
+      
+      <guid>/2019/07/26/juliacon/</guid>
+      <description>Yesterday I gave a talk on Turing.jl, and I think I only made 5-9 mistakes. You can check it out on YouTube:
+ There were also some spectacular talks by the other probabilitistic programming languages in Julia. Chad Scherrer (who is pretty great) covered Soss.jl, which has a pretty slick syntax and what I would consider an admirable user interface. Gen.jl had a remarkable presentation from Alex Lew (who is also pretty great) that has a really fascinating perspective on inference.</description>
+    </item>
+    
+    <item>
+      <title>Switzerland: Day 4</title>
+      <link>/2019/06/27/switzerland-day-4/</link>
+      <pubDate>Thu, 27 Jun 2019 19:47:24 +0200</pubDate>
+      
+      <guid>/2019/06/27/switzerland-day-4/</guid>
+      <description>&amp;#8853; See here for a link to purchase Joel&amp;rsquo;s book. It&amp;rsquo;s a good one. 
+Today was the first day of the empirical session with Albert Menkveld . We covered the first couple chapters of Joel Hasbrouck&amp;rsquo;s excellent book.
+&amp;#8853; Roll, Richard, 1984, A Simple Implicit Measure of the Effective Bid-Ask Spread in an Efficient Market, The Journal of Finance 39, 1127–1139. 
+We started with the general Roll (1984) model, which is a really straightforward way to think about how order processing costs make it into the bid-ask spread.</description>
+    </item>
+    
+    <item>
+      <title>Switzerland: Day 3</title>
+      <link>/2019/06/26/switzerland-day-3/</link>
+      <pubDate>Wed, 26 Jun 2019 17:46:48 +0200</pubDate>
+      
+      <guid>/2019/06/26/switzerland-day-3/</guid>
+      <description>Not much news today. We had the morning off, presumably so that some students could work on their presentations. The afternoon included five presentations, generally covering
+ A theoretical examination of the impacts of financial transaction taxes The effect of speed bumps on market liquidity The asymmetric returns volatility effect (theory and empirics) Determinants of market fragmentation The effects of primary issuance on secondary market liquidity  The presentation quality was pretty excellent, overall.</description>
+    </item>
+    
+    <item>
+      <title>Switzerland: Day 2</title>
+      <link>/2019/06/25/switzerland-day-2/</link>
+      <pubDate>Tue, 25 Jun 2019 18:38:51 +0200</pubDate>
+      
+      <guid>/2019/06/25/switzerland-day-2/</guid>
+      <description>&amp;#8853; Glosten, Lawrence R., 1994, Is the Electronic Open Limit Order Book Inevitable?, The Journal of Finance 49, 1127–1161. 
+&amp;#8853; Vayanos, Dimitri, 1999, Strategic Trading and Welfare in a Dynamic Market, Review of Economic Studies 66, 219–254. 
+&amp;#8853; Grossman, Sanford J., and Merton H. Miller, 1988, Liquidity and Market Structure, The Journal of Finance 43, 617–633. 
+Today was the final lecture series on microstructural theory. We covered models of the limit order book, primarily Glosten (1994), and a model of inventory holding costs and imperfect competition among dealers.</description>
+    </item>
+    
+    <item>
+      <title>Switzerland: Day 1</title>
+      <link>/2019/06/24/switzerland-day-1/</link>
+      <pubDate>Mon, 24 Jun 2019 18:09:08 +0200</pubDate>
+      
+      <guid>/2019/06/24/switzerland-day-1/</guid>
+      <description>&amp;#8853; A picture of Lugano from some balcony somewhere.
+Today was the first day of the market microstructure summer school, where Albert Menkveld and Thierry Foucault teach the theory and empirics of market microstructure. It&amp;rsquo;s held in Lugano, Switzerland, a large city in the Italian-speaking canton of Ticino.
+Thierry began the week with theory1, primarily on determinants of the bid-ask spread, as well as how asymmetric information is applied in many of the classic models.</description>
+    </item>
+    
+    <item>
+      <title>AFA Webcasts</title>
+      <link>/2019/01/08/afa-webcasts/</link>
+      <pubDate>Tue, 08 Jan 2019 08:08:25 -0800</pubDate>
+      
+      <guid>/2019/01/08/afa-webcasts/</guid>
+      <description>From Susan Athey&amp;rsquo;s luncheon address on machine learning to the AFA:
+ &amp;hellip; and so we have to then develop on top of that best practices for analyzing a black box algorithm. And there&amp;rsquo;s not really like a science and convention on that. If somebody writes a difference-in-difference paper, there&amp;rsquo;s ten things you should do &amp;ndash; There are best practices, and we know how to evaluate whether you should believe the results or not.</description>
+    </item>
+    
+    <item>
+      <title>2018 Retrospective</title>
+      <link>/2019/01/01/2018-retrospective/</link>
+      <pubDate>Tue, 01 Jan 2019 12:31:22 -0800</pubDate>
+      
+      <guid>/2019/01/01/2018-retrospective/</guid>
+      <description>It&amp;rsquo;s a new year, and I&amp;rsquo;ve gathered some notes from the year gone by.
+Achievements  Became a C# software developer. Went to Miami. Passed CFA Level One. Learned Rust, got better at Julia, introduced myself to OCaml, Haskell, and Chapel. Started a PhD. Visited my grandmother in upstate New York with my brother. Built and designed a tool to detect outlier performance in investment activities. Endured a lot of Southern Oregon&amp;rsquo;s wildfire smoke.</description>
+    </item>
+    
+    <item>
+      <title>Stock Prediction With News</title>
+      <link>/2018/12/31/stock-prediction-with-news/</link>
+      <pubDate>Mon, 31 Dec 2018 06:15:40 -0800</pubDate>
+      
+      <guid>/2018/12/31/stock-prediction-with-news/</guid>
+      <description>&amp;#8853; Sardelich, Marcelo, and Suresh Manandhar, 2018, Multimodal deep learning for short-term stock volatility prediction, arXiv:1812.10479 [cs, q-fin, stat]. 
+I&amp;rsquo;m always interested in seeing more people apply natural language processing to financial statements and headlines. A lot of the accounting literature where those kinds of tools are most likely to be useful uses very primitive techniques for textual analysis.
+So I was delighted to read this paper by Marcelo and Manandhar on arXiv where the authors gather headlines and attempt volatility forecasting.</description>
+    </item>
+    
+    <item>
+      <title>Optimizing Market Marking</title>
+      <link>/2018/12/27/optimizing-market-marking/</link>
+      <pubDate>Thu, 27 Dec 2018 16:48:26 -0800</pubDate>
+      
+      <guid>/2018/12/27/optimizing-market-marking/</guid>
+      <description>&amp;#8853; Patel, Yagna, 2018, Optimizing Market Making using Multi-Agent Reinforcement Learning, arXiv:1812.10252 [cs, q-fin, stat].
+Apparently I&amp;rsquo;ve been on a kick reading some of these reinforcement learning/market making papers. Yagna Patel published an interesting paper on arXiv1 discussing the application of a reinforcement learning agent to market making, one of my favorite topics. Market making, that is, not necessarily reinforcement learning.
+Why As Patel points out, there&amp;rsquo;s three big concerns that users of machine learning in finance have to watch out for.</description>
+    </item>
+    
+    <item>
+      <title>Selection mechanism design</title>
+      <link>/2018/12/17/selection-mechanism-design/</link>
+      <pubDate>Mon, 17 Dec 2018 07:28:24 -0800</pubDate>
+      
+      <guid>/2018/12/17/selection-mechanism-design/</guid>
+      <description>&amp;#8853; Dewhurst, David Rushing, Michael Vincent Arnold, and Colin Michael Van Oort, 2018, Selection mechanism design affects volatility in a market of evolving zero-intelligence agents, arXiv:1812.05657 [cs, q-fin].
+Here&amp;rsquo;s an interesting paper from Dewherst, Arnold, and Van Oort published to arXiv. Dewherst et al. use an evolving multi-agent landscape to model evolutionary selection mechanisms applicable to markets.
+&amp;#8853; Lo, Andrew W, 2004, The Adaptive Markets Hypothesis, Journal of Portfolio Management, 15.</description>
+    </item>
+    
+    <item>
+      <title>MD&amp;A Paper Summary</title>
+      <link>/2018/10/13/mda-paper-summary/</link>
+      <pubDate>Sat, 13 Oct 2018 17:34:17 -0700</pubDate>
+      
+      <guid>/2018/10/13/mda-paper-summary/</guid>
+      <description>This was written as a summary for an interesting paper I read for a class on whether or not the MD&amp;amp;A section of financial statements can be predictive of bankruptcy.
+&amp;#8853; Mayew, William J., Mani Sethuraman, and Mohan Venkatachalam. MD&amp;amp;A Disclosure and the Firm’s Ability to Continue as a Going Concern. The Accounting Review 90, no. 4 (July 2015): 1621–51. https://doi.org/10.2308/accr-50983.
+Mayew, Sethuraman and Venkatachalam (2015) present a study on the role that the textual properties of a firm&amp;rsquo;s MD&amp;amp;A section plays in predicting bankruptcy.</description>
+    </item>
+    
+    <item>
+      <title>Dat Site</title>
+      <link>/2018/09/20/dat-site/</link>
+      <pubDate>Thu, 20 Sep 2018 20:58:31 -0700</pubDate>
+      
+      <guid>/2018/09/20/dat-site/</guid>
+      <description>This site is now accessible via the peer-to-peer browser Beaker via dat://cameron.pfiffer.org or directly at dat://d9bb03a966c47ea49469c48111085635a6388a532dfe671cab057688560ff3e4/.</description>
+    </item>
+    
+    <item>
+      <title>Math Camp - Week 2</title>
+      <link>/2018/09/09/math-camp-week-2/</link>
+      <pubDate>Sun, 09 Sep 2018 18:33:01 -0700</pubDate>
+      
+      <guid>/2018/09/09/math-camp-week-2/</guid>
+      <description>The second week of math camp has been finished up. This week, we got into the nuts and bolts of matrices, eigenvalue decompositions, and a couple other linear algebra-type things. I will say, I did not think that I would be spending so much time doing homework &amp;ndash; everyone I knew said something along the lines of &amp;ldquo;only two hours a day? Sounds easy.&amp;rdquo;
+Turns out, I have spent at least 4+ hours a day on miscellaneous math homework.</description>
+    </item>
+    
+    <item>
+      <title>Math Camp - Week 1</title>
+      <link>/2018/09/02/math-camp-week-1/</link>
+      <pubDate>Sun, 02 Sep 2018 18:33:01 -0700</pubDate>
+      
+      <guid>/2018/09/02/math-camp-week-1/</guid>
+      <description>At the University of Oregon, all the economist and economist-light &amp;#8853; Here, &amp;ldquo;economist-light&amp;rdquo; just means all the business school disciplines; finance, marketing, accounting, etc.  folks take a three week math camp designed to get them up to speed on everything they could ever possibly hope to know about the mathematics used in economics.
+Math camp started on Wednesday, August 29th, and so far I have had three math camp sessions which have shown me how little I know about absolutely anything.</description>
+    </item>
+    
+    <item>
+      <title>Interesting Papers</title>
+      <link>/2018/08/13/interesting-papers/</link>
+      <pubDate>Mon, 13 Aug 2018 21:14:11 -0700</pubDate>
+      
+      <guid>/2018/08/13/interesting-papers/</guid>
+      <description>Via arXiv:
+ We develop a large-scale deep learning model to predict price movements from limit order book (LOB) data of cash equities. The architecture utilises convolutional filters to capture the spatial structure of the limit order books as well as LSTM modules to capture longer time dependencies. The model is trained using electronic market quotes from the London Stock Exchange. Our model delivers a remarkably stable out-of-sample prediction accuracy for a variety of instruments and outperforms existing methods such as Support Vector Machines, standard Multilayer Perceptrons, as well as other previously proposed convolutional neural network (CNN) architectures.</description>
+    </item>
+    
+    <item>
+      <title>Why Finance</title>
+      <link>/2018/07/09/why-finance/</link>
+      <pubDate>Mon, 09 Jul 2018 19:36:58 -0700</pubDate>
+      
+      <guid>/2018/07/09/why-finance/</guid>
+      <description>Introduction This coming fall, I will be a doctoral student at the University of Oregon. I wanted to get whatever thoughts I could ahead of my time there &amp;ndash; to try and make a &amp;ldquo;before and after&amp;rdquo;. What will I think is interesting now, and what will I think is interesting when (or if) I graduate? Will I have achieved whatever goals I thought I wanted to?
+To that end, I&amp;rsquo;ve collected some of my thoughts on finance, why I personally like it, and what I&amp;rsquo;m going to do after I graduate.</description>
+    </item>
+    
+    <item>
+      <title>Information Theory</title>
+      <link>/2018/06/25/information-theory/</link>
+      <pubDate>Mon, 25 Jun 2018 21:30:55 -0700</pubDate>
+      
+      <guid>/2018/06/25/information-theory/</guid>
+      <description>&amp;#8853; An Introduction to Information Theory by John R. Pierce. 
+I&amp;rsquo;ve recently been perusing an introductory text of information theory. Information theory is one of those things that I have always wanted to look into but never gotten around to &amp;ndash; but now I am an adult with real things to try not to do, so I figured what the hell.
+Information theory is the scientific study of how information can be quantified, stored, and communicated efficiently.</description>
+    </item>
+    
+    <item>
+      <title>Links</title>
+      <link>/links/</link>
+      <pubDate>Wed, 20 Jun 2018 06:56:21 -0700</pubDate>
+      
+      <guid>/links/</guid>
+      <description>Miscellaneous links I think are good.
+Books Data Science &amp;amp; Econometrics  Forecasting: Principles and Practice Econometrics with R R for Data Science  Machine Learning &amp;amp; AI  Neural Networks and Deep Learning Deep Learning  Math  Calculus  Code  Learn You a Haskell  Services Media  Plex  News  The Wall Street Journal Washington Post FiveThirtyEight  Education &amp;#8853; I&amp;rsquo;ve learned pretty much everything I know about math from Khan Academy.</description>
+    </item>
+    
+    <item>
+      <title>Good Book</title>
+      <link>/2018/06/20/good-book/</link>
+      <pubDate>Wed, 20 Jun 2018 06:51:27 -0700</pubDate>
+      
+      <guid>/2018/06/20/good-book/</guid>
+      <description>There&amp;rsquo;s a spectacular book on using R for forecasting online &amp;ndash; so far, it seems like a breezy, informative read. Take a look here. No more to note on that, just thought I&amp;rsquo;d stick a link up.</description>
+    </item>
+    
+    <item>
+      <title>Deep Learning Is Insufficient</title>
+      <link>/2018/06/08/deep-learning-is-insufficient/</link>
+      <pubDate>Fri, 08 Jun 2018 06:20:22 -0700</pubDate>
+      
+      <guid>/2018/06/08/deep-learning-is-insufficient/</guid>
+      <description>Via Gary Marcus:
+ Thus, for example, in a system like Lerer et al’s (2016) efforts to learn about the physics of falling towers, there is no prior knowledge of physics (beyond what is implied in convolution). Newton’s laws, for example, are not explicitly encoded; the system instead (to some limited degree) approximates them by learning contingencies from raw, pixel level data. As I note in a forthcoming paper in innate (Marcus, in prep) researchers in deep learning appear to have a very strong bias against including prior knowledge even when (as in the case of physics) that prior knowledge is well known.</description>
+    </item>
+    
+    <item>
+      <title>Privacy Economist</title>
+      <link>/2018/06/06/privacy-economist/</link>
+      <pubDate>Wed, 06 Jun 2018 05:33:04 -0700</pubDate>
+      
+      <guid>/2018/06/06/privacy-economist/</guid>
+      <description>Via The Economist:
+ Some people argue that those who have done nothing wrong need not worry. But that justifies limitless state surveillance, and risks a chilling effect on citizens’ fundamental civil liberties. After all, if you are not planning crimes while talking on the phone, why not just let police officers listen to every call? Police need oversight not because they are bad people but because maintaining the appropriate balance between liberty and security requires constant vigilance by engaged citizens.</description>
+    </item>
+    
+    <item>
+      <title>Rust &amp; More</title>
+      <link>/2018/06/03/rust-more/</link>
+      <pubDate>Sun, 03 Jun 2018 21:01:18 -0700</pubDate>
+      
+      <guid>/2018/06/03/rust-more/</guid>
+      <description>For the past two or so weeks I’ve been spending a lot of time writing Rust. Rust is a really spectacularly designed language with perhaps the greatest package manager⊕It’s called Cargo. I have ever experienced.
+Rust is fascinating to me because it’s one of my first true compiled languages. In contrast to the other languages I’m somewhat good at:
+ R (mostly interpereted) Python (interpereted) C# (JIT compiled) Julia (JIT compiled)  I am only passingly familiar with C and have mostly repressed C++, so Rust was both new and refreshing to me.</description>
+    </item>
+    
+    <item>
+      <title>Down With Business</title>
+      <link>/2018/05/22/down-with-business/</link>
+      <pubDate>Tue, 22 May 2018 05:39:43 -0700</pubDate>
+      
+      <guid>/2018/05/22/down-with-business/</guid>
+      <description>From Martin Parker at the Guardian:
+ We can see how this works if we look a bit more closely at the business-school curriculum and how it is taught. Take finance, for instance. This is a field concerned with understanding how people with money invest it. It assumes that there are people with money or capital that can be used as security for money, and hence it also assumes substantial inequalities of income and wealth.</description>
+    </item>
+    
+    <item>
+      <title>Updates</title>
+      <link>/2018/05/12/updates/</link>
+      <pubDate>Sat, 12 May 2018 15:08:05 -0700</pubDate>
+      
+      <guid>/2018/05/12/updates/</guid>
+      <description>I’m trying to get better about writing more things. To that end, I figured I should post some general updates on the things I’ve done lately.
+New York My brother and I just got back from a week-long trip to upstate New York to see our grandmother. She’s a cool lady, and we figured since we’re both sort of adults with jobs we should drop in. I raced BMX a little bit, wiped out a bit, and generally had a good time with cool folks.</description>
+    </item>
+    
+    <item>
+      <title>PhD</title>
+      <link>/2018/04/19/phd/</link>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/04/19/phd/</guid>
+      <description>I’m going to be a PhD student at the University of Oregon! I am looking forward to working with some spectacularly bright people.</description>
+    </item>
+    
+    <item>
+      <title>Scientific Papers</title>
+      <link>/2018/04/05/scientific-papers/</link>
+      <pubDate>Thu, 05 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/04/05/scientific-papers/</guid>
+      <description>An excellent article from the Atlantic explores the way that computational essays haven&amp;rsquo;t seemed to penetrate academia. There&amp;rsquo;s some information about the contest between open source and for-profit tools, like this:
+ But it’s hard to sell the scientific community on a piece of commercial software. Even though Wolfram Research has given away a free Mathematica notebook viewer for years, and even though most major universities already have a site license that lets their students and faculty use Mathematica freely, it might be too much to ask publishers to abandon PDFs, an open format, for a proprietary product.</description>
+    </item>
+    
+    <item>
+      <title>Business Cards</title>
+      <link>/2018/02/27/business-cards/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/27/business-cards/</guid>
+      <description>A couple months ago while I was bumming around London trying to get people to give me work, I made some (I think) really cool business card designs. I made a couple of different card designs that shared the same front and had varying backs. I have gotten some pretty good feedback whenever I’ve given these out.
+All the designs are made by me in Adobe Illustrator. You can get similar cards made at moo.</description>
+    </item>
+    
+    <item>
+      <title>Tufte Stufte</title>
+      <link>/2018/02/26/tufte-stufte/</link>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/26/tufte-stufte/</guid>
+      <description>This is not a margin note.⊕This is a margin note. As you can see, it is to the right of the left, and it indeed appears to be smaller. Were it a margin note as one might presuppose, it would be to the right of the left and perhaps a bit smaller.</description>
+    </item>
+    
+    <item>
+      <title>Corporate Debt</title>
+      <link>/2017/09/12/corporate-debt/</link>
+      <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/09/12/corporate-debt/</guid>
+      <description>This strikes me as a strange use of corporate cash.
+ Thirty US companies together have more than $800bn of fixed-income investments, according to a Financial Times analysis of their most recent filings with the US Securities and Exchange Commission.
+ That’s a lot of money. You might be wondering who those thirty companies are, and it’s probably who you’d expect – tech companies with far too much cash sitting around collecting dust.</description>
+    </item>
+    
+    <item>
+      <title>The American Dream</title>
+      <link>/2017/09/03/the-american-dream/</link>
+      <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/09/03/the-american-dream/</guid>
+      <description>Edmund Phelps writing at Project Syndicate:
+ What made the American Dream distinctive was neither the hope of winning the lottery nor of being buoyed by national market forces or public policy. It was the hope of achieving things, with all that that entails: drawing on one’s personal knowledge, trusting one’s intuition, venturing into the unknown. It reflected the deep need of these Americans to have the experience of succeeding at something: a craftsman’s gratification at seeing his mastery result in better work, or a merchant’s satisfaction at seeing “his ship come in.</description>
+    </item>
+    
+    <item>
+      <title>The Flash Crash</title>
+      <link>/2017/08/26/the-flash-crash/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/08/26/the-flash-crash/</guid>
+      <description>A paper came out in the April 2017 edition of the Journal of Finance that I found to be absolutely fascinating. Normally I’d just put a link up on Twitter and move on, but leaving Facebook and Twitter have limited my ability to scream about cool papers. I thought I’d do a brief post about the paper and talk about why it’s interesting to me.
+The abstract:
+ We study intraday market intermediation in an electronic market before and during a period of large and temporary selling pressure.</description>
+    </item>
+    
+    <item>
+      <title>English Pronunciation</title>
+      <link>/2017/08/16/english-pronunciation/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/08/16/english-pronunciation/</guid>
+      <description>My last name tends to throw a lot of people off, because it has far too many f&amp;rsquo;s and not enough real letters. While doing a bit of research on how to tell people how to best pronounce my name (it&amp;rsquo;s &amp;ldquo;fye-fur&amp;rdquo;, not &amp;ldquo;fiffer&amp;rdquo;), I found a neat little poem designed to showcase some of the strange ways English pronounces words. I sent it out to a couple of my friends from Norway and Greece and they politely declined to try a live reading.</description>
+    </item>
+    
+    <item>
+      <title>Perfect Numbers</title>
+      <link>/2017/08/15/perfect-numbers/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/08/15/perfect-numbers/</guid>
+      <description>I just started reading a book called How to Prove It: A Structured Approach, a book all about writing and understanding proofs. My unconventional background in mathematics means that I have a fair bit of terror when it comes to proofs; they have often come up on more quantitative finance courses in a tangential manner, as the proofs are often unnessecary. The fact remains that I am terrified by them, and wanted to get over my fear of proofs.</description>
+    </item>
+    
+    <item>
+      <title>A Brief Paper on Cointegration in Crude Oil</title>
+      <link>/2017/08/06/a-brief-paper-on-cointegration-in-crude-oil/</link>
+      <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/08/06/a-brief-paper-on-cointegration-in-crude-oil/</guid>
+      <description>I&amp;rsquo;ve just finished putting the final touches on my final paper for my master&amp;rsquo;s degree, and I thought I&amp;rsquo;d write up a bit about the process. You can get the fancy LaTeX version here.
+My final summer course for the master&amp;rsquo;s program was all about Energy Finance, taught by an econometrician1. Commensurate with the professor&amp;rsquo;s experience, the final paper was along the same lines. We were allowed to choose between three different project options.</description>
+    </item>
+    
+    <item>
+      <title>Julia</title>
+      <link>/2017/07/05/julia/</link>
+      <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/05/julia/</guid>
+      <description>As I&amp;rsquo;m wrapping up my master&amp;rsquo;s degree, I have somehow managed to find a large amount of time to pursue personal interests. One of those interests is Julia, a technical computing language with C-comparable speed. I&amp;rsquo;m not exactly sure where I stumbled on it, but it stuck with me. Of course, the best way to learn something is to do something cool with it, and FiveThiryEight&amp;rsquo;s Riddler often tends to supply great cannon fodder for programming.</description>
+    </item>
+    
+    <item>
+      <title>Kaggle Titanic</title>
+      <link>/2017/05/23/kaggle-titanic/</link>
+      <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/23/kaggle-titanic/</guid>
+      <description>I thought I’d start getting into Kaggle to work on some non-finance data to get a feel for the messiness of real-world information. Kaggle’s introductory competition is about predicting which passengers on the Titanic are going to survive using a handful of features, so let’s launch into mucking about. This post follows a “lab book” style and is quite scattered, as I develop ideas about what to do.
+# Libraries library(tidyverse) ## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.</description>
+    </item>
+    
+    <item>
+      <title>The Rise of DIY Quants</title>
+      <link>/2017/05/16/the-rise-of-diy-quants/</link>
+      <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/16/the-rise-of-diy-quants/</guid>
+      <description>This post first appeared in the May 2017 edition of the Reading University Investment Society newspaper - you can find a copy of the whole paper here.
+Modern finance is a constantly evolving field. In the 1970s after Black-Scholes published their seminal paper, derivatives in their current form (for primitive derivatives are found as far back as in ancient Sumerian culture) became common and ubiquitous. Approximately ten years later, we saw the rise of the first quantitative powerhouse Renaissance Technologies, a firm that to this day makes absurd profits.</description>
+    </item>
+    
+    <item>
+      <title>Github Pages</title>
+      <link>/2017/05/13/github-pages/</link>
+      <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/13/github-pages/</guid>
+      <description>I recently moved my site away from zeit, and migrated it to GitHub Pages. It&amp;rsquo;s much easier to maintain the site with git than with zeit&amp;rsquo;s now feature, which is a little too high-powered for my tases.
+I&amp;rsquo;ve also changed the theme to a modified version of paperback. The colors were originally all sepia tone, and I liked the current color scheme and typography.</description>
+    </item>
+    
+    <item>
+      <title>Credit Risk &amp; Logistic Regression</title>
+      <link>/2017/05/01/credit-risk-logistic-regression/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/01/credit-risk-logistic-regression/</guid>
+      <description>I thought I’d do a little bit of analysis to showcase some credit risk analysis, using logistic regression. I’ve pulled this sample loan data from a DataCamp course on credit risk. It’s a cool class, you should check it out if you have time. In a later post, I will try this same analysis with a neural network to see if it has better predictive capabilities.
+Here’s a look at the data.</description>
+    </item>
+    
+    <item>
+      <title>I made a newspaper</title>
+      <link>/2017/05/01/i-made-a-newspaper/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/01/i-made-a-newspaper/</guid>
+      <description>A couple of my friends here at the University of Reading came up with an excellent idea to start a financial newspaper. The concept was that the society1 would collect articles on investing and other things finance and publish them in a monthly paper. Being one of the few native English speakers with an interest in editing and journalism, I was selected to run the paper as Chief Editor.
+I&amp;rsquo;m very proud of the results, you can find the finished version of the April edition here.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>/2017/04/30/introduction/</link>
+      <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/30/introduction/</guid>
+      <description>Hello! I&amp;rsquo;ve just finished building this site with Hugo and blogdown, an excellent R package built up by the folks at RStudio. The first iteration of this site is being hosted by zeit, a super interesting cloud company. Deployment takes about a minute, unlike the absolute nightmare that is Google Cloud. They take Dockerfiles as well, something that I haven&amp;rsquo;t had any experience with until lately.
+As this is the first blog post here, I just thought I&amp;rsquo;d lay out a bit of why I built this.</description>
+    </item>
+    
+    <item>
+      <title>Federal Funds Hike</title>
+      <link>/2017/04/16/federal-funds-hike/</link>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/16/federal-funds-hike/</guid>
+      <description>This article first appeared in the Reading University Investment Society&amp;rsquo;s April edition on April 16th, 2017.
+Last month, the Federal Reserve raised the short-term interest rate target range by 0.25%, to a range of 0.75% to 1%. This is in line with the central bank’s “slow and steady” approach to rate increases after a decade of historically low interest rates, and is the third such rate increase since June of 2006.</description>
+    </item>
+    
+    <item>
+      <title>IEX&#39;s Crumbling Quote</title>
+      <link>/2017/04/16/iexs-crumbling-quote/</link>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/16/iexs-crumbling-quote/</guid>
+      <description>This article first appeared in the Reading University Investment Society&amp;rsquo;s April edition on April 16th, 2017.
+The Investor’s Exchange, also referred to as IEX, came to prominence in 2014 after Michael Lewis’ book Flash Boys was released. IEX was designed as an exchange to protect lumbering buy side firms from high-frequency traders and other nimble market actors.
+Their first innovation was to treat what is referred to as stale quote arbitrage.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
+      
+      <guid>/about/</guid>
+      <description>&amp;#8853; 
+&amp;#8853; It&amp;rsquo;s me!
+I&amp;rsquo;m a graduate student in finance. I also play with code and pianos.
+I am a PhD student at the University of Oregon studying finance. I have a master&amp;rsquo;s in finance from the ICMA Centre at the Henley Business School (which itself is part of the University of Reading), and a BSc in Technical Theater from Southern Oregon University.
+My interests are pretty broad in finance, but in general I tend to favor situations where technology is involed:</description>
+    </item>
+    
+    <item>
+      <title>Dataset Wishlist</title>
+      <link>/notes/wanted-datasets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/wanted-datasets/</guid>
+      <description> LOBSTER for limit order book reconstruction.  </description>
+    </item>
+    
+    <item>
+      <title>Order Cancellation</title>
+      <link>/notes/order-cancellation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/order-cancellation/</guid>
+      <description>Notes on Order Cancellation Subrahmanyam, Zeng (2016) Notes  HFT firms do not cancel orders more frequently than others, when you look at the top 50 price levels. Uses 116 stocks on NASDAQ during Q1 2011. HFT dominates cancellations at the top three price levels. Order executions are similar between HFT and non-HFT at approximately 50 price levels. Median order rest time:     HFT 0.53 2.15 6.</description>
+    </item>
+    
+  </channel>
+</rss>

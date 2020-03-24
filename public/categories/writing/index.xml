@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writing on Cameron&#39;s Blog</title>
+    <link>/categories/writing/</link>
+    <description>Recent content in Writing on Cameron&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/writing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Rise of DIY Quants</title>
+      <link>/2017/05/16/the-rise-of-diy-quants/</link>
+      <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/16/the-rise-of-diy-quants/</guid>
+      <description>This post first appeared in the May 2017 edition of the Reading University Investment Society newspaper - you can find a copy of the whole paper here.
+Modern finance is a constantly evolving field. In the 1970s after Black-Scholes published their seminal paper, derivatives in their current form (for primitive derivatives are found as far back as in ancient Sumerian culture) became common and ubiquitous. Approximately ten years later, we saw the rise of the first quantitative powerhouse Renaissance Technologies, a firm that to this day makes absurd profits.</description>
+    </item>
+    
+    <item>
+      <title>I made a newspaper</title>
+      <link>/2017/05/01/i-made-a-newspaper/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/01/i-made-a-newspaper/</guid>
+      <description>A couple of my friends here at the University of Reading came up with an excellent idea to start a financial newspaper. The concept was that the society1 would collect articles on investing and other things finance and publish them in a monthly paper. Being one of the few native English speakers with an interest in editing and journalism, I was selected to run the paper as Chief Editor.
+I&amp;rsquo;m very proud of the results, you can find the finished version of the April edition here.</description>
+    </item>
+    
+    <item>
+      <title>Federal Funds Hike</title>
+      <link>/2017/04/16/federal-funds-hike/</link>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/16/federal-funds-hike/</guid>
+      <description>This article first appeared in the Reading University Investment Society&amp;rsquo;s April edition on April 16th, 2017.
+Last month, the Federal Reserve raised the short-term interest rate target range by 0.25%, to a range of 0.75% to 1%. This is in line with the central bank’s “slow and steady” approach to rate increases after a decade of historically low interest rates, and is the third such rate increase since June of 2006.</description>
+    </item>
+    
+    <item>
+      <title>IEX&#39;s Crumbling Quote</title>
+      <link>/2017/04/16/iexs-crumbling-quote/</link>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/16/iexs-crumbling-quote/</guid>
+      <description>This article first appeared in the Reading University Investment Society&amp;rsquo;s April edition on April 16th, 2017.
+The Investor’s Exchange, also referred to as IEX, came to prominence in 2014 after Michael Lewis’ book Flash Boys was released. IEX was designed as an exchange to protect lumbering buy side firms from high-frequency traders and other nimble market actors.
+Their first innovation was to treat what is referred to as stale quote arbitrage.</description>
+    </item>
+    
+  </channel>
+</rss>

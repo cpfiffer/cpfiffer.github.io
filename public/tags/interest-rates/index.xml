@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interest Rates on Cameron&#39;s Blog</title>
+    <link>/tags/interest-rates/</link>
+    <description>Recent content in Interest Rates on Cameron&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/interest-rates/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Federal Funds Hike</title>
+      <link>/2017/04/16/federal-funds-hike/</link>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/16/federal-funds-hike/</guid>
+      <description>This article first appeared in the Reading University Investment Society&amp;rsquo;s April edition on April 16th, 2017.
+Last month, the Federal Reserve raised the short-term interest rate target range by 0.25%, to a range of 0.75% to 1%. This is in line with the central bank’s “slow and steady” approach to rate increases after a decade of historically low interest rates, and is the third such rate increase since June of 2006.</description>
+    </item>
+    
+  </channel>
+</rss>

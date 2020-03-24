@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on Cameron&#39;s Blog</title>
+    <link>/tags/web/</link>
+    <description>Recent content in Web on Cameron&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Flash Crash</title>
+      <link>/2017/08/26/the-flash-crash/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/08/26/the-flash-crash/</guid>
+      <description>A paper came out in the April 2017 edition of the Journal of Finance that I found to be absolutely fascinating. Normally I’d just put a link up on Twitter and move on, but leaving Facebook and Twitter have limited my ability to scream about cool papers. I thought I’d do a brief post about the paper and talk about why it’s interesting to me.
+The abstract:
+ We study intraday market intermediation in an electronic market before and during a period of large and temporary selling pressure.</description>
+    </item>
+    
+    <item>
+      <title>Julia</title>
+      <link>/2017/07/05/julia/</link>
+      <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/05/julia/</guid>
+      <description>As I&amp;rsquo;m wrapping up my master&amp;rsquo;s degree, I have somehow managed to find a large amount of time to pursue personal interests. One of those interests is Julia, a technical computing language with C-comparable speed. I&amp;rsquo;m not exactly sure where I stumbled on it, but it stuck with me. Of course, the best way to learn something is to do something cool with it, and FiveThiryEight&amp;rsquo;s Riddler often tends to supply great cannon fodder for programming.</description>
+    </item>
+    
+    <item>
+      <title>Github Pages</title>
+      <link>/2017/05/13/github-pages/</link>
+      <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/13/github-pages/</guid>
+      <description>I recently moved my site away from zeit, and migrated it to GitHub Pages. It&amp;rsquo;s much easier to maintain the site with git than with zeit&amp;rsquo;s now feature, which is a little too high-powered for my tases.
+I&amp;rsquo;ve also changed the theme to a modified version of paperback. The colors were originally all sepia tone, and I liked the current color scheme and typography.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>/2017/04/30/introduction/</link>
+      <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/30/introduction/</guid>
+      <description>Hello! I&amp;rsquo;ve just finished building this site with Hugo and blogdown, an excellent R package built up by the folks at RStudio. The first iteration of this site is being hosted by zeit, a super interesting cloud company. Deployment takes about a minute, unlike the absolute nightmare that is Google Cloud. They take Dockerfiles as well, something that I haven&amp;rsquo;t had any experience with until lately.
+As this is the first blog post here, I just thought I&amp;rsquo;d lay out a bit of why I built this.</description>
+    </item>
+    
+  </channel>
+</rss>

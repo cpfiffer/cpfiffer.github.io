@@ -1,0 +1,271 @@
+
+<span class="camerons_logo">
+      <span class = "blog_logo">
+        <h1> Cameron's Blog </h1>
+         
+      </span>
+      <h3> <i> Finance, statistics, data, and other trash </i> </h3>
+      <h4><a href="/"> Blog </a> ∘ <a href="/about"> About </a> ∘ <a href="/links"> Links </a> ∘ <a href="https://github.com/cpfiffer"> Github </a> ∘  <a href="/notes"> Notes </a></h4>
+      
+</span>
+
+<hr>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+<title>Cameron&#39;s Blog - Bayesian Econometrics</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Cameron&#39;s Blog">
+<meta name="generator" content="Hugo 0.57.2" />
+
+  
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/tuftesque.css">
+<style>
+body {
+  
+    background-color:  white;
+  
+}
+</style>
+
+
+  
+</head>
+
+<body>
+<div id="layout" class="pure-g">
+<article class="pure-u-1">
+<h1> Bayesian Econometrics </h1>
+
+
+
+
+<span class="toc">
+    <header>
+    <h2>Contents</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#ground-truth">Ground truth</a></li>
+<li><a href="#causal-inference">Causal inference</a></li>
+<li><a href="#economists-love-math">Economists love math</a></li>
+</ul></li>
+<li><a href="#bayesian-methods-and-economics">Bayesian methods and economics</a>
+<ul>
+<li><a href="#bayesian-methods">Bayesian methods</a></li>
+<li><a href="#the-state-of-bayesian-methods-in-finance">The state of Bayesian methods in finance</a></li>
+</ul></li>
+<li><a href="#what-s-cool">What&rsquo;s cool</a></li>
+<li><a href="#hopes">Hopes</a>
+<ul>
+<li><a href="#structural-estimation">Structural estimation</a></li>
+<li><a href="#prior-sensitivity">Prior sensitivity</a></li>
+<li><a href="#latent-variables">Latent variables</a></li>
+</ul></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</nav>
+</span>
+
+
+<section>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>Since I&rsquo;m in social distancing mode, I figured it would be a good time to write a blog post on Bayesian methods and financial economics. I have written a post in quite a while, as the past year and a half or so have been a busy time for me. The finance PhD takes up most of my time, as well as my work on <a href="https://turing.ml">Turing.jl</a>, a <a href="https://en.wikipedia.org/wiki/Probabilistic_programming">probabilistic programming language</a> (PPL) for Julia.</p>
+
+<p>Before I continue, I want to make sure people understand my perspective. I do not work in fields of economics that people tend to think of when they think of economics &ndash; maybe you think of labor, health, or macroeconomics, all of which are valuable fields that I know very little about. I study finance, which is the study of how money and securities are used and what they do to the economy. Keep that in mind as we go along. I&rsquo;m in a smaller subfield of economics that shares many of the same methodologies and language, but is applied to the theory of the firm and to asset prices.</p>
+
+<p>Back to Turing.jl. Everyone who works on Turing is of an extremely high quality level. They are all typically very skilled in their respective computational or statistical domains, and it is easy to feel a little out of place. I am not an optimization person, or a machine learning person, or even really anyone with any measure of formal engineering training<sup class="footnote-ref" id="fnref:training"><a href="#fn:training">1</a></sup>.</p>
+
+<p>I am, however, a financial economist (with training wheels). Working on Turing and spending a lot of time with CS and statistics people who are not economists has been particularly eye-opening, because economics is a unique field that I think tends to stand out in the sciences. Here&rsquo;s why:</p>
+
+<h2 id="ground-truth">Ground truth</h2>
+
+<p>As with all social sciences, <strong>ground truth is hard to come by</strong>. In any of the hard sciences like physics, you can hypothesize something, and then sometimes you can spend hundred of millions of dollars to see if it is true. In economics, we don&rsquo;t really have this. You can&rsquo;t run experiments where you make half of all pregnant mothers smoke to see what happens to their kids, or randomly assign particular directors to company boards.</p>
+
+<h2 id="causal-inference">Causal inference</h2>
+
+<p><strong>Causal inference is the name of the game</strong>. Economics is about how thing A causes thing B to change. The field has built up an enormous set of statistical tools just to identify whether and how a thing is causal, and many of these tools are commonly only used in social sciences<sup class="footnote-ref" id="fnref:iv"><a href="#fn:iv">2</a></sup>.</p>
+
+<h2 id="economists-love-math">Economists love math</h2>
+
+<p><strong>Economics is mathematical</strong>. Because economists don&rsquo;t have ground truth, they build models of behavior and attempt to match empirical facts to what theory suggests should exist. Economists tend to bash other social scientists (especially sociology, sorry folks) because their methods are less sophisticated. Economists even bash financial economists like me, because we tend to be 5-10 years behind economics writ-large in terms of empirical and theoretical methodologies.</p>
+
+<h1 id="bayesian-methods-and-economics">Bayesian methods and economics</h1>
+
+<p>I&rsquo;m going to talk about how I think Bayesian methods are being used currently in financial economics, why I think Bayesian methods should be used more in empirical economics. I also want to pitch Turing.jl as a way for researchers to do more of this, if only because it is very easy to do so.</p>
+
+<p>I mentioned before that economics does not have ground truth. There will never be a point when a researcher can be confident that their model is 100% correct, or that their parameter estiamtes are accurate. It&rsquo;s just not possible &ndash; economics is the science of choices by people. People are made up of angry goop and they can behave irrationally at times, so a deterministic model is pretty hard to specify.</p>
+
+<p>That&rsquo;s why economists use standard errors, and think so hard about whether their model is free from material omitted bias, heteroskedasticity, etc. Standard errors in OLS (or whatever your method is) give you a good proxy for the variance of your estimator, assuming that estimator is normal.</p>
+
+<p>Economists have many ways to think about standard errors and causal inference &ndash; do your errors have some kind of autocorrelation? What if clusters of observation share some common error? Does the instrument you are using satisfy the necessary requirements? These kinds of questions are where economics shines the brightest. Because there is no ground truth, you want to be as confident as you can when you say something.</p>
+
+<h2 id="bayesian-methods">Bayesian methods</h2>
+
+<p>What does any of this have to do with Bayesian methods? Well, my biggest issue with contemporary econometrics is the use of priors. Every single time someone runs a regression with <code>lm(y ~ x, data)</code> or <code>reg y x</code>, they are doing a very specific thing. OLS is simply the <a href="https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation">maximum a posteriori</a> estimate of the model&rsquo;s parameters with a flat prior everywhere, also called <a href="https://en.wikipedia.org/wiki/Maximum_likelihood_estimation">maximum likelihood</a>. By doing this, you let the data speak for you, which I am generally in favor of.</p>
+
+<p>But sometimes priors matter! When you have small datasets or multiple posterior  modes, sometimes priors can get your estimates to where you think is reasonable (conditional on a good prior).</p>
+
+<p>It&rsquo;s not like economists have a shortage of priors, either. Good papers are either backed by good theory or show intuitive relationships that don&rsquo;t need a formal theoretical link, and in all cases you can typically say something like</p>
+
+<blockquote>
+<p>If the relationships in Person (2030) hold, then $\alpha &gt; 1$.</p>
+</blockquote>
+
+<p>Sounds like a prior to me. You can use theoretical predictions to motivate priors when you&rsquo;re writing models.</p>
+
+<h2 id="the-state-of-bayesian-methods-in-finance">The state of Bayesian methods in finance</h2>
+
+<p>My perception is that Bayesian methods are still somewhat fringe, but that they have a slight but regular appearance in finance. I went to our top journal, the <a href="https://afajof.org/">Journal of Finance</a>, and searched for the word &ldquo;bayesian&rdquo;. I grabbed any of the papers that are not pure theory. Here&rsquo;s a list of papers that turned up:</p>
+
+<ul>
+<li>Cavagnaro et al. (2019). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.12783">Measuring Institutional Investors’ Skill at Making Private Equity Investments</a>.</li>
+<li>Pástor (2000). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00204">Portfolio Selection and Asset Pricing Models</a>.</li>
+<li>Pástor and Stambaugh (1999). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00099">Costs of Equity Capital and Model Mispricing</a>.</li>
+<li>Johannes, Lochstoer, and Mou (2016). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.12246">Learning About Consumption Dynamics</a>.</li>
+<li>Lamoureux and Witte (2002). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/1540-6261.00467">Empirical Analysis of the Yield Curve: The Information in the Data Viewed through the Window of Cox, Ingersoll, and Ross</a>.</li>
+<li>Kandel and Stambaugh (1996). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.1996.tb02689.x">On the Predictability of Stock Returns: An Asset‐Allocation Perspective</a>.</li>
+<li>Barillas and Shanken (2018). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.12607">Comparing Asset Pricing Models</a>.</li>
+<li>Rouwenhorst (1999). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00151">Local Return Factors and Turnover in Emerging Stock Markets</a>.</li>
+<li>Brav (2000). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00279">Inference in Long‐Horizon Event Studies: A Bayesian Approach with Application to Initial Public Offerings</a>.</li>
+<li>Baks, Metrick, and Wachter (2001). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00319">Should Investors Avoid All Actively Managed Mutual Funds? A Study in Bayesian Performance Evaluation</a>.</li>
+<li>Busse and Irvine (2006). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.2006.01057.x">Bayesian Alphas and Mutual Fund Persistence</a>.</li>
+</ul>
+
+<p>Many of these papers use explicitly derived analytic forms, explicit Gibbs conditionals, or very basic MCMC models. Very few of these models are non-linear models, and in most cases they tend to be regular frequentist econometrics with the addition of a density function.</p>
+
+<h1 id="what-s-cool">What&rsquo;s cool</h1>
+
+<p>My favorite papers apply Bayesian methods in a more interesting way. One example is <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.12607">Barillas and Shanken (2018)</a>, who use a closed form solution to analyze the efficacy of various factor models. I like this paper quite a lot, but I think that researchers tend to work really hard to derive closed form solutions when they are not really ncessary. For example, <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.12854">Chib, Zeng, and Zhao (2020)</a> attempted to replicate Barillas and Shanken, and noticed that the use of a Jeffrey&rsquo;s prior on nuisance parameters makes the closed form solution unsound.</p>
+
+<p>You can avoid this by just numerically solving your model. I believe that we should start thinking more and more computationally as our models become more complex, and Markov Chain Monte Carlo lets you do this. Importantly, this is easier now that ever. It&rsquo;s not 2002 anymore and you don&rsquo;t have to roll your own Gibbs sampler every time you need to solve some model. You can just use a probabilistic programming language like Turing!</p>
+
+<p><label for="book" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="book" class="margin-toggle"/>
+<span class="marginnote">
+Some other good PPLs are <a href="https://mc-stan.org/">Stan</a>, <a href="https://github.com/cscherrer/Soss.jl">Soss.jl</a>, <a href="https://docs.pymc.io/">PyMC</a>, and <a href="http://pyro.ai/">Pyro</a>, among many others.
+</span></p>
+
+<p>Don&rsquo;t get me wrong &ndash; I love theory as much as the next person. Theory is good for telling stories, whereas empirics are good for proving those stories. Or theory is getting more and more complex, and our empirics should rise to meet the challenge. Additionally, I think where Bayesian methods are concerned, people try to mix theory and empirics too closely, and they end up looking for closed form solutions where there are none.</p>
+
+<p>I want to present a rough sketch of how I think about this, and how I&rsquo;d do it computationally. Assume that there are $N$ factor models, each of which returns an expected return from a function <code>r(m, t, x)</code> for factor model index <code>m</code>, time <code>t</code>, and observable data <code>x</code>. Assume <code>x</code> is a matrix of returns and factors for one security. One nice way to do this in Turing is</p>
+
+<pre><code class="language-julia"># Import Turing
+using Turing
+
+#
+# Declare our probabilistic model.
+# - models is a vector of functions, r(n, t, x), that return an expected return.
+# - data is a matrix with returns in the first column, and factors in the remaining columns.
+# 
+@model factors(models, data) = begin
+    # Choose which model is &quot;true&quot;, all models have equal priors.
+    m ~ Categorical(length(models))
+
+    # Draw a variance parameter.
+    σ ~ InverseGamma(2,3)
+
+    # Estimate each return.
+    r_hat = r.(m, 1:size(data, 1), data)
+
+    # Check the model's predictions:
+    data[:, 1] ~ MvNormal(r_hat, σ)
+end
+</code></pre>
+
+<p>And you&rsquo;re done! You can run this on whatever sampling method you want, and it&rsquo;ll give you posterior probabilities for models. As valuable as raw math is, sometimes it&rsquo;s nice to just type the model up and see what the data says, assuming you&rsquo;ve thought about all the econometric issues as you normally would.</p>
+
+<h1 id="hopes">Hopes</h1>
+
+<p>In this section, I want to talk about some things I want to see more of going forward.</p>
+
+<h2 id="structural-estimation">Structural estimation</h2>
+
+<p>Structural estimation is a really beautiful tool. When you structurally estimate something, you marry theory and empirics to determine the effect of some parameter. For the most part, it is done in a frequentist way by matching moments between simulated data and empirical data. You can do structural estimation in a Bayesian way by specifying a very general probabilistic model and then running it through your PPL of choice. Not only does this give you parameter estimates, but it also tells you how uncertain you are of those estimates. You might even learn that your parameterizations are multimodal, and that there are numerous nontrivial outcomes in your model that a simulated method of moments estimation might miss.</p>
+
+<h2 id="prior-sensitivity">Prior sensitivity</h2>
+
+<p>Bayesian methods let you test how realistic something is. I read a cool working paper a little while ago called <a href="https://sites.google.com/site/lalochstoer/VolUnderreactionMain.pdf?attredirects=0&amp;d=1">Volatility Expectations and Returns</a> by Lars Lochstoer and Tyler Muir. They propose a novel behavioral explanation of some weird patterns in the VIX, realized volatility, returns, and the variance risk premium. Essentially, if investors use too much of past variance to form their expectations about current variance, you can explain many strange effects in markets.</p>
+
+<p>The problem with behavioral papers is that they don&rsquo;t quite site right with finance folks, because it&rsquo;s very easy to say that some arbitrageur should have removed this anomaly. Rob Ready (here at the University of Oregon) asked how strong your priors would have to be on using old observations of variance for this effect to matter, and we can test this! Build a model of stoachastic volatility and conditional expectations, and you should be able to fiddle with your model priors until something cool comes out.</p>
+
+<h2 id="latent-variables">Latent variables</h2>
+
+<p>Bayesian methods are interesting when you apply them to inferring latent variables. In finance, these might be things like managerial skill, expected return, volatility, etc. We&rsquo;ve got all kinds of things we don&rsquo;t directly observe but have models to explain how they interact when other stuff. When you know that X goes up when Y does, you can start to run inference on the relationships between X and Y even when you can&rsquo;t observe Y, though as always, it helps to have lots of data.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>This was a bit of a rambling post, but I&rsquo;m trying to get some thoughts on paper. What a time to be alive.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:training">I do have industry experience, but it&rsquo;s not a perfect substitute. It helps a lot to have thought about all the little fiddly bits that go into Turing.
+ <a class="footnote-return" href="#fnref:training"><sup>[return]</sup></a></li>
+<li id="fn:iv">Do physics people use <a href="https://en.wikipedia.org/wiki/Instrumental_variables_estimation">instrumental variables</a>?
+ <a class="footnote-return" href="#fnref:iv"><sup>[return]</sup></a></li>
+</ol>
+</div>
+</section>
+<section>
+  <footer class="page-footer">
+		<hr>
+		<ul class="page-footer-menu">
+		
+		</ul>
+
+  
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</footer>
+
+</section>
+</article>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+---
+title: "Down With Business"
+author: Cameron Pfiffer
+date: 2018-05-22T05:39:43-07:00
+draft: false
+---
+
+From [Martin Parker](https://www.theguardian.com/news/2018/apr/27/bulldoze-the-business-school) at the Guardian:
+
+>We can see how this works if we look a bit more closely at the business-school curriculum and how it is taught. Take finance, for instance. This is a field concerned with understanding how people with money invest it. It assumes that there are people with money or capital that can be used as security for money, and hence it also assumes substantial inequalities of income and wealth. The greater the inequalities within any given society, the greater the interest in finance, as well as the market in luxury yachts. Finance academics almost always assume that earning rent on capital (however it was acquired) is a legitimate and perhaps even praiseworthy activity, with skilful investors being lionised for their technical skills and success. The purpose of this form of knowledge is to maximise the rent from wealth, often by developing mathematical or legal mechanisms that can multiply it. Successful financial strategies are those that produce the maximum return in the shortest period, and hence that further exacerbate the social inequalities that made them possible in the first place.
+
+The article in its entirety is Martin's rejection of the business school, and how it fosters some ideological problems amongst its students. His characterization of finance `r tufte::margin_note("He had many other points, but I am not really qualified to talk about operations management.")` seems a bit reductive. 
+
+First, finance does not necessitate inequality. Finance is merely the grease of capital, because without it money wouldn't move as much as it does -- the presence of a tool does not force its use for ill-ends. Certainly, finance allows those with capital to gain more from that capital base than the poor, but at the same time, well-capitalized people and institutions are theoretically the ones who are most likely to make investments in capital goods 
+`r tufte::margin_note("1. Capital goods benefit us because they are expensive, and the production of (most) capital goods touches lots of hands.")` or research, things which benefit us all.
+
+`r tufte::margin_note("2. Research is good because it allows society to do things it couldn't before, like cure polio, send messages across the world, or write blog posts.")`
+
+Second, I don't know that characterizing finance as the science of extracting rent from wealth is the right way to go about it. Again, yes, those with capital benefit more from finance, but so does society. Finance is the science of making sure those who _have_ assets can give money to those who _do not_, and can do better things with that money. Without finance we would have no modern agriculture, iPhones, shopping malls, computers, or nearly anything else -- if investors cannot engage in maturity and liquidity transformation, nothing will be done. 
+
+
+The article is very well written and worth a read, though I would hesitate to destroy business schools just yet; I've only just been accepted to one. Wait about five years, please.

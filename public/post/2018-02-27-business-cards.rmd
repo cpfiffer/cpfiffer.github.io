@@ -1,0 +1,60 @@
+---
+title: "Business Cards"
+exceprt: "Some of my business cards."
+author: "Cameron Pfiffer"
+date: '2018-02-27'
+slug: business-cards
+categories: []
+tags: []
+draft: false
+---
+
+A couple months ago while I was bumming around London trying to get people to give me work, I made some (I think) really cool business card designs. I made a couple of different card designs that shared the same front and had varying backs. I have gotten some pretty good feedback whenever I've given these out.
+
+All the designs are made by me in Adobe Illustrator. You can get similar cards made at [moo.com](moo.com).
+
+### Front
+`r tufte::margin_note("Boilerplate front matter.")`
+![](/cards/front.jpg){height=300px}
+
+### Accounting
+`r tufte::margin_note("A graphical representation of the accounting identity. This might be my least favorite design.")`
+![](/cards/accounting.jpg){height=300px}
+
+### Capital Structure
+`r tufte::margin_note("A pie chart showing the way that companies can be financed, along with the [weighted average cost of capital](https://en.wikipedia.org/wiki/Weighted_average_cost_of_capital) function.")`
+![](/cards/cap.jpg){height=300px}
+
+### Event Study
+`r tufte::margin_note("A visual depiction of how event studies are conducted in finance and economics.")`
+![](/cards/event.jpg){width=100%}
+
+### Gradient Descent (Type 1)
+`r tufte::margin_note("The first style of gradient descent I designed. I did not use this one in my actual cards in favor of the next version.")`
+![](/cards/graph1.jpg){height=300px}
+
+### Gradient Descent (Type 2)
+`r tufte::margin_note("This one is by far the most popular one I have made, and my personal favorite. It's a representation of 3d [gradient descent](https://en.wikipedia.org/wiki/Gradient_descent), a optimization algorithm commonly used in machine learning.")`
+![](/cards/graph2.jpg){height=300px}
+
+### Markowitz Portfolio
+`r tufte::margin_note("The Markowitz [mean-variance portfolio](https://en.wikipedia.org/wiki/Modern_portfolio_theory).")`
+![](/cards/markowitz.jpg){height=300px}
+
+### Neural Network
+`r tufte::margin_note("A representation of a small neural net. In retrospect, this design is a bit cluttered and unpleasant, and I'm often reluctant to give it out.")`
+![](/cards/nn.jpg){height=300px}
+
+### Options
+`r tufte::margin_note("This is a short [butterfly option](https://en.wikipedia.org/wiki/Butterfly_(options)), shown with all the constituent options.")`
+![](/cards/options.jpg){width=100%}
+
+### Regression
+`r tufte::margin_note("Linear regression. Nice, clean, and simple")`
+![](/cards/regression.jpg){height=300px}
+
+### The Time Value of Money
+`r tufte::margin_note("A fundamental part of finance and economics. I really like the way this one looks.")`
+![](/cards/tvm.jpg){height=300px}
+
+If you'd like a business card, send me an email at [cameron@pfiffer.org](mailto:cameron@pfiffer.org) and maybe I'll mail you one. They're pretty cool.

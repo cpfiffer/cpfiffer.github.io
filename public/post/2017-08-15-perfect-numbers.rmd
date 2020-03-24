@@ -1,0 +1,47 @@
+---
+title: Perfect Numbers
+author: ~
+date: '2017-08-15'
+slug: perfect-numbers
+---
+
+I just started reading a book called [How to Prove It: A Structured Approach](https://books.google.co.uk/books/about/How_to_Prove_it.html?id=murSjwEACAAJ&redir_esc=y&hl=en), a book all about writing and understanding proofs. My unconventional background in mathematics means that I have a fair bit of terror when it comes to proofs; they have often come up on more quantitative finance courses in a tangential manner, as the proofs are often unnessecary. The fact remains that I am terrified by them, and wanted to get over my fear of proofs. 
+
+In the process, I read a bit on [perfect numbers](https://en.wikipedia.org/wiki/Perfect_number). One of the proofs in the book was Euclid's proof about infinite primes, and I figured I should write a little bit of code to find perfect numbers, for gits and shiggles.
+
+Here's the code to compute [aliquot sums](https://en.wikipedia.org/wiki/Aliquot_sum) in Julia, a necessary intermediate step in perfect number evaluation.
+
+```
+using Primes
+
+function aliquot(x::Int64, verbose=false)
+    divisors = []
+    for i in 1:x-1
+        if(x%i == 0)
+            append!(divisors, i)
+        end
+    end
+    if verbose == true print(divisors) end
+    return sum(divisors)
+end
+```
+
+This is a function for computing the next prime number after integer $x$.
+
+```
+function next_perfect(x::Int64, limit=Inf64)
+    # Given a number, find the next highest perfect number.
+    found = false
+    while(found==false)
+        # You can set a computational limit with the 'limit' argument.
+        if (x >= limit) break end
+        if aliquot(x) == x
+            print(x, " is the next perfect number.")
+            found=true
+            break
+        end
+        x += 1
+    end
+    return x
+end
+```
