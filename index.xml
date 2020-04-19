@@ -481,6 +481,16 @@ My interests are pretty broad in finance, but in general I tend to favor situati
     </item>
     
     <item>
+      <title>Bayesian finance</title>
+      <link>/notes/bayes-finance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/bayes-finance/</guid>
+      <description>A list of Bayesian finance papers I&amp;rsquo;ve noticed. These are mostly sourced from the financial economics literature, and primarily so from the top three journals (Journal of Finance, Review of Financial Studies, and the Journal of Financial Economics). I exclude theoretical papers because the Bayesian component is usually not the most interesting part. I favor empirical papers that use some kind of Bayesian method. Suggestions welcome!
+Note: a .bib file can be found here.</description>
+    </item>
+    
+    <item>
       <title>Dataset Wishlist</title>
       <link>/notes/wanted-datasets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
