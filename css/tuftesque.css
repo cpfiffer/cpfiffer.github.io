@@ -10,7 +10,7 @@ code {
   background-color: #f7f7f7;
   font-size: 0.95em;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 1.0rem;
+  font-size: 1.5rem;
   line-height: 1.6;
 }
 
@@ -165,7 +165,7 @@ label.margin-toggle {
 
 
 #homepage{
-  width: 100%;
+  width: 50%;
   margin: auto auto;
   color: #111111;
 }
@@ -317,8 +317,8 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 30%;
+  padding-right: 30%;
   font-family: "et-book", -apple-system, "San Francisco", "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Open Sans","Helvetica Neue", "Lucida Grand", sans-serif;
   background-color: #fffff8;
   color: #333;
@@ -595,7 +595,7 @@ h1 .code, h2 .code, h3 .code {
 }
 
 .marginnote .code, .sidenote .code {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 pre.code {
@@ -678,14 +678,24 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
 /* Large screens */
 @media all and (max-width: 1200px) {
   #homepage{
-    width: 75%;
+    width: 50%;
   }
+
+  /* body{
+    padding-left: 25%;
+    padding-right: 25%;
+  } */
 }
 
 /* Medium-large screens */
 @media all and (max-width: 760px) {
   #homepage{
     width: 85%;
+  }
+
+  body{
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
