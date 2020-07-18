@@ -22,7 +22,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="Cameron&#39;s Blog">
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.68.3" />
 
   
 
@@ -69,35 +69,6 @@ body {
 
 
 
-
-<span class="toc">
-    <header>
-    <h2>Contents</h2>
-    </header>
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#introduction">Introduction</a>
-<ul>
-<li><a href="#ground-truth">Ground truth</a></li>
-<li><a href="#causal-inference">Causal inference</a></li>
-<li><a href="#economists-love-math">Economists love math</a></li>
-</ul></li>
-<li><a href="#bayesian-methods-and-economics">Bayesian methods and economics</a>
-<ul>
-<li><a href="#bayesian-methods">Bayesian methods</a></li>
-<li><a href="#the-state-of-bayesian-methods-in-finance">The state of Bayesian methods in finance</a></li>
-</ul></li>
-<li><a href="#what-s-cool">What&rsquo;s cool</a></li>
-<li><a href="#hopes">Hopes</a>
-<ul>
-<li><a href="#structural-estimation">Structural estimation</a></li>
-<li><a href="#prior-sensitivity">Prior sensitivity</a></li>
-<li><a href="#latent-variables">Latent variables</a></li>
-</ul></li>
-<li><a href="#conclusion">Conclusion</a></li>
-</ul>
-</nav>
-</span>
 
 
 <section>
@@ -183,30 +154,27 @@ Some other good PPLs are <a href="https://mc-stan.org/">Stan</a>, <a href="https
 <p>Don&rsquo;t get me wrong &ndash; I love theory as much as the next person. Theory is good for telling stories, whereas empirics are good for proving those stories. Or theory is getting more and more complex, and our empirics should rise to meet the challenge. Additionally, I think where Bayesian methods are concerned, people try to mix theory and empirics too closely, and they end up looking for closed form solutions where there are none.</p>
 
 <p>I want to present a rough sketch of how I think about this, and how I&rsquo;d do it computationally. Assume that there are $N$ factor models, each of which returns an expected return from a function <code>r(m, t, x)</code> for factor model index <code>m</code>, time <code>t</code>, and observable data <code>x</code>. Assume <code>x</code> is a matrix of returns and factors for one security. One nice way to do this in Turing is</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#75715e"># Import Turing</span>
+<span style="color:#66d9ef">using</span> Turing
 
-<pre><code class="language-julia"># Import Turing
-using Turing
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># Declare our probabilistic model.</span>
+<span style="color:#75715e"># - models is a vector of functions, r(n, t, x), that return an expected return.</span>
+<span style="color:#75715e"># - data is a matrix with returns in the first column, and factors in the remaining columns.</span>
+<span style="color:#75715e"># </span>
+<span style="color:#a6e22e">@model</span> factors(models, data) <span style="color:#f92672">=</span> <span style="color:#66d9ef">begin</span>
+    <span style="color:#75715e"># Choose which model is &#34;true&#34;, all models have equal priors.</span>
+    m <span style="color:#f92672">~</span> Categorical(length(models))
 
-#
-# Declare our probabilistic model.
-# - models is a vector of functions, r(n, t, x), that return an expected return.
-# - data is a matrix with returns in the first column, and factors in the remaining columns.
-# 
-@model factors(models, data) = begin
-    # Choose which model is &quot;true&quot;, all models have equal priors.
-    m ~ Categorical(length(models))
+    <span style="color:#75715e"># Draw a variance parameter.</span>
+    σ <span style="color:#f92672">~</span> InverseGamma(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>)
 
-    # Draw a variance parameter.
-    σ ~ InverseGamma(2,3)
+    <span style="color:#75715e"># Estimate each return.</span>
+    r_hat <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>(m, <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>size(data, <span style="color:#ae81ff">1</span>), data)
 
-    # Estimate each return.
-    r_hat = r.(m, 1:size(data, 1), data)
-
-    # Check the model's predictions:
-    data[:, 1] ~ MvNormal(r_hat, σ)
-end
-</code></pre>
-
+    <span style="color:#75715e"># Check the model&#39;s predictions:</span>
+    data[<span style="color:#f92672">:</span>, <span style="color:#ae81ff">1</span>] <span style="color:#f92672">~</span> MvNormal(r_hat, σ)
+<span style="color:#66d9ef">end</span></code></pre></div>
 <p>And you&rsquo;re done! You can run this on whatever sampling method you want, and it&rsquo;ll give you posterior probabilities for models. As valuable as raw math is, sometimes it&rsquo;s nice to just type the model up and see what the data says, assuming you&rsquo;ve thought about all the econometric issues as you normally would.</p>
 
 <h1 id="hopes">Hopes</h1>

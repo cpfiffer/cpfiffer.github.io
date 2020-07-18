@@ -1,0 +1,268 @@
+
+<span class="camerons_logo">
+      <span class = "blog_logo">
+        <h1> Cameron's Blog </h1>
+         
+      </span>
+      <h3> <i> Finance, statistics, data, and other trash </i> </h3>
+      <h4><a href="/"> Blog </a> ∘ <a href="/about"> About </a> ∘ <a href="/links"> Links </a> ∘ <a href="https://github.com/cpfiffer"> Github </a> ∘  <a href="/notes"> Notes </a></h4>
+      
+</span>
+
+<hr>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+<title>Cameron&#39;s Blog - </title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Cameron&#39;s Blog">
+<meta name="generator" content="Hugo 0.68.3" />
+
+  
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/tuftesque.css">
+<style>
+body {
+  
+    background-color:  white;
+  
+}
+</style>
+
+
+  
+</head>
+
+<body>
+<div id="layout" class="pure-g">
+<article class="pure-u-1">
+<h1>  </h1>
+
+
+
+
+
+<section><p>A Tale of Two Premiums: The Role of Hedgers and Speculators in Commodity Futures</p>
+
+<p>Kang, Rouwenhorst, and Tang (2020)</p>
+
+<hr />
+
+<p>Abstract</p>
+
+<ul>
+<li>Studies the interaction between the net positions of traders and risk premia in commodity futures markets.</li>
+<li>Short-term position changes come from liquidity demanding noncommercials.</li>
+<li>Long-term variation comes from the hedging demands of commercials.</li>
+<li>Both position change types push expected returns in opposite directions.</li>
+<li>Commercial traders provide liquidity, and profit from doing so relative to the hedging premium they pay.</li>
+</ul>
+
+<p>Introduction</p>
+
+<ul>
+<li>Normal backwardation suggests that
+
+<ul>
+<li>the hedging demand for futures is net short.</li>
+<li>hedgers induce speculators to absorb the risk of price fluctuations.</li>
+</ul></li>
+<li>The Keynesian view is weak because
+
+<ol>
+<li>Hedging and speculation are often difficult to distinguish. Commercial hedgers can speculate based on market views.</li>
+<li>Speculators don&rsquo;t just &ldquo;provide insurance&rdquo;, they have various means and end goals, such as ETF investment.</li>
+</ol></li>
+<li>What influences position changes unrelated to hedging demand? And what happens to risk premiums?</li>
+<li>Empirical evidence of the Keynsian view is weak.</li>
+<li>Tests of <code>returns ~ hedging_pressure</code> is typically not as significant as you would think.
+
+<ul>
+<li>CFTC designations may not categorize hedgers/speculators well.</li>
+<li>Lots of the variation in hedging pressure that is not from commercials who are hedging. Classic noise problem!</li>
+</ul></li>
+<li>Commercial traders might be supplying liquidity for the short-term trades.</li>
+<li>Examines futures returns following weekly position changes from the CFTC.</li>
+<li>The weeks following a position change have
+
+<ul>
+<li>Noncommercial buyers get low returns when buying, high returns when selling.</li>
+<li>Commercial buyers get the opposite: high returns when buying, low returns when selling.</li>
+</ul></li>
+<li>Commercial traders are contrarians, while noncommercials are impatient liquidity demanders.</li>
+<li>This is contrary to the Keynesian view, where incresed selling should accompany higher returns! What&rsquo;s up here?</li>
+<li>If you remove variation in hedging pressure from short term trading, you get the Keynsian relationship.</li>
+<li>There are two premiums! One for hedging (paid by commercials to noncommercials) and one for liquidity provision (paid by noncommercials to commercials).</li>
+<li>Factors that influence premia
+
+<ul>
+<li>Commercials are less willing to provide liquidity when (option-implied) risk is high.</li>
+<li>The VIX doesn&rsquo;t effect liquidity provision.</li>
+<li>Commercials are less willing to provide liquidity when they are capital constrained or when they are imbalanced.</li>
+</ul></li>
+<li>Commercial traders provide liquidity to momentum traders because lots of trading by noncommercials is orthogonal to momentum.</li>
+<li>Explains why commercial traders trade so much &ndash; they&rsquo;re providing liquidity.</li>
+</ul>
+
+<p>Data and summary stats</p>
+
+<ul>
+<li><p>CFTC position data</p></li>
+
+<li><p>26 commodities on NYMEX, NYBOT, CBOT, and CME</p></li>
+
+<li><p>Ranges from January 2, 1994 to December 31, 2017</p></li>
+
+<li><p>Use Disaggregated Comitment of Trader data for robustness.</p></li>
+
+<li><p>Hedging pressure for commodity $i$:
+$$
+HP<em>{i,t} = \frac{CS</em>{i,t} - CL<em>{i,t}}{OI</em>{i,t}} = -\frac{\text{commercial net long position}<em>{i,t}}{\text{open interest}</em>{i,t}}
+$$</p></li>
+
+<li><p>For each trader category, define net trading as
+$$
+Q<em>{i,t} = \frac{\text{net long position}</em>{i,t} - \text{net long position}<em>{i,t-1}}{\text{open interest}</em>{i,t}}
+$$</p></li>
+
+<li><p>Finally, define propensity to trade as
+$$
+PT<em>{i,t} = \frac{
+\mid L</em>{i,t} - L<em>{i,t-1} \mid + \mid S</em>{i,t} - S<em>{i,t-1} \mid
+}{
+L</em>{i,t-1} + S_{i,t-1}
+}
+$$
+for a trader type&rsquo;s long position $L$ and short position $S$.</p></li>
+
+<li><p>Table I</p>
+
+<ul>
+<li>Average excess return is positive for <sup>18</sup>&frasl;<sub>26</sub> markets</li>
+<li>Hedging pressure is positive for <sup>24</sup>&frasl;<sub>26</sub> commodities</li>
+</ul></li>
+
+<li><p>Figure I</p>
+
+<ul>
+<li>Lots of time series variation in hedging pressure.</li>
+</ul></li>
+</ul>
+
+<p>Liquidity Provision in Commodities Futures Markets</p>
+
+<ul>
+<li>Run Fama-MacBeth regressions of $Q$ on current or past returns and position changes.</li>
+<li>Table II
+
+<ul>
+<li>Noncommercials are momentum traders</li>
+<li>Commercials are contrarians</li>
+</ul></li>
+<li>Table III
+
+<ul>
+<li>Testing whether returns are predictable</li>
+<li>Commodities bought by commercials do well in the next period.</li>
+<li>Noncommercials tend to lose.</li>
+</ul></li>
+<li>DCOT and CFTC data are correlated at 0.9, so we&rsquo;re fine to use the CFTC data.</li>
+<li>Table IV
+
+<ul>
+<li>Does the DCOT data change much?</li>
+<li>Nope.</li>
+</ul></li>
+<li>Table V
+
+<ul>
+<li>There&rsquo;s a momentum effect when you sort on net trading by commercials</li>
+</ul></li>
+</ul>
+
+<p>The role of hedging pressure revisited</p>
+
+<ul>
+<li>Short term trading makes hedging pressure noisy as all hell</li>
+<li>Table VI
+
+<ul>
+<li>Using smoothed hedging pressure gets you the result you&rsquo;d expect, that hedging pressure induces higher returns as an insurance premium.</li>
+</ul></li>
+<li>More or less the same story multiple times.</li>
+</ul>
+
+<p>Further perspective in liquidity provision</p>
+
+<ul>
+<li>Commodity volatility comes from option-implied vol on futures.</li>
+<li>Table IX
+
+<ul>
+<li>Nothing to do with the vix, everything to do with commodities volatility.</li>
+<li>Large losses or big imabalances reduce liquidity provision</li>
+</ul></li>
+</ul>
+
+<p>Why do commercials provide liquidity to momentum traders?</p>
+
+<ul>
+<li>They gain more from liquidity provision than they lose from momentum trading</li>
+</ul>
+</section>
+<section>
+  <footer class="page-footer">
+		<hr>
+		<ul class="page-footer-menu">
+		
+		</ul>
+
+  
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</footer>
+
+</section>
+</article>
+</div>
+</body>
+</html>

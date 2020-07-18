@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on Cameron&#39;s Blog</title>
@@ -9,6 +9,18 @@
     
 	<atom:link href="/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>/notes/two-premiums/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/two-premiums/</guid>
+      <description>A Tale of Two Premiums: The Role of Hedgers and Speculators in Commodity Futures
+Kang, Rouwenhorst, and Tang (2020)
+Abstract
+ Studies the interaction between the net positions of traders and risk premia in commodity futures markets. Short-term position changes come from liquidity demanding noncommercials. Long-term variation comes from the hedging demands of commercials. Both position change types push expected returns in opposite directions. Commercial traders provide liquidity, and profit from doing so relative to the hedging premium they pay.</description>
+    </item>
     
     <item>
       <title>Bayesian finance</title>

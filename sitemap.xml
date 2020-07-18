@@ -1,14 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>/2020/03/24/bayesian-econometrics/</loc>
-    <lastmod>2020-03-24T09:21:25-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2020-03-24T09:21:25-07:00</lastmod>
   </url>
   
@@ -115,6 +110,11 @@
   <url>
     <loc>/2018/06/25/information-theory/</loc>
     <lastmod>2018-06-25T21:30:55-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2018-06-20T06:56:21-07:00</lastmod>
   </url>
   
   <url>
@@ -320,6 +320,10 @@
   <url>
     <loc>/tags/me/</loc>
     <lastmod>2016-05-05T21:48:51-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/notes/two-premiums/</loc>
   </url>
   
   <url>

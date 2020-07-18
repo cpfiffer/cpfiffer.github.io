@@ -22,7 +22,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="Cameron&#39;s Blog">
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.68.3" />
 
   
 
@@ -70,13 +70,6 @@ body {
 
 
 
-<span class="toc">
-    <header>
-    <h2>Contents</h2>
-    </header>
-    
-</span>
-
 
 <section><p>As I&rsquo;m wrapping up my master&rsquo;s degree, I have somehow managed to find a large amount of time to pursue personal interests. One of those interests is <a href="https://julialang.org/">Julia</a>, a technical computing language with C-comparable speed. I&rsquo;m not exactly sure where I stumbled on it, but it stuck with me. Of course, the best way to learn something is to do something <em>cool</em> with it, and <a href="https://fivethirtyeight.com/features/pick-a-number-any-number/">FiveThiryEight&rsquo;s Riddler</a> often tends to supply great cannon fodder for programming. This past week&rsquo;s one was a computationally difficult one:</p>
 
@@ -110,82 +103,70 @@ body {
 </ol>
 
 <p>Mathematically, it&rsquo;s very simple to define what&rsquo;s a multiple and what&rsquo;s a factor, here&rsquo;s two functions that do that. <code>valid</code> is a function where you pass an <code>x</code> and a <code>y</code> and return <code>true</code> if <code>x</code> can be followed by <code>y</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#75715e"># Test if x can be followed by y</span>
+<span style="color:#66d9ef">function</span> valid(x, y, limit)
+	<span style="color:#75715e"># Determine if y is a multiple of x</span>
+	mul <span style="color:#f92672">=</span> multiples(x, limit) <span style="color:#75715e"># Get multiples of x</span>
+	index <span style="color:#f92672">=</span> findin(mul, y) <span style="color:#75715e"># Find if y is in the list of x&#39;s multiples</span>
+	<span style="color:#66d9ef">if</span> index <span style="color:#f92672">!=</span> [] <span style="color:#75715e"># If the index isn&#39;t zero</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
+	<span style="color:#66d9ef">end</span>
 
-<pre><code># Test if x can be followed by y
-function valid(x, y, limit)
-	# Determine if y is a multiple of x
-	mul = multiples(x, limit) # Get multiples of x
-	index = findin(mul, y) # Find if y is in the list of x's multiples
-	if index != [] # If the index isn't zero
-		return true
-	end
-
-	# Now determine if y is a factor of x
-	if x % y == 0
-		return true
-	end
-	return false
-end
-</code></pre>
-
+	<span style="color:#75715e"># Now determine if y is a factor of x</span>
+	<span style="color:#66d9ef">if</span> x <span style="color:#f92672">%</span> y <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
+	<span style="color:#66d9ef">end</span>
+	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
+<span style="color:#66d9ef">end</span></code></pre></div>
 <p>Multiples generates a list of multiples and returns it.</p>
-
-<pre><code>function multiples(x, limit)
-	vals = [0]
-	for i in 1:limit
-		#print(i, &quot;\n&quot;)
-		if (i % x == 0) &amp; (i != x)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#66d9ef">function</span> multiples(x, limit)
+	vals <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>]
+	<span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>limit
+		<span style="color:#75715e">#print(i, &#34;\n&#34;)</span>
+		<span style="color:#66d9ef">if</span> (i <span style="color:#f92672">%</span> x <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&amp;</span> (i <span style="color:#f92672">!=</span> x)
 			append!(vals, i)
-		end
-	end
-	if vals == [0]
-		print(&quot;No multiples of &quot;, x, &quot;.&quot;, &quot;\n&quot;)
-	end
+		<span style="color:#66d9ef">end</span>
+	<span style="color:#66d9ef">end</span>
+	<span style="color:#66d9ef">if</span> vals <span style="color:#f92672">==</span> [<span style="color:#ae81ff">0</span>]
+		print(<span style="color:#e6db74">&#34;No multiples of &#34;</span>, x, <span style="color:#e6db74">&#34;.&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+	<span style="color:#66d9ef">end</span>
 
-	return vals
-end
-</code></pre>
-
+	<span style="color:#66d9ef">return</span> vals
+<span style="color:#66d9ef">end</span></code></pre></div>
 <p>These two functions are called by <code>makechain</code>, which picks the first number<sup class="footnote-ref" id="fnref:f0d5da3f"><a href="#fn:f0d5da3f">3</a></sup>, and then tests if subsequent random numbers are valid. When it runs out of valid numbers, it spits out the answer.</p>
-
-<pre><code>function makechain(limit::Int64)
-  possible = Array(1:limit)
-  first = rand(possible)
-  remove = getindex(possible, first)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#66d9ef">function</span> makechain(limit<span style="color:#f92672">::</span><span style="color:#66d9ef">Int64</span>)
+  possible <span style="color:#f92672">=</span> <span style="color:#66d9ef">Array</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>limit)
+  first <span style="color:#f92672">=</span> rand(possible)
+  remove <span style="color:#f92672">=</span> getindex(possible, first)
   deleteat!(possible,remove)
 
-  chain = [first]
+  chain <span style="color:#f92672">=</span> [first]
 
-	# Pick a random number.
-	# Check if that number is valid.
-	# If it isn't pick a new one, until they're all gone.
-	testPosition = possible
+	<span style="color:#75715e"># Pick a random number.</span>
+	<span style="color:#75715e"># Check if that number is valid.</span>
+	<span style="color:#75715e"># If it isn&#39;t pick a new one, until they&#39;re all gone.</span>
+	testPosition <span style="color:#f92672">=</span> possible
 	shuffle!(testPosition)
-	for i in testPosition
-		v = valid(chain[end], i, limit)
-		if v == true
+	<span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> testPosition
+		v <span style="color:#f92672">=</span> valid(chain[<span style="color:#66d9ef">end</span>], i, limit)
+		<span style="color:#66d9ef">if</span> v <span style="color:#f92672">==</span> <span style="color:#66d9ef">true</span>
 			append!(chain, i)
-		end
-	end
+		<span style="color:#66d9ef">end</span>
+	<span style="color:#66d9ef">end</span>
 
-  return chain
-end
-</code></pre>
-
+  <span style="color:#66d9ef">return</span> chain
+<span style="color:#66d9ef">end</span></code></pre></div>
 <p>Finally, the final function just runs <code>makechain</code> a bunch of times and finds the longest chain it can.</p>
-
-<pre><code>function find_longest(iterations::Int64, limit=100)
-	longest = []
-	for i in 1:iterations
-		chain = makechain(limit)
-		if length(chain) &gt; length(longest)
-			longest = chain
-		end
-	end
-	return longest
-end
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#66d9ef">function</span> find_longest(iterations<span style="color:#f92672">::</span><span style="color:#66d9ef">Int64</span>, limit<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>)
+	longest <span style="color:#f92672">=</span> []
+	<span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>iterations
+		chain <span style="color:#f92672">=</span> makechain(limit)
+		<span style="color:#66d9ef">if</span> length(chain) <span style="color:#f92672">&gt;</span> length(longest)
+			longest <span style="color:#f92672">=</span> chain
+		<span style="color:#66d9ef">end</span>
+	<span style="color:#66d9ef">end</span>
+	<span style="color:#66d9ef">return</span> longest
+<span style="color:#66d9ef">end</span></code></pre></div>
 <p>My biggest output was something like 27 integers long after building 10 million chains, which was far below the 77 found by two other contestants. One guy apparently solved it with some nifty combinatorics software.</p>
 
 <p>Even though I didn&rsquo;t get the right answer, I had a lot of fun working with Julia for the first time and I&rsquo;m looking forward to finding neat things to do with it. Also, Julia is <strong>wicked fast</strong>.</p>

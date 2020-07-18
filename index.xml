@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cameron&#39;s Blog</title>
@@ -6,7 +6,7 @@
     <description>Recent content on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Mar 2020 09:21:25 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jun 2018 06:56:21 -0700</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -478,6 +478,18 @@ Their first innovation was to treat what is referred to as stale quote arbitrage
 I&amp;rsquo;m a graduate student in finance. I also play with code and pianos.
 I am a PhD student at the University of Oregon studying finance. I have a master&amp;rsquo;s in finance from the ICMA Centre at the Henley Business School (which itself is part of the University of Reading), and a BSc in Technical Theater from Southern Oregon University.
 My interests are pretty broad in finance, but in general I tend to favor situations where technology is involed:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/notes/two-premiums/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/two-premiums/</guid>
+      <description>A Tale of Two Premiums: The Role of Hedgers and Speculators in Commodity Futures
+Kang, Rouwenhorst, and Tang (2020)
+Abstract
+ Studies the interaction between the net positions of traders and risk premia in commodity futures markets. Short-term position changes come from liquidity demanding noncommercials. Long-term variation comes from the hedging demands of commercials. Both position change types push expected returns in opposite directions. Commercial traders provide liquidity, and profit from doing so relative to the hedging premium they pay.</description>
     </item>
     
     <item>
