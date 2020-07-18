@@ -681,10 +681,25 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
     width: 50%;
   }
 
-  /* body{
-    padding-left: 25%;
-    padding-right: 25%;
-  } */
+  body{
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .sidenote, .marginnote {
+    float: right;
+    clear: right;
+    margin-right: -31%;
+    margin-left: 1%;
+    width: 28%;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    vertical-align: baseline;
+    position: relative;
+    color: rgba(0, 0, 0, 1);
+  }
 }
 
 /* Medium-large screens */
