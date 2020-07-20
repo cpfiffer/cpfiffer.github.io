@@ -6,10 +6,21 @@
     <description>Recent content on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
     <lastBuildDate>Wed, 20 Jun 2018 06:56:21 -0700</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bayesian finance papers</title>
+      <link>/2020/04/19/bayesian-finance-papers/</link>
+      <pubDate>Sun, 19 Apr 2020 20:58:31 -0700</pubDate>
+      
+      <guid>/2020/04/19/bayesian-finance-papers/</guid>
+      <description>A list of Bayesian finance papers I&amp;rsquo;ve noticed. These are mostly sourced from the financial economics literature, and primarily so from the top three journals (Journal of Finance, Review of Financial Studies, and the Journal of Financial Economics). I exclude theoretical papers because the Bayesian component is usually not the most interesting part. I favor empirical papers that use some kind of Bayesian method. Suggestions welcome!
+Note: a .bib file can be found here.</description>
+    </item>
     
     <item>
       <title>Bayesian Econometrics</title>
@@ -474,50 +485,10 @@ Their first innovation was to treat what is referred to as stale quote arbitrage
       
       <guid>/about/</guid>
       <description>&amp;#8853; 
-&amp;#8853; It&amp;rsquo;s me!
-I&amp;rsquo;m a graduate student in finance. I also play with code and pianos.
-I am a PhD student at the University of Oregon studying finance. I have a master&amp;rsquo;s in finance from the ICMA Centre at the Henley Business School (which itself is part of the University of Reading), and a BSc in Technical Theater from Southern Oregon University.
-My interests are pretty broad in finance, but in general I tend to favor situations where technology is involed:</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/notes/two-premiums/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/notes/two-premiums/</guid>
-      <description>A Tale of Two Premiums: The Role of Hedgers and Speculators in Commodity Futures
-Kang, Rouwenhorst, and Tang (2020)
-Abstract
- Studies the interaction between the net positions of traders and risk premia in commodity futures markets. Short-term position changes come from liquidity demanding noncommercials. Long-term variation comes from the hedging demands of commercials. Both position change types push expected returns in opposite directions. Commercial traders provide liquidity, and profit from doing so relative to the hedging premium they pay.</description>
-    </item>
-    
-    <item>
-      <title>Bayesian finance</title>
-      <link>/notes/bayes-finance/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/notes/bayes-finance/</guid>
-      <description>A list of Bayesian finance papers I&amp;rsquo;ve noticed. These are mostly sourced from the financial economics literature, and primarily so from the top three journals (Journal of Finance, Review of Financial Studies, and the Journal of Financial Economics). I exclude theoretical papers because the Bayesian component is usually not the most interesting part. I favor empirical papers that use some kind of Bayesian method. Suggestions welcome!
-Note: a .bib file can be found here.</description>
-    </item>
-    
-    <item>
-      <title>Dataset Wishlist</title>
-      <link>/notes/wanted-datasets/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/notes/wanted-datasets/</guid>
-      <description> LOBSTER for limit order book reconstruction.  </description>
-    </item>
-    
-    <item>
-      <title>Order Cancellation</title>
-      <link>/notes/order-cancellation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/notes/order-cancellation/</guid>
-      <description>Notes on Order Cancellation Subrahmanyam, Zeng (2016) Notes  HFT firms do not cancel orders more frequently than others, when you look at the top 50 price levels. Uses 116 stocks on NASDAQ during Q1 2011. HFT dominates cancellations at the top three price levels. Order executions are similar between HFT and non-HFT at approximately 50 price levels. Median order rest time:     HFT 0.53 2.15 6.</description>
+&amp;#8853; It&amp;rsquo;s my jolly face!
+I play with code and pianos.
+I am a PhD student at the University of Oregon studying finance. I have a master&amp;rsquo;s in finance from the ICMA Centre at the Henley Business School (which itself is part of the University of Reading), and a BSc in Technical Theater from Southern Oregon University. I&amp;rsquo;m a developer for Turing.jl, a probabilistic programming tool.
+My interests are pretty broad in finance, but in general I tend to favor situations where technology is involed (with some classic asset pricing stuff too):</description>
     </item>
     
   </channel>

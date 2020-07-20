@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/2020/03/24/bayesian-econometrics/</loc>
-    <lastmod>2020-03-24T09:21:25-07:00</lastmod>
+    <loc>/2020/04/19/bayesian-finance-papers/</loc>
+    <lastmod>2020-04-19T20:58:31-07:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
+    <lastmod>2020-04-19T20:58:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2020/03/24/bayesian-econometrics/</loc>
     <lastmod>2020-03-24T09:21:25-07:00</lastmod>
   </url>
   
@@ -320,26 +325,6 @@
   <url>
     <loc>/tags/me/</loc>
     <lastmod>2016-05-05T21:48:51-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/notes/two-premiums/</loc>
-  </url>
-  
-  <url>
-    <loc>/notes/bayes-finance/</loc>
-  </url>
-  
-  <url>
-    <loc>/notes/wanted-datasets/</loc>
-  </url>
-  
-  <url>
-    <loc>/notes/</loc>
-  </url>
-  
-  <url>
-    <loc>/notes/order-cancellation/</loc>
   </url>
   
 </urlset>

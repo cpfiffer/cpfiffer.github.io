@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Cameron&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Mar 2020 09:21:25 -0700</lastBuildDate>
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 19 Apr 2020 20:58:31 -0700</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bayesian finance papers</title>
+      <link>/2020/04/19/bayesian-finance-papers/</link>
+      <pubDate>Sun, 19 Apr 2020 20:58:31 -0700</pubDate>
+      
+      <guid>/2020/04/19/bayesian-finance-papers/</guid>
+      <description>A list of Bayesian finance papers I&amp;rsquo;ve noticed. These are mostly sourced from the financial economics literature, and primarily so from the top three journals (Journal of Finance, Review of Financial Studies, and the Journal of Financial Economics). I exclude theoretical papers because the Bayesian component is usually not the most interesting part. I favor empirical papers that use some kind of Bayesian method. Suggestions welcome!
+Note: a .bib file can be found here.</description>
+    </item>
     
     <item>
       <title>Bayesian Econometrics</title>
