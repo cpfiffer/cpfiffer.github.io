@@ -18,9 +18,34 @@
       <pubDate>Mon, 17 Dec 2018 07:28:24 -0800</pubDate>
       
       <guid>/2018/12/17/selection-mechanism-design/</guid>
-      <description>&amp;#8853; Dewhurst, David Rushing, Michael Vincent Arnold, and Colin Michael Van Oort, 2018, Selection mechanism design affects volatility in a market of evolving zero-intelligence agents, arXiv:1812.05657 [cs, q-fin].
-Here&amp;rsquo;s an interesting paper from Dewherst, Arnold, and Van Oort published to arXiv. Dewherst et al. use an evolving multi-agent landscape to model evolutionary selection mechanisms applicable to markets.
-&amp;#8853; Lo, Andrew W, 2004, The Adaptive Markets Hypothesis, Journal of Portfolio Management, 15.</description>
+      <description>&lt;p&gt;&lt;label for=&#34;source&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
+&lt;input type=&#34;checkbox&#34; id=&#34;source&#34; class=&#34;margin-toggle&#34;/&gt;
+&lt;span class=&#34;marginnote&#34;&gt; Dewhurst, David Rushing, Michael Vincent Arnold, and Colin Michael Van Oort, 2018, Selection mechanism design affects volatility in a market of evolving zero-intelligence agents, arXiv:1812.05657 [cs, q-fin].&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1812.05657&#34;&gt;Here&amp;rsquo;s an interesting paper&lt;/a&gt; from Dewherst, Arnold, and Van Oort published to arXiv. Dewherst et al. use an evolving multi-agent landscape to model evolutionary selection mechanisms applicable to markets.&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&#34;amg&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
+&lt;input type=&#34;checkbox&#34; id=&#34;amg&#34; class=&#34;margin-toggle&#34;/&gt;
+&lt;span class=&#34;marginnote&#34;&gt; Lo, Andrew W, 2004, The Adaptive Markets Hypothesis, Journal of Portfolio Management, 15.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Choosing a representative selection mechanism is somewhat important if you follow Andrew Lo&amp;rsquo;s Adaptive Markets Hypothesis, where financial agents are weeded out in response to changing market conditions. Deherst et al. examine three selection mechanisms.&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&#34;fba&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
+&lt;input type=&#34;checkbox&#34; id=&#34;fba&#34; class=&#34;margin-toggle&#34;/&gt;
+&lt;span class=&#34;marginnote&#34;&gt; The authors use frequent batch auctions instread of continuous dual auctions. I&amp;rsquo;m a big fan of frequent batch auctions, and you can read more about them in the &lt;a href=&#34;https://faculty.chicagobooth.edu/eric.budish/research/HFT-FrequentBatchAuctions.pdf&#34;&gt;Budish, Cramton and Shim (2015) paper&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;The first is a global quantile-based measure, where the bottom 10% of all agents are eliminated when a selection event occurs. The second is a localized variant, where agents in a subsample are kept in the environment according to the probability&lt;/p&gt;
+
+&lt;p&gt;$$p_i(t)=\frac{π_i(t)}{∑{π_j}}$$&lt;/p&gt;
+
+&lt;p&gt;where $π_i$ is the fitness of agent $i$. This can be understood as awarding higher retention probabilities to agents with a high share of the sampled agent&amp;rsquo;s fitness. The final metric uses the first metric with probability ½ and the second metric with probability ½.&lt;/p&gt;
+
+&lt;p&gt;The agents have risk aversion, and are allowed to &amp;ldquo;innovate&amp;rdquo; by drawing their parameters from distributions unaffected by existing agents. If you don&amp;rsquo;t innovate, you draw your parameters from a distribution represented by agents who were not removed.&lt;/p&gt;
+
+&lt;p&gt;The results show that the quantile metric creates agents with higher average profitability, but that the localized variant has a higher correlation between micro and macro volatility.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m not quite sold at the end of the paper as to their selection mechanism, but I think it&amp;rsquo;s an interesting vein of research.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

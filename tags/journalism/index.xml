@@ -18,8 +18,21 @@
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/01/i-made-a-newspaper/</guid>
-      <description>A couple of my friends here at the University of Reading came up with an excellent idea to start a financial newspaper. The concept was that the society1 would collect articles on investing and other things finance and publish them in a monthly paper. Being one of the few native English speakers with an interest in editing and journalism, I was selected to run the paper as Chief Editor.
-I&amp;rsquo;m very proud of the results, you can find the finished version of the April edition here.</description>
+      <description>&lt;p&gt;A couple of my friends here at the University of Reading came up with an excellent idea to start a financial newspaper. The concept was that the society&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; would collect articles on investing and other things finance and publish them in a monthly paper. Being one of the few native English speakers with an interest in editing and journalism, I was selected to run the paper as Chief Editor.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m very proud of the results, you can find the finished version of the April edition &lt;a href=&#34;https://www.dropbox.com/s/vicfm15cza2gt8u/RUIS-April.pdf?dl=0&#34;&gt;here&lt;/a&gt;. I wrote a couple articles, about the &lt;a href=&#34;/2017/04/16/2017-05-01-federal-funds-hike/&#34;&gt;federal funds hike&lt;/a&gt; and &lt;a href=&#34;/2017/04/16/2017-05-01-iex-s-crumbling-quote/&#34;&gt;IEX&lt;/a&gt;. I also wrote a lovely editors note, available in the full edition.&lt;/p&gt;
+
+&lt;p&gt;We intend to release at least a few more editions before we all graduate, and we&amp;rsquo;ll see how they turn out.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;That&amp;rsquo;s what they call &amp;ldquo;clubs&amp;rdquo; in the UK.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
@@ -28,9 +41,20 @@ I&amp;rsquo;m very proud of the results, you can find the finished version of th
       <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/04/16/iexs-crumbling-quote/</guid>
-      <description>This article first appeared in the Reading University Investment Society&amp;rsquo;s April edition on April 16th, 2017.
-The Investor’s Exchange, also referred to as IEX, came to prominence in 2014 after Michael Lewis’ book Flash Boys was released. IEX was designed as an exchange to protect lumbering buy side firms from high-frequency traders and other nimble market actors.
-Their first innovation was to treat what is referred to as stale quote arbitrage.</description>
+      <description>&lt;p&gt;&lt;strong&gt;This article first appeared in the Reading University Investment Society&amp;rsquo;s  &lt;a href=&#34;https://www.dropbox.com/s/vicfm15cza2gt8u/RUIS-April.pdf?dl=0&#34;&gt;April edition&lt;/a&gt; on April 16th, 2017.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Investor’s Exchange, also referred to as IEX, came to prominence in 2014 after Michael Lewis’ book Flash Boys was released. IEX was designed as an exchange to protect lumbering buy side firms from high-frequency traders and other nimble market actors.&lt;/p&gt;
+
+&lt;p&gt;Their first innovation was to treat what is referred to as stale quote arbitrage. In this type of arbitrage, a fast trader could detect when the best bid or offer had changed on one exchange, and then immediately go to another exchange and pick off a midpoint quote before the midpoint updated. To solve this problem, IEX famously built a box in a warehouse with a very long coil of fiber optic cable designed to introduce a 350-microsecond delay into quote updates. Any trader who could detect a midpoint quote before it updated on another exchange could not immediately post an order on IEX, because it would suffer a delay while the exchange updated the midpoint quotes.&lt;/p&gt;
+
+&lt;p&gt;IEX’s dedication to ensuring low transaction costs to its buy side clients is ceaseless, and it has published a new working paper about dealing with another type of arbitrage, which it calls “crumbling quote arbitrage”. The paper, written by Allison Bishop is entitled “&lt;a href=&#34;https://iextrading.com/docs/The%20Evolution%20of%20the%20Crumbling%20Quote%20Signal.pdf?utm_medium=email&amp;amp;utm_source=newsletter&amp;amp;utm_term=170411&amp;amp;utm_campaign=moneystuff&#34;&gt;The Evolution of the Crumbling Quote Signal&lt;/a&gt;” and details the exchange’s cunning way of dealing with an interesting problem.&lt;/p&gt;
+
+&lt;p&gt;Crumbling quotes refer to when the number of exchanges on the national best bid or offer is eroding over time as the market eats up posted volumes. This can and does happen in legitimate market trading, but some predatory firms may intentionally claim all posted volumes and have in place an order to take advantage of IEX’s delay.&lt;/p&gt;
+
+&lt;p&gt;The working paper is fascinating, as Bishop demonstrates IEX’s approach to predicting when a crumbling quote is likely to occur, and allowing orders pegged to the midpoint to exercise discretion when IEX’s “signal” is on. Their new rule was approved by the SEC for use in production, though it has yet to be fully installed exchange-wide.&lt;/p&gt;
+
+&lt;p&gt;IEX has been at the forefront of protecting its client’s interests, and this is simply the next step at the frontier of combating high frequency traders and other technologically advanced market participants. IEX has a powerful advantage over market predators, and that is that it – along with other exchanges – has access to both a greater quantity and quality of data that traders would usually have to pay thousands of dollars a month for. It will certainly be interesting to watch the development and competition between IEX and those it tries to protect its clients from.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

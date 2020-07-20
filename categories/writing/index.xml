@@ -18,8 +18,24 @@
       <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/16/the-rise-of-diy-quants/</guid>
-      <description>This post first appeared in the May 2017 edition of the Reading University Investment Society newspaper - you can find a copy of the whole paper here.
-Modern finance is a constantly evolving field. In the 1970s after Black-Scholes published their seminal paper, derivatives in their current form (for primitive derivatives are found as far back as in ancient Sumerian culture) became common and ubiquitous. Approximately ten years later, we saw the rise of the first quantitative powerhouse Renaissance Technologies, a firm that to this day makes absurd profits.</description>
+      <description>&lt;p&gt;&lt;strong&gt;This post first appeared in the May 2017 edition of the Reading University Investment Society newspaper - you can find a copy of the whole paper &lt;a href=&#34;https://www.dropbox.com/s/bn6kukgloae9sr9/May.pdf?dl=0&#34;&gt;here&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Modern finance is a constantly evolving field. In the 1970s after Black-Scholes published their seminal paper, derivatives in their current form (for primitive derivatives are found as far back as in ancient Sumerian culture) became common and ubiquitous. Approximately ten years later, we saw the rise of the first quantitative powerhouse Renaissance Technologies, a firm that to this day makes absurd profits. Even today, the rise of passive investing is driven by mathematics as firms construct smart-beta models and strive for mean-variance portfolio optimization.&lt;/p&gt;
+
+&lt;p&gt;But the past five years have seen another interesting development - the rise of DIY quants. Idle software engineers, physicists, students, hedge fund managers, and even yours truly have engaged in the construction of systematic and automated trading tools with free tools like Quantopian, Quandl, CloudQuant, Numerai, and many others. These platforms combine free data with programming and software development tools, and many offer tutorials on quantitative investment strategies and techniques.&lt;/p&gt;
+
+&lt;p&gt;Take Quantopian for example. In about ten minutes from creating an account, you can have a algorithmized strategy for mean-reversion up and running. You can even hook your algorithm up to two brokers for live trading, either Interactive Brokers or Robinhood. Quantopian offers minute-level equities data, as well as futures prices to trade on, all callable by an easy-to-manage API. Participants on the platform can place their algorithms in competitions, with the prize being capital awarded from Quantopian and its full deployment in the market.&lt;/p&gt;
+
+&lt;p&gt;You can couple your Quantopian strategy with Quandl&amp;rsquo;s vast array of core and alternative data, such as satellite imagery, oil tank storage levels, retailer email receipt data, and other custom datasets.  One could imagine a complex algorithm that locates all oil tankers currently shipping, weights the levels in reserve, and prices equities for oil and shipping as well as oil derivatives. In fact, it&amp;rsquo;s likely that some hedge fund somewhere in the world is already doing such a thing.&lt;/p&gt;
+
+&lt;p&gt;The world is becoming more accepting of this type of behavior. In some ways, it reflects global culture&amp;rsquo;s growing aversion to high finance, as we shift away from large banks and financial institutions and move to passive investing. In the same way, DIY quants are democratizing previously unavailable services and reclaiming sovereignty over their investments.&lt;/p&gt;
+
+&lt;p&gt;This type of investing wouldn&amp;rsquo;t have been able to occur even in the 2000s - few had the skills necessary to write the code, the computers were too slow, the digital infrastructure was lacking, and the data was prohibitively expensive. Python and other high-level languages (often condemned by institutional quantitative investors as being too slow for production) have risen in ubiquity. Even in the late 2000&amp;rsquo;s the difference in speed between Python and a faster language, like C or Fortran, was nearly insurmountable due to the slowness of the computers they ran on. Now, a budding math-geek can run a trading bot on a cloud server from a Chromebook, and utilize thousands of times more computational power than was used to send men to the moon. Lastly, the data is too expensive! In the past, someone who wanted to do what someone in their garage today could do for free would have to pay thousands of dollars to have CDs shipped to their house in order to model the data - now, all you need is a quick API call and you can have world-class data.&lt;/p&gt;
+
+&lt;p&gt;I will note that this type of investing cannot compete with true high-frequency trading outfits. Such firms pay millions to co-locate inside broker&amp;rsquo;s facilities to reduce latency, and often have the ability of paying near-zero explicit transaction costs. DIY quantitative investing should work on minute scale or longer. I personally have a portfolio management algorithm that simple performs mean-variance optimization and rebalances once a month, so I don&amp;rsquo;t have to think about my investments.&lt;/p&gt;
+
+&lt;p&gt;If you think you&amp;rsquo;d like to be a cog in the efficient market, go check out any of the quantitative investment sites! Try and find a signal that nobody else has found. If you do, give me a call – maybe I’ll invest.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -28,8 +44,21 @@ Modern finance is a constantly evolving field. In the 1970s after Black-Scholes 
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/01/i-made-a-newspaper/</guid>
-      <description>A couple of my friends here at the University of Reading came up with an excellent idea to start a financial newspaper. The concept was that the society1 would collect articles on investing and other things finance and publish them in a monthly paper. Being one of the few native English speakers with an interest in editing and journalism, I was selected to run the paper as Chief Editor.
-I&amp;rsquo;m very proud of the results, you can find the finished version of the April edition here.</description>
+      <description>&lt;p&gt;A couple of my friends here at the University of Reading came up with an excellent idea to start a financial newspaper. The concept was that the society&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; would collect articles on investing and other things finance and publish them in a monthly paper. Being one of the few native English speakers with an interest in editing and journalism, I was selected to run the paper as Chief Editor.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m very proud of the results, you can find the finished version of the April edition &lt;a href=&#34;https://www.dropbox.com/s/vicfm15cza2gt8u/RUIS-April.pdf?dl=0&#34;&gt;here&lt;/a&gt;. I wrote a couple articles, about the &lt;a href=&#34;/2017/04/16/2017-05-01-federal-funds-hike/&#34;&gt;federal funds hike&lt;/a&gt; and &lt;a href=&#34;/2017/04/16/2017-05-01-iex-s-crumbling-quote/&#34;&gt;IEX&lt;/a&gt;. I also wrote a lovely editors note, available in the full edition.&lt;/p&gt;
+
+&lt;p&gt;We intend to release at least a few more editions before we all graduate, and we&amp;rsquo;ll see how they turn out.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;That&amp;rsquo;s what they call &amp;ldquo;clubs&amp;rdquo; in the UK.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
@@ -38,8 +67,18 @@ I&amp;rsquo;m very proud of the results, you can find the finished version of th
       <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/04/16/federal-funds-hike/</guid>
-      <description>This article first appeared in the Reading University Investment Society&amp;rsquo;s April edition on April 16th, 2017.
-Last month, the Federal Reserve raised the short-term interest rate target range by 0.25%, to a range of 0.75% to 1%. This is in line with the central bank’s “slow and steady” approach to rate increases after a decade of historically low interest rates, and is the third such rate increase since June of 2006.</description>
+      <description>&lt;p&gt;&lt;strong&gt;This article first appeared in the Reading University Investment Society&amp;rsquo;s  &lt;a href=&#34;https://www.dropbox.com/s/vicfm15cza2gt8u/RUIS-April.pdf?dl=0&#34;&gt;April edition&lt;/a&gt; on April 16th, 2017.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Last month, the Federal Reserve raised the short-term interest rate target range by 0.25%, to a range of 0.75% to 1%. This is in line with the central bank’s “slow and steady” approach to rate increases after a decade of historically low interest rates, and is the third such rate increase since June of 2006. The Federal Reserve has further signaled its intentions to complete at least two more quarter-point increases during 2017, with the median projection among Fed officials sitting at 1.4% by year-end. This reflects a positive outlook for the US economy, as wage and job growth continue to display robustness in the face of a volatile global market place. But how likely are rates to continue rising?&lt;/p&gt;
+
+&lt;p&gt;The impending and steady rate increases has caused a dramatic rise in bond issuance, as investors pile in to low rate debt securities. Companies sold a record-high amount of bonds in March to the tune of $414 billion, the Wall Street Journal reported earlier this week. This signals that the market believes the Fed’s intentions to raise rates, lending further evidence to the certainty of rate increases.&lt;/p&gt;
+
+&lt;p&gt;Perhaps a bigger indicator that rates will continue to raise steadily – and may even have an accelerated pace – is the split between US monetary and fiscal policy. As the Federal Reserve undertakes monetary tightening, the Trump administration and the Republican majority have indicated expansionary fiscal policy in preliminary budgets. This includes infrastructure spending, which Trump has stated could be as much as $1 trillion, as well as increased military and defense spending. Each of these are certain to increase money supply in the economy and drive inflation expectations, which may increase Federal Reserve rate pacing.&lt;/p&gt;
+
+&lt;p&gt;Thus, the likelihood of continued rate hikes seems high and potentially increasing. This could signal bad news for both personal income investors who will see the market value of their holdings drop, and institutional investors with actively managed bond funds who will struggle to find profitable investment opportunities. The global impacts will be significant, as the federal funds rate is tightly linked with other interest rates. In fact, one day after the Federal Reserve raised its rates a quarter percent, the People’s Bank of China kept its rates in lock step with its American counterpart.&lt;/p&gt;
+
+&lt;p&gt;The markets are headed towards the normalcy previous generations experienced, with 30-year interest rates above 3% and federal fund rate changes that nobody noticed. Now, when a rate hike is expected, it is talked about endlessly weeks before and after. This is good for savers and pension funds, but bond investors are going to suffer during the transition from almost-free money to rates I haven’t seen since I was 12.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -48,9 +87,20 @@ Last month, the Federal Reserve raised the short-term interest rate target range
       <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/04/16/iexs-crumbling-quote/</guid>
-      <description>This article first appeared in the Reading University Investment Society&amp;rsquo;s April edition on April 16th, 2017.
-The Investor’s Exchange, also referred to as IEX, came to prominence in 2014 after Michael Lewis’ book Flash Boys was released. IEX was designed as an exchange to protect lumbering buy side firms from high-frequency traders and other nimble market actors.
-Their first innovation was to treat what is referred to as stale quote arbitrage.</description>
+      <description>&lt;p&gt;&lt;strong&gt;This article first appeared in the Reading University Investment Society&amp;rsquo;s  &lt;a href=&#34;https://www.dropbox.com/s/vicfm15cza2gt8u/RUIS-April.pdf?dl=0&#34;&gt;April edition&lt;/a&gt; on April 16th, 2017.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Investor’s Exchange, also referred to as IEX, came to prominence in 2014 after Michael Lewis’ book Flash Boys was released. IEX was designed as an exchange to protect lumbering buy side firms from high-frequency traders and other nimble market actors.&lt;/p&gt;
+
+&lt;p&gt;Their first innovation was to treat what is referred to as stale quote arbitrage. In this type of arbitrage, a fast trader could detect when the best bid or offer had changed on one exchange, and then immediately go to another exchange and pick off a midpoint quote before the midpoint updated. To solve this problem, IEX famously built a box in a warehouse with a very long coil of fiber optic cable designed to introduce a 350-microsecond delay into quote updates. Any trader who could detect a midpoint quote before it updated on another exchange could not immediately post an order on IEX, because it would suffer a delay while the exchange updated the midpoint quotes.&lt;/p&gt;
+
+&lt;p&gt;IEX’s dedication to ensuring low transaction costs to its buy side clients is ceaseless, and it has published a new working paper about dealing with another type of arbitrage, which it calls “crumbling quote arbitrage”. The paper, written by Allison Bishop is entitled “&lt;a href=&#34;https://iextrading.com/docs/The%20Evolution%20of%20the%20Crumbling%20Quote%20Signal.pdf?utm_medium=email&amp;amp;utm_source=newsletter&amp;amp;utm_term=170411&amp;amp;utm_campaign=moneystuff&#34;&gt;The Evolution of the Crumbling Quote Signal&lt;/a&gt;” and details the exchange’s cunning way of dealing with an interesting problem.&lt;/p&gt;
+
+&lt;p&gt;Crumbling quotes refer to when the number of exchanges on the national best bid or offer is eroding over time as the market eats up posted volumes. This can and does happen in legitimate market trading, but some predatory firms may intentionally claim all posted volumes and have in place an order to take advantage of IEX’s delay.&lt;/p&gt;
+
+&lt;p&gt;The working paper is fascinating, as Bishop demonstrates IEX’s approach to predicting when a crumbling quote is likely to occur, and allowing orders pegged to the midpoint to exercise discretion when IEX’s “signal” is on. Their new rule was approved by the SEC for use in production, though it has yet to be fully installed exchange-wide.&lt;/p&gt;
+
+&lt;p&gt;IEX has been at the forefront of protecting its client’s interests, and this is simply the next step at the frontier of combating high frequency traders and other technologically advanced market participants. IEX has a powerful advantage over market predators, and that is that it – along with other exchanges – has access to both a greater quantity and quality of data that traders would usually have to pay thousands of dollars a month for. It will certainly be interesting to watch the development and competition between IEX and those it tries to protect its clients from.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

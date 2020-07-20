@@ -18,8 +18,351 @@
       <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/23/kaggle-titanic/</guid>
-      <description>I thought I’d start getting into Kaggle to work on some non-finance data to get a feel for the messiness of real-world information. Kaggle’s introductory competition is about predicting which passengers on the Titanic are going to survive using a handful of features, so let’s launch into mucking about. This post follows a “lab book” style and is quite scattered, as I develop ideas about what to do.
-# Libraries library(tidyverse) ## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.</description>
+      <description>
+
+
+&lt;p&gt;I thought I’d start getting into &lt;a href=&#34;www.kaggle.com&#34;&gt;Kaggle&lt;/a&gt; to work on some non-finance data to get a feel for the messiness of real-world information. Kaggle’s introductory competition is about predicting which passengers on the Titanic are going to survive using a handful of features, so let’s launch into mucking about. This post follows a “lab book” style and is quite scattered, as I develop ideas about what to do.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Libraries
+library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.4.1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(stringr)
+# Load data
+train &amp;lt;- read_csv(&amp;quot;../../data/Titanic/train.csv&amp;quot;)
+test &amp;lt;- read_csv(&amp;quot;../../data/Titanic/test.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now let’s take a look at the data.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;str(train)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Classes &amp;#39;tbl_df&amp;#39;, &amp;#39;tbl&amp;#39; and &amp;#39;data.frame&amp;#39;:    891 obs. of  12 variables:
+##  $ PassengerId: int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ Survived   : int  0 1 1 1 0 0 0 0 1 1 ...
+##  $ Pclass     : int  3 1 3 1 3 3 1 3 3 2 ...
+##  $ Name       : chr  &amp;quot;Braund, Mr. Owen Harris&amp;quot; &amp;quot;Cumings, Mrs. John Bradley (Florence Briggs Thayer)&amp;quot; &amp;quot;Heikkinen, Miss. Laina&amp;quot; &amp;quot;Futrelle, Mrs. Jacques Heath (Lily May Peel)&amp;quot; ...
+##  $ Sex        : chr  &amp;quot;male&amp;quot; &amp;quot;female&amp;quot; &amp;quot;female&amp;quot; &amp;quot;female&amp;quot; ...
+##  $ Age        : num  22 38 26 35 35 NA 54 2 27 14 ...
+##  $ SibSp      : int  1 1 0 1 0 0 0 3 0 1 ...
+##  $ Parch      : int  0 0 0 0 0 0 0 1 2 0 ...
+##  $ Ticket     : chr  &amp;quot;A/5 21171&amp;quot; &amp;quot;PC 17599&amp;quot; &amp;quot;STON/O2. 3101282&amp;quot; &amp;quot;113803&amp;quot; ...
+##  $ Fare       : num  7.25 71.28 7.92 53.1 8.05 ...
+##  $ Cabin      : chr  NA &amp;quot;C85&amp;quot; NA &amp;quot;C123&amp;quot; ...
+##  $ Embarked   : chr  &amp;quot;S&amp;quot; &amp;quot;C&amp;quot; &amp;quot;S&amp;quot; &amp;quot;S&amp;quot; ...
+##  - attr(*, &amp;quot;spec&amp;quot;)=List of 2
+##   ..$ cols   :List of 12
+##   .. ..$ PassengerId: list()
+##   .. .. ..- attr(*, &amp;quot;class&amp;quot;)= chr  &amp;quot;collector_integer&amp;quot; &amp;quot;collector&amp;quot;
+##   .. ..$ Survived   : list()
+##   .. .. ..- attr(*, &amp;quot;class&amp;quot;)= chr  &amp;quot;collector_integer&amp;quot; &amp;quot;collector&amp;quot;
+##   .. ..$ Pclass     : list()
+##   .. .. ..- attr(*, &amp;quot;class&amp;quot;)= chr  &amp;quot;collector_integer&amp;quot; &amp;quot;collector&amp;quot;
+##   .. ..$ Name       : list()
+##   .. .. ..- attr(*, &amp;quot;class&amp;quot;)= chr  &amp;quot;collector_character&amp;quot; &amp;quot;collector&amp;quot;
+##   .. ..$ Sex        : list()
+##   .. .. ..- attr(*, &amp;quot;class&amp;quot;)= chr  &amp;quot;collector_character&amp;quot; &amp;quot;collector&amp;quot;
+##   .. ..$ Age        : list()
+##   .. .. ..- attr(*, &amp;quot;class&amp;quot;)= chr  &amp;quot;collector_double&amp;quot; &amp;quot;collector&amp;quot;
+##   .. ..$ SibSp      : list()
+##   .. .. ..- attr(*, &amp;quot;class&amp;quot;)= chr  &amp;quot;collector_integer&amp;quot; &amp;quot;collector&amp;quot;
+##   .. ..$ Parch      : list()
+##   .. .. ..- attr(*, &amp;quot;class&amp;quot;)= chr  &amp;quot;collector_integer&amp;quot; &amp;quot;collector&amp;quot;
+##   .. ..$ Ticket     : list()
+##   .. .. ..- attr(*, &amp;quot;class&amp;quot;)= chr  &amp;quot;collector_character&amp;quot; &amp;quot;collector&amp;quot;
+##   .. ..$ Fare       : list()
+##   .. .. ..- attr(*, &amp;quot;class&amp;quot;)= chr  &amp;quot;collector_double&amp;quot; &amp;quot;collector&amp;quot;
+##   .. ..$ Cabin      : list()
+##   .. .. ..- attr(*, &amp;quot;class&amp;quot;)= chr  &amp;quot;collector_character&amp;quot; &amp;quot;collector&amp;quot;
+##   .. ..$ Embarked   : list()
+##   .. .. ..- attr(*, &amp;quot;class&amp;quot;)= chr  &amp;quot;collector_character&amp;quot; &amp;quot;collector&amp;quot;
+##   ..$ default: list()
+##   .. ..- attr(*, &amp;quot;class&amp;quot;)= chr  &amp;quot;collector_guess&amp;quot; &amp;quot;collector&amp;quot;
+##   ..- attr(*, &amp;quot;class&amp;quot;)= chr &amp;quot;col_spec&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What I want to do first is add a couple of features. &lt;a href=&#34;https://www.datacamp.com/community/open-courses/kaggle-tutorial-on-machine-learing-the-sinking-of-the-titanic#gs.UrAze5E&#34;&gt;DataCamp’s excellent tutorial&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; on this data set uses &lt;code&gt;Title&lt;/code&gt; and &lt;code&gt;FamilySize&lt;/code&gt;, which I’ll add now. I also thought it might be cool to separate out family names to see if certain families were likely to survive.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Do it with test and train, don&amp;#39;t want to reconcile them later.
+test &amp;lt;- test %&amp;gt;% 
+  mutate(Surname = as.factor(word(test$Name, sep = fixed(&amp;quot;,&amp;quot;))),
+         Title = word(test$Name, start = 1, sep = fixed(&amp;quot;.&amp;quot;)))
+
+test$Title &amp;lt;- test$Title %&amp;gt;% 
+  str_replace(&amp;quot;[.]&amp;quot;, &amp;quot;&amp;quot;) %&amp;gt;%
+  word(start = -1) %&amp;gt;% 
+  as.factor(.)
+
+# Remove uncommon titles
+uncommon &amp;lt;- test %&amp;gt;% 
+  group_by(Title) %&amp;gt;%
+  count() %&amp;gt;% 
+  filter (n &amp;gt;=5) 
+
+levels(test$Title) &amp;lt;- c(levels(test$Title), &amp;quot;Other&amp;quot;)
+test$Title[!(test$Title %in% uncommon$Title)] &amp;lt;- as.factor(&amp;quot;Other&amp;quot;)
+test$Title &amp;lt;- droplevels.data.frame(test)$Title
+
+# Update embarkment location to factor
+test$Embarked &amp;lt;- as.factor(test$Embarked)
+
+# Gender to factor
+test$Sex &amp;lt;- as.factor(test$Sex)
+
+test$FamilySize &amp;lt;- test$Parch + test$SibSp + 1
+
+# Change training dataset
+train &amp;lt;- train %&amp;gt;% 
+  mutate(Surname = as.factor(word(train$Name, sep = fixed(&amp;quot;,&amp;quot;))),
+         Title = word(train$Name, start = 1, sep = fixed(&amp;quot;.&amp;quot;)))
+
+train$Title &amp;lt;- train$Title %&amp;gt;% 
+  str_replace(&amp;quot;[.]&amp;quot;, &amp;quot;&amp;quot;) %&amp;gt;%
+  word(start = -1) %&amp;gt;% 
+  as.factor(.)
+
+# Remove uncommon titles
+uncommon &amp;lt;- train %&amp;gt;% 
+  group_by(Title) %&amp;gt;%
+  count() %&amp;gt;% 
+  filter (n &amp;gt;=5) 
+
+levels(train$Title) &amp;lt;- c(levels(train$Title), &amp;quot;Other&amp;quot;)
+train$Title[!(train$Title %in% uncommon$Title)] &amp;lt;- as.factor(&amp;quot;Other&amp;quot;)
+train$Title &amp;lt;- droplevels.data.frame(train)$Title
+
+# Update embarkment location to factor
+train$Embarked &amp;lt;- as.factor(train$Embarked)
+
+# Gender to factor
+train$Sex &amp;lt;- as.factor(train$Sex)
+
+train$FamilySize &amp;lt;- train$Parch + train$SibSp + 1
+
+summary(train)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   PassengerId       Survived          Pclass          Name          
+##  Min.   :  1.0   Min.   :0.0000   Min.   :1.000   Length:891        
+##  1st Qu.:223.5   1st Qu.:0.0000   1st Qu.:2.000   Class :character  
+##  Median :446.0   Median :0.0000   Median :3.000   Mode  :character  
+##  Mean   :446.0   Mean   :0.3838   Mean   :2.309                     
+##  3rd Qu.:668.5   3rd Qu.:1.0000   3rd Qu.:3.000                     
+##  Max.   :891.0   Max.   :1.0000   Max.   :3.000                     
+##                                                                     
+##      Sex           Age            SibSp           Parch       
+##  female:314   Min.   : 0.42   Min.   :0.000   Min.   :0.0000  
+##  male  :577   1st Qu.:20.12   1st Qu.:0.000   1st Qu.:0.0000  
+##               Median :28.00   Median :0.000   Median :0.0000  
+##               Mean   :29.70   Mean   :0.523   Mean   :0.3816  
+##               3rd Qu.:38.00   3rd Qu.:1.000   3rd Qu.:0.0000  
+##               Max.   :80.00   Max.   :8.000   Max.   :6.0000  
+##               NA&amp;#39;s   :177                                     
+##     Ticket               Fare           Cabin           Embarked  
+##  Length:891         Min.   :  0.00   Length:891         C   :168  
+##  Class :character   1st Qu.:  7.91   Class :character   Q   : 77  
+##  Mode  :character   Median : 14.45   Mode  :character   S   :644  
+##                     Mean   : 32.20                      NA&amp;#39;s:  2  
+##                     3rd Qu.: 31.00                                
+##                     Max.   :512.33                                
+##                                                                   
+##       Surname       Title       FamilySize    
+##  Andersson:  9   Dr    :  7   Min.   : 1.000  
+##  Sage     :  7   Master: 40   1st Qu.: 1.000  
+##  Carter   :  6   Miss  :182   Median : 1.000  
+##  Goodwin  :  6   Mr    :517   Mean   : 1.905  
+##  Johnson  :  6   Mrs   :125   3rd Qu.: 2.000  
+##  Panula   :  6   Rev   :  6   Max.   :11.000  
+##  (Other)  :851   Other : 14&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That’s a lot of Anderssons! I wonder if they’re related - let’s check family size by surname.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;train %&amp;gt;% 
+  filter(Surname == &amp;quot;Andersson&amp;quot;) %&amp;gt;% 
+  select(Name, FamilySize, Survived, SibSp, Parch)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9 × 5
+##                                                        Name FamilySize
+##                                                       &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt;
+## 1                               Andersson, Mr. Anders Johan          7
+## 2                           Andersson, Miss. Erna Alexandra          7
+## 3                         Andersson, Miss. Ellis Anna Maria          7
+## 4              Andersson, Mr. August Edvard (&amp;quot;Wennerstrom&amp;quot;)          1
+## 5                      Andersson, Miss. Ingeborg Constanzia          7
+## 6                         Andersson, Miss. Sigrid Elisabeth          7
+## 7 Andersson, Mrs. Anders Johan (Alfrida Konstantia Brogren)          7
+## 8                        Andersson, Miss. Ebba Iris Alfrida          7
+## 9                   Andersson, Master. Sigvard Harald Elias          7
+## # ... with 3 more variables: Survived &amp;lt;int&amp;gt;, SibSp &amp;lt;int&amp;gt;, Parch &amp;lt;int&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;They are all related - except for Erna and August, and &lt;a href=&#34;https://titanicstory.wordpress.com/2012/04/04/the-entire-andersson-family-was-lost-on-the-titanic/&#34;&gt;the whole family died&lt;/a&gt;. This is a really sad data set.&lt;/p&gt;
+&lt;p&gt;Na’s are the bane of any good analysis, and I want to try to remove some of them. Let’s try to pull out as many as we can.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;clean_age &amp;lt;- function(df) {
+  # Turns missing values into the average for the column.
+  NA2mean &amp;lt;- function(x) replace(x, is.na(x), mean(x, na.rm = TRUE))
+  df[,&amp;#39;Age&amp;#39;] &amp;lt;- lapply(df[,&amp;#39;Age&amp;#39;], NA2mean)
+  return(df)
+}
+
+clean_embarkment &amp;lt;- function(df) {
+  # The most people embarked from &amp;#39;S&amp;#39;, so I&amp;#39;m just setting
+  # the two missing values to &amp;#39;S&amp;#39;.
+  df[is.na(df[,&amp;#39;Embarked&amp;#39;]), &amp;#39;Embarked&amp;#39;] &amp;lt;- &amp;#39;S&amp;#39;
+  return (df)
+}
+
+test &amp;lt;- clean_age(test)
+train &amp;lt;- clean_age(train)
+
+test &amp;lt;- clean_embarkment(test)
+train &amp;lt;- clean_embarkment(train)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I also want to scale all my features to between 0 and 1, to make processing easier. This also means scrapping the names and turning all numerical values into numbers.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scaler &amp;lt;- function(x, ...){(x - min(x, ...)) / (max(x, ...) - min(x, ...))}
+
+cleanse &amp;lt;- function(df) {
+  # Remove character variables
+  df &amp;lt;- subset(df, select = -c(Name, Ticket, Cabin, Surname))
+  
+  # If it&amp;#39;s a prediction set or otherwise, break it out
+  if(&amp;#39;Survived&amp;#39; %in% colnames(df)){
+    id &amp;lt;- select(df, Survived, PassengerId)
+    df &amp;lt;- subset(df, select = -c(Survived, PassengerId))
+  } else {
+    id &amp;lt;- select(df, PassengerId)
+    df &amp;lt;- subset(df, select = -c(PassengerId))
+  }
+  
+  # Convert factors to numbers
+  factname = c(&amp;#39;Embarked&amp;#39;, &amp;#39;Title&amp;#39;, &amp;#39;Sex&amp;#39;)
+  df[,factname] &amp;lt;- lapply(df[,factname] , as.integer)
+  
+  # Scale variables
+  df &amp;lt;- as.tibble(map(df, na.rm = TRUE, scaler))
+  
+  # Again, separate by labeled or not
+  if(&amp;#39;Survived&amp;#39; %in% colnames(id)){
+    df$PassengerId &amp;lt;- id$PassengerId
+    df$Survived &amp;lt;- id$Survived
+  } else {
+    df$PassengerId &amp;lt;- id$PassengerId
+  }
+  
+  return(df)
+}
+
+train_scl &amp;lt;- cleanse(train)
+test_scl &amp;lt;- cleanse(test)
+
+summary(train_scl)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      Pclass            Sex              Age             SibSp        
+##  Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.00000  
+##  1st Qu.:0.5000   1st Qu.:0.0000   1st Qu.:0.2712   1st Qu.:0.00000  
+##  Median :1.0000   Median :1.0000   Median :0.3679   Median :0.00000  
+##  Mean   :0.6543   Mean   :0.6476   Mean   :0.3679   Mean   :0.06538  
+##  3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:0.4345   3rd Qu.:0.12500  
+##  Max.   :1.0000   Max.   :1.0000   Max.   :1.0000   Max.   :1.00000  
+##      Parch             Fare            Embarked          Title       
+##  Min.   :0.0000   Min.   :0.00000   Min.   :0.0000   Min.   :0.0000  
+##  1st Qu.:0.0000   1st Qu.:0.01544   1st Qu.:0.5000   1st Qu.:0.3333  
+##  Median :0.0000   Median :0.02821   Median :1.0000   Median :0.5000  
+##  Mean   :0.0636   Mean   :0.06286   Mean   :0.7682   Mean   :0.4805  
+##  3rd Qu.:0.0000   3rd Qu.:0.06051   3rd Qu.:1.0000   3rd Qu.:0.5000  
+##  Max.   :1.0000   Max.   :1.00000   Max.   :1.0000   Max.   :1.0000  
+##    FamilySize       PassengerId       Survived     
+##  Min.   :0.00000   Min.   :  1.0   Min.   :0.0000  
+##  1st Qu.:0.00000   1st Qu.:223.5   1st Qu.:0.0000  
+##  Median :0.00000   Median :446.0   Median :0.0000  
+##  Mean   :0.09046   Mean   :446.0   Mean   :0.3838  
+##  3rd Qu.:0.10000   3rd Qu.:668.5   3rd Qu.:1.0000  
+##  Max.   :1.00000   Max.   :891.0   Max.   :1.0000&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s start the analysis with a good old-fashioned logistic regression. Throw everything we’ve got into the pot.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;logit &amp;lt;- glm(Survived ~ Pclass + Sex + Age + SibSp + 
+               Parch + Fare + Embarked + Title,
+             family = binomial(),
+             data = train_scl,
+             na.action = na.omit)
+summary(logit)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## glm(formula = Survived ~ Pclass + Sex + Age + SibSp + Parch + 
+##     Fare + Embarked + Title, family = binomial(), data = train_scl, 
+##     na.action = na.omit)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.6460  -0.5874  -0.4168   0.6330   2.4134  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&amp;gt;|z|)    
+## (Intercept)   4.4881     0.5158   8.701  &amp;lt; 2e-16 ***
+## Pclass       -2.1785     0.2789  -7.811 5.66e-15 ***
+## Sex          -2.7493     0.1995 -13.783  &amp;lt; 2e-16 ***
+## Age          -2.7969     0.6686  -4.183 2.87e-05 ***
+## SibSp        -2.7339     0.8755  -3.123  0.00179 ** 
+## Parch        -0.5260     0.7104  -0.740  0.45910    
+## Fare          0.9325     1.2190   0.765  0.44427    
+## Embarked     -0.4345     0.2300  -1.889  0.05891 .  
+## Title        -0.8603     0.6672  -1.289  0.19724    
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1186.66  on 890  degrees of freedom
+## Residual deviance:  783.39  on 882  degrees of freedom
+## AIC: 801.39
+## 
+## Number of Fisher Scoring iterations: 5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Basically what the above tells us is that Pretty much everything decreases your chances of living. You start at a high level (the intercept has a coefficient of 4.6) and decrease from there. Men have a sex of 1, and women have a sex of 0, so being a man is a strong predictor of dying. The strongest indicator by far is age - being older decreases your chances of living. Let’s take the testing data set and predict what we think the results are likely to be.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Now we predict using the model
+threshold &amp;lt;- 0.5
+logit_pred &amp;lt;- predict(logit, newdata = test_scl, type = &amp;#39;response&amp;#39;)
+hist(logit_pred)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-05-12-kaggle-titanic_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;logit_pred &amp;lt;- ifelse(logit_pred &amp;gt; threshold, 1, 0)
+# If we&amp;#39;re missing data, predict 0.
+logit_pred[is.na(logit_pred)] &amp;lt;- 0
+summary(logit_pred)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##  0.0000  0.0000  0.0000  0.3589  1.0000  1.0000&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Cool. Let’s export it and see what results we get!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;all &amp;lt;- data.frame(test$PassengerId, logit_pred)
+colnames(all) &amp;lt;- c(&amp;quot;PassengerID&amp;quot;, &amp;quot;Survived&amp;quot;)
+write_csv(all, &amp;quot;../../data/Titanic/predictions/logit_prediction.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;neural-networks&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Neural Networks&lt;/h1&gt;
+&lt;p&gt;After submitting to Kaggle, this method gives me an accuracy of 76%, worse than the random forest method, which gave 79%. Let me see if a neural network is any better.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(neuralnet)
+set.seed(91)
+
+# Model the neural network
+nnet &amp;lt;- neuralnet(Survived ~ Pclass + Sex + Age + SibSp + 
+             Parch + Fare + Embarked + Title,
+             hidden = c(2,2,2),
+             threshold = 0.035,
+             stepmax = 400000000,
+             data = train_scl,
+             lifesign = &amp;#39;full&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## hidden: 2, 2, 2    thresh: 0.035    rep: 1/1    steps:      1000 min thresh: 0.1103394579
+##                                                             2000 min thresh: 0.05215387676
+##                                                             3000 min thresh: 0.04034919191
+##                                                             4000 min thresh: 0.03822729544
+##                                                             5000 min thresh: 0.03554090753
+##                                                             5122 error: 54.00459 time: 3.79 secs&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Predict the test set
+nnet.c &amp;lt;- compute(nnet, test_scl[,1:8])
+nnet.c &amp;lt;- nnet.c$net.result
+hist(nnet.c)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-05-12-kaggle-titanic_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nnet.c &amp;lt;- ifelse(nnet.c &amp;gt; threshold, 1, 0)
+# If we&amp;#39;re missing data, predict 0.
+nnet.c[is.na(nnet.c)] &amp;lt;- 0
+
+summary(nnet.c)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##        V1           
+##  Min.   :0.0000000  
+##  1st Qu.:0.0000000  
+##  Median :0.0000000  
+##  Mean   :0.3755981  
+##  3rd Qu.:1.0000000  
+##  Max.   :1.0000000&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;all &amp;lt;- data.frame(test$PassengerId, nnet.c)
+colnames(all) &amp;lt;- c(&amp;quot;PassengerID&amp;quot;, &amp;quot;Survived&amp;quot;)
+write_csv(all, &amp;quot;../../data/Titanic/predictions/nnet_prediction.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I’ve run a lot of other computation on a variety of neural networks, with up to five layers and a variety of node amounts - I only ever matched random forest accuracy with a relatively uncomplicated neural network with three layers of two nodes, at 79%. I suspect that for this data set, predicting survival is best suited to other algorithms.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;I used random forests and decision trees as my first submissions. DataCamp’s tutorial does an excellent job explaining the methodology and code, so you can check out the hyperlink above if you’re interested.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
@@ -28,8 +371,170 @@
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/01/credit-risk-logistic-regression/</guid>
-      <description>I thought I’d do a little bit of analysis to showcase some credit risk analysis, using logistic regression. I’ve pulled this sample loan data from a DataCamp course on credit risk. It’s a cool class, you should check it out if you have time. In a later post, I will try this same analysis with a neural network to see if it has better predictive capabilities.
-Here’s a look at the data.</description>
+      <description>
+
+
+&lt;p&gt;I thought I’d do a little bit of analysis to showcase some credit risk analysis, using &lt;strong&gt;logistic regression&lt;/strong&gt;. I’ve pulled this sample loan data from a DataCamp course on &lt;a href=&#34;https://www.datacamp.com/courses/introduction-to-credit-risk-modeling-in-r&#34;&gt;credit risk&lt;/a&gt;. It’s a cool class, you should check it out if you have time. In a later post, I will try this same analysis with a neural network to see if it has better predictive capabilities.&lt;/p&gt;
+&lt;p&gt;Here’s a look at the data. You can see we have all kinds of valuable information we can use in determining whether someone is likely to default - people with high rates and low credit scores are more likely to default, while people who own their homes and have had long term employment grades are less likely to default. We also have a column called &lt;code&gt;loan_status&lt;/code&gt;, which is a boolean value indicating whether that particular borrower has defaulted.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   loan_status loan_amnt int_rate grade emp_length home_ownership
+## 1           0      5000    10.65     B         10           RENT
+## 2           0      2400       NA     C         25           RENT
+## 3           0     10000    13.49     C         13           RENT
+## 4           0      5000       NA     A          3           RENT
+## 5           0      3000       NA     E          9           RENT
+## 6           0     12000    12.69     B         11            OWN
+##   annual_inc age
+## 1      24000  33
+## 2      12252  31
+## 3      49200  24
+## 4      36000  39
+## 5      48000  24
+## 6      75000  28&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;logistic-regression&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Logistic Regression&lt;/h1&gt;
+&lt;p&gt;If you’re unfamiliar with logistic regression, that’s alright. What it does (in broad strokes) is allow you to predict a value &lt;strong&gt;between 1 and 0&lt;/strong&gt;, and provide you with a degree of certainty. For example, if we ran a logistic regression on a bunch of variables, and then found relevant coefficients, we could use the features of a particular borrower to determine what level of risk they have. A lender could take appropriate measures with someone with a very low chance (0.02) of default by providing them with lower rates, or by simply not lending to someone with a very high chance of default (0.99).&lt;/p&gt;
+&lt;p&gt;Now we should tidy up some of the data and get rid of any rows with &lt;code&gt;NA&lt;/code&gt;s. There are more efficient ways of dealing with this problem, but for our purposes we only lose about 3,000 observations, bringing us to about 25,000 observations. This is enough by most measures to build a rudimentary predictive model.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Filter out rows with any NAs.
+data &amp;lt;- data[complete.cases(data),]
+head(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   loan_status loan_amnt int_rate grade emp_length home_ownership
+## 1           0      5000    10.65     B         10           RENT
+## 3           0     10000    13.49     C         13           RENT
+## 6           0     12000    12.69     B         11            OWN
+## 7           1      9000    13.49     C          0           RENT
+## 8           0      3000     9.91     B          3           RENT
+## 9           1     10000    10.65     B          3           RENT
+##   annual_inc age
+## 1      24000  33
+## 3      49200  24
+## 6      75000  28
+## 7      30000  22
+## 8      15000  22
+## 9     100000  28&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s split our dataset into two pieces, 60/40. This allows us to design a model with the 60% dataset and test it on the 40% dataset. If I was performing more exploratory analysis, I’d split the 40 in half, one for messing around in and the other for testing, but I’m pretty much skipping right to the modeling for now.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(9090)
+bound &amp;lt;- floor((nrow(data)/4)*3)
+data &amp;lt;- data[sample(nrow(data)),]
+train &amp;lt;- data[1:bound,]
+test &amp;lt;- data[(bound+1):nrow(data),]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now to the preliminary model. We can use the R’s built-in functions to handle this. See below a summary of the output.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;model &amp;lt;- glm(loan_status ~., family = binomial(link=&amp;#39;logit&amp;#39;), data = train)
+summary(model)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## glm(formula = loan_status ~ ., family = binomial(link = &amp;quot;logit&amp;quot;), 
+##     data = train)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -1.1467  -0.5358  -0.4416  -0.3374   3.3591  
+## 
+## Coefficients:
+##                       Estimate Std. Error z value Pr(&amp;gt;|z|)    
+## (Intercept)         -3.006e+00  2.151e-01 -13.976  &amp;lt; 2e-16 ***
+## loan_amnt           -2.241e-06  4.141e-06  -0.541  0.58839    
+## int_rate             9.058e-02  2.301e-02   3.936 8.29e-05 ***
+## gradeB               3.338e-01  1.084e-01   3.080  0.00207 ** 
+## gradeC               4.932e-01  1.569e-01   3.143  0.00167 ** 
+## gradeD               5.809e-01  1.995e-01   2.911  0.00360 ** 
+## gradeE               5.946e-01  2.505e-01   2.374  0.01760 *  
+## gradeF               8.550e-01  3.343e-01   2.558  0.01053 *  
+## gradeG               1.242e+00  4.367e-01   2.844  0.00446 ** 
+## emp_length           5.405e-03  3.655e-03   1.479  0.13920    
+## home_ownershipOTHER  7.172e-01  3.331e-01   2.153  0.03130 *  
+## home_ownershipOWN   -1.000e-01  9.608e-02  -1.041  0.29795    
+## home_ownershipRENT  -1.647e-02  5.329e-02  -0.309  0.75723    
+## annual_inc          -5.325e-06  7.722e-07  -6.896 5.36e-12 ***
+## age                 -5.048e-03  3.911e-03  -1.291  0.19685    
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 13297  on 19177  degrees of freedom
+## Residual deviance: 12761  on 19163  degrees of freedom
+## AIC: 12791
+## 
+## Number of Fisher Scoring iterations: 5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, we test our accuracy. How well does our model predict loan status? The below code spits out the accuracy when we test our model on the &lt;code&gt;test&lt;/code&gt; dataframe, and we get a result of 89%. Not bad!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit &amp;lt;- predict(model, newdata = test, type = &amp;quot;response&amp;quot;)
+fit &amp;lt;- ifelse(fit &amp;gt; 0.5, 1, 0)
+error &amp;lt;- mean(fit != test$loan_status)
+print(paste( &amp;quot;Accuracy is: &amp;quot;, 1 - error))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Accuracy is:  0.893477240732051&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This &lt;a href=&#34;https://datascienceplus.com/perform-logistic-regression-in-r/&#34;&gt;lovely blogpost&lt;/a&gt; recommends plotting the true positive vs. false positives. The code for that is below. The plot shows a nearly straight line, which means we really aren’t especially predictive - the output at the bottom of 0.66 similarly shows the same. We’d like this value to be closer to one to indicate predictive ability.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ROCR)
+p &amp;lt;- predict(model, newdata = test, type = &amp;quot;response&amp;quot;)
+pr &amp;lt;- prediction(p, test$loan_status)
+prf &amp;lt;- performance(pr, measure = &amp;quot;tpr&amp;quot;, x.measure = &amp;quot;fpr&amp;quot;)
+plot(prf)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-05-01-credit-risk-part-1_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;auc &amp;lt;- performance(pr, measure=&amp;quot;auc&amp;quot;)
+auc &amp;lt;- auc@y.values[[1]]
+auc&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.6606138&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But we’ve skipped a couple of important steps in modeling. The model summary shows a litany of variables that really aren’t that predictive; we need to take them out. We’re going to leave anything with a &lt;code&gt;.&lt;/code&gt; or any number of asterisks (&lt;code&gt;*&lt;/code&gt;) in, because they are significant. A 10% significant will suffice for me.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;model2 &amp;lt;- glm(loan_status ~ int_rate + grade + emp_length +
+                (home_ownership==&amp;#39;OTHER&amp;#39;) + annual_inc + age, 
+              family = binomial(link=&amp;#39;logit&amp;#39;), 
+              data = train)
+summary(model2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## glm(formula = loan_status ~ int_rate + grade + emp_length + (home_ownership == 
+##     &amp;quot;OTHER&amp;quot;) + annual_inc + age, family = binomial(link = &amp;quot;logit&amp;quot;), 
+##     data = train)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -1.1355  -0.5361  -0.4424  -0.3373   3.3724  
+## 
+## Coefficients:
+##                                 Estimate Std. Error z value Pr(&amp;gt;|z|)    
+## (Intercept)                   -3.030e+00  2.117e-01 -14.309  &amp;lt; 2e-16 ***
+## int_rate                       8.976e-02  2.300e-02   3.903 9.51e-05 ***
+## gradeB                         3.324e-01  1.082e-01   3.071  0.00213 ** 
+## gradeC                         4.950e-01  1.569e-01   3.155  0.00161 ** 
+## gradeD                         5.807e-01  1.994e-01   2.912  0.00359 ** 
+## gradeE                         5.941e-01  2.501e-01   2.375  0.01755 *  
+## gradeF                         8.522e-01  3.338e-01   2.553  0.01067 *  
+## gradeG                         1.230e+00  4.358e-01   2.822  0.00478 ** 
+## emp_length                     5.473e-03  3.593e-03   1.523  0.12767    
+## home_ownership == &amp;quot;OTHER&amp;quot;TRUE  7.319e-01  3.316e-01   2.208  0.02728 *  
+## annual_inc                    -5.386e-06  6.847e-07  -7.867 3.65e-15 ***
+## age                           -5.070e-03  3.911e-03  -1.296  0.19490    
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 13297  on 19177  degrees of freedom
+## Residual deviance: 12762  on 19166  degrees of freedom
+## AIC: 12786
+## 
+## Number of Fisher Scoring iterations: 5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now to test accuracy. It basically has yielded no meaningful change in predictive ability - but then again, that’s hard to do. All we’ve done is create a more parsimonious model in line with current thinking in statistics and econometrics.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit &amp;lt;- predict(model2, newdata = test, type = &amp;quot;response&amp;quot;)
+fit &amp;lt;- ifelse(fit &amp;gt; 0.5, 1, 0)
+error &amp;lt;- mean(fit != test$loan_status)
+print(paste( &amp;quot;Accuracy is: &amp;quot;, 1 - error))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Accuracy is:  0.893477240732051&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, we plot the cure we showed before. Again, no real difference, but we can feel better that we have a smaller model with less “junk” floating around.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ROCR)
+p &amp;lt;- predict(model2, newdata = test, type = &amp;quot;response&amp;quot;)
+pr &amp;lt;- prediction(p, test$loan_status)
+prf &amp;lt;- performance(pr, measure = &amp;quot;tpr&amp;quot;, x.measure = &amp;quot;fpr&amp;quot;)
+plot(prf)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-05-01-credit-risk-part-1_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;auc &amp;lt;- performance(pr, measure=&amp;quot;auc&amp;quot;)
+auc &amp;lt;- auc@y.values[[1]]
+auc&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.661003&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Thanks for taking the time to read this post. Check out later posts where I use neural networks to look at this same dataset. It’ll be fun for the whole family!&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

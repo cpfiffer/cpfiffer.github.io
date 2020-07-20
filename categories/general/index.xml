@@ -18,9 +18,27 @@
       <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/08/26/the-flash-crash/</guid>
-      <description>A paper came out in the April 2017 edition of the Journal of Finance that I found to be absolutely fascinating. Normally I’d just put a link up on Twitter and move on, but leaving Facebook and Twitter have limited my ability to scream about cool papers. I thought I’d do a brief post about the paper and talk about why it’s interesting to me.
-The abstract:
- We study intraday market intermediation in an electronic market before and during a period of large and temporary selling pressure.</description>
+      <description>
+
+
+&lt;p&gt;&lt;a href=&#34;http://www.afajof.org/details/journalArticle/10546091/The-Flash-Crash-HighFrequency-Trading-in-an-Electronic-Market.html&#34;&gt;A paper&lt;/a&gt; came out in the April 2017 edition of the &lt;em&gt;Journal of Finance&lt;/em&gt; that I found to be absolutely fascinating. Normally I’d just put a link up on Twitter and move on, but leaving Facebook and Twitter have limited my ability to scream about cool papers. I thought I’d do a brief post about the paper and talk about why it’s interesting to me.&lt;/p&gt;
+&lt;p&gt;The abstract:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We study intraday market intermediation in an electronic market before and during a period of large and temporary selling pressure. On May 6, 2010, U.S. financial markets experienced a systemic intraday event—the Flash Crash—where a large automated selling program was rapidly executed in the E‐mini S&amp;amp;P 500 stock index futures market. Using audit trail transaction‐level data for the E‐mini on May 6 and the previous three days, we find that the trading pattern of the most active nondesignated intraday intermediaries (classified as High‐Frequency Traders) did not change when prices fell during the Flash Crash.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The flash crash&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; has always been an interesting subject, because it illustrates a lesson that anyone who is involved with markets knows – if you sell a ton of stuff, the prices go down. But perhaps more importantly, it demonstrates the highly interconnected nature of modern financial markets.&lt;/p&gt;
+&lt;p&gt;During the flash crash, an institutional trader initiated an algorithm to sell an incredibly large amount of E-mini shares, a futures contract on the S&amp;amp;P 500. The algorithm used was a fairly simplistic strategy that aimed to trade 9% of the past minute’s volume.&lt;/p&gt;
+&lt;p&gt;I have a lot of feelings on this kind of strategy. It’s not especially tactful, it has no regard to price or timing, and fails to adapt to changing conditions. If I’m aware of someone trading a tremendous amount of shares every minute (and assuming I can devise their strategy before they complete the trade), I might try to game the system by increasing the volume traded in the previous minute – either by simply churning a position or taking large long positions – and then using the foreknowledge that a large trade is about to come to take advantage. Particularly for a trade the size that the institution was trying to make (around $4.9 billion), this is a really crappy way to do it.&lt;/p&gt;
+&lt;p&gt;Back to the paper. It’s well worth the read. They study audit trail level data for four days during and before the flash crash in the E-mini market, and their interesting finding is that high-frequency traders didn’t really change their trading behavior during the event. This is in contrast to a lot of the murmurings commonly bandied about in regards to the flash crash, where everyone mutters something to the effect of “HFTs got out, liquidity dried up, etc.”&lt;/p&gt;
+&lt;p&gt;The authors note that market makers, not high-frequency traders, altered their inventory holding behavior in response to changing prices. Interesting.&lt;/p&gt;
+&lt;p&gt;Give it a read.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;You can read more about the flash crash in the &lt;a href=&#34;https://www.sec.gov/news/studies/2010/marketevents-report.pdf&#34;&gt;SEC’s report&lt;/a&gt; on the matter.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
@@ -29,7 +47,119 @@ The abstract:
       <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/07/05/julia/</guid>
-      <description>As I&amp;rsquo;m wrapping up my master&amp;rsquo;s degree, I have somehow managed to find a large amount of time to pursue personal interests. One of those interests is Julia, a technical computing language with C-comparable speed. I&amp;rsquo;m not exactly sure where I stumbled on it, but it stuck with me. Of course, the best way to learn something is to do something cool with it, and FiveThiryEight&amp;rsquo;s Riddler often tends to supply great cannon fodder for programming.</description>
+      <description>&lt;p&gt;As I&amp;rsquo;m wrapping up my master&amp;rsquo;s degree, I have somehow managed to find a large amount of time to pursue personal interests. One of those interests is &lt;a href=&#34;https://julialang.org/&#34;&gt;Julia&lt;/a&gt;, a technical computing language with C-comparable speed. I&amp;rsquo;m not exactly sure where I stumbled on it, but it stuck with me. Of course, the best way to learn something is to do something &lt;em&gt;cool&lt;/em&gt; with it, and &lt;a href=&#34;https://fivethirtyeight.com/features/pick-a-number-any-number/&#34;&gt;FiveThiryEight&amp;rsquo;s Riddler&lt;/a&gt; often tends to supply great cannon fodder for programming. This past week&amp;rsquo;s one was a computationally difficult one:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;From Itay Bavly, a chain-link number problem:&lt;/p&gt;
+
+&lt;p&gt;You start with the integers from one to 100, inclusive, and you want to organize them into a chain. The only rules for building this chain are that you can only use each number once and that each number must be adjacent in the chain to one of its factors or multiples. For example, you might build the chain:&lt;/p&gt;
+
+&lt;p&gt;4, 12, 24, 6, 60, 30, 10, 100, 25, 5, 1, 97&lt;/p&gt;
+
+&lt;p&gt;You have no numbers left to place after 97, leaving you with a finished chain of length 12.&lt;/p&gt;
+
+&lt;p&gt;What is the longest chain you can build?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There really doesn&amp;rsquo;t appear to be an easy answer to the problem &amp;ndash; my brother noted this:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Friend of mine says that traversing a directed graph is NP-Complete, so brute-force is the way to do it. Probably&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:a14987c3&#34;&gt;&lt;a href=&#34;#fn:a14987c3&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I thought it seemed like a perfect time to try out Julia. The past two weeks or so I&amp;rsquo;ve been idly combing through Julia&amp;rsquo;s &lt;a href=&#34;https://docs.julialang.org/en/stable/&#34;&gt;fantastic documentation&lt;/a&gt;, and I&amp;rsquo;ve been really impressed by the syntax&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:110a8281&#34;&gt;&lt;a href=&#34;#fn:110a8281&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; and ease at which you can handle very fast processes.&lt;/p&gt;
+
+&lt;p&gt;What I wanted to do was basically try and brute force the problem. Here&amp;rsquo;s my pseudocode.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Pick a random number.&lt;/li&gt;
+&lt;li&gt;Pick a valid number to follow it.&lt;/li&gt;
+&lt;li&gt;Repeat until you can&amp;rsquo;t find a number.&lt;/li&gt;
+&lt;li&gt;Do steps 1-3 with new chains, discarding the shortest chain.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mathematically, it&amp;rsquo;s very simple to define what&amp;rsquo;s a multiple and what&amp;rsquo;s a factor, here&amp;rsquo;s two functions that do that. &lt;code&gt;valid&lt;/code&gt; is a function where you pass an &lt;code&gt;x&lt;/code&gt; and a &lt;code&gt;y&lt;/code&gt; and return &lt;code&gt;true&lt;/code&gt; if &lt;code&gt;x&lt;/code&gt; can be followed by &lt;code&gt;y&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-julia&#34; data-lang=&#34;julia&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Test if x can be followed by y&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; valid(x, y, limit)
+	&lt;span style=&#34;color:#75715e&#34;&gt;# Determine if y is a multiple of x&lt;/span&gt;
+	mul &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; multiples(x, limit) &lt;span style=&#34;color:#75715e&#34;&gt;# Get multiples of x&lt;/span&gt;
+	index &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; findin(mul, y) &lt;span style=&#34;color:#75715e&#34;&gt;# Find if y is in the list of x&amp;#39;s multiples&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; index &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; [] &lt;span style=&#34;color:#75715e&#34;&gt;# If the index isn&amp;#39;t zero&lt;/span&gt;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+
+	&lt;span style=&#34;color:#75715e&#34;&gt;# Now determine if y is a factor of x&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; y &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Multiples generates a list of multiples and returns it.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-julia&#34; data-lang=&#34;julia&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; multiples(x, limit)
+	vals &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;limit
+		&lt;span style=&#34;color:#75715e&#34;&gt;#print(i, &amp;#34;\n&amp;#34;)&lt;/span&gt;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (i &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; (i &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; x)
+			append!(vals, i)
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; vals &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+		print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;No multiples of &amp;#34;&lt;/span&gt;, x, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; vals
+&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;These two functions are called by &lt;code&gt;makechain&lt;/code&gt;, which picks the first number&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:f0d5da3f&#34;&gt;&lt;a href=&#34;#fn:f0d5da3f&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;, and then tests if subsequent random numbers are valid. When it runs out of valid numbers, it spits out the answer.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-julia&#34; data-lang=&#34;julia&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; makechain(limit&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Int64&lt;/span&gt;)
+  possible &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Array&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;limit)
+  first &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; rand(possible)
+  remove &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; getindex(possible, first)
+  deleteat!(possible,remove)
+
+  chain &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [first]
+
+	&lt;span style=&#34;color:#75715e&#34;&gt;# Pick a random number.&lt;/span&gt;
+	&lt;span style=&#34;color:#75715e&#34;&gt;# Check if that number is valid.&lt;/span&gt;
+	&lt;span style=&#34;color:#75715e&#34;&gt;# If it isn&amp;#39;t pick a new one, until they&amp;#39;re all gone.&lt;/span&gt;
+	testPosition &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; possible
+	shuffle!(testPosition)
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; testPosition
+		v &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; valid(chain[&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;], i, limit)
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; v &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+			append!(chain, i)
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; chain
+&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Finally, the final function just runs &lt;code&gt;makechain&lt;/code&gt; a bunch of times and finds the longest chain it can.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-julia&#34; data-lang=&#34;julia&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; find_longest(iterations&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Int64&lt;/span&gt;, limit&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;)
+	longest &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;iterations
+		chain &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; makechain(limit)
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; length(chain) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; length(longest)
+			longest &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; chain
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; longest
+&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;My biggest output was something like 27 integers long after building 10 million chains, which was far below the 77 found by two other contestants. One guy apparently solved it with some nifty combinatorics software.&lt;/p&gt;
+
+&lt;p&gt;Even though I didn&amp;rsquo;t get the right answer, I had a lot of fun working with Julia for the first time and I&amp;rsquo;m looking forward to finding neat things to do with it. Also, Julia is &lt;strong&gt;wicked fast&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:a14987c3&#34;&gt;Later, this was confirmed by &lt;a href=&#34;https://fivethirtyeight.com/features/is-this-bathroom-occupied/&#34;&gt;Oliver Roeder at the Riddler&lt;/a&gt;.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:a14987c3&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:110a8281&#34;&gt;It kind of reads like Python with a bit of Matlab.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:110a8281&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:f0d5da3f&#34;&gt;The function&amp;rsquo;s argument, &lt;code&gt;limit&lt;/code&gt;, allows you to test chains between 1 and any integer.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:f0d5da3f&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
@@ -38,8 +168,10 @@ The abstract:
       <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/13/github-pages/</guid>
-      <description>I recently moved my site away from zeit, and migrated it to GitHub Pages. It&amp;rsquo;s much easier to maintain the site with git than with zeit&amp;rsquo;s now feature, which is a little too high-powered for my tases.
-I&amp;rsquo;ve also changed the theme to a modified version of paperback. The colors were originally all sepia tone, and I liked the current color scheme and typography.</description>
+      <description>&lt;p&gt;I recently moved my site away from &lt;a href=&#34;zeit.co&#34;&gt;zeit&lt;/a&gt;, and migrated it to &lt;a href=&#34;pages.github.com&#34;&gt;GitHub Pages&lt;/a&gt;. It&amp;rsquo;s much easier to maintain the site with git than with zeit&amp;rsquo;s &lt;code&gt;now&lt;/code&gt; feature, which is a little too high-powered for my tases.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve also changed the theme to a modified version of &lt;a href=&#34;https://github.com/damiencaselli/paperback&#34;&gt;paperback&lt;/a&gt;. The colors were originally all sepia tone, and I liked the current color scheme and typography.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -48,8 +180,32 @@ I&amp;rsquo;ve also changed the theme to a modified version of paperback. The co
       <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/04/30/introduction/</guid>
-      <description>Hello! I&amp;rsquo;ve just finished building this site with Hugo and blogdown, an excellent R package built up by the folks at RStudio. The first iteration of this site is being hosted by zeit, a super interesting cloud company. Deployment takes about a minute, unlike the absolute nightmare that is Google Cloud. They take Dockerfiles as well, something that I haven&amp;rsquo;t had any experience with until lately.
-As this is the first blog post here, I just thought I&amp;rsquo;d lay out a bit of why I built this.</description>
+      <description>&lt;p&gt;Hello! I&amp;rsquo;ve just finished building this site with Hugo and &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;&lt;code&gt;blogdown&lt;/code&gt;&lt;/a&gt;, an excellent R package built up by the folks at RStudio. The first iteration of this site is being hosted by &lt;a href=&#34;https://zeit.co/now&#34;&gt;zeit&lt;/a&gt;, a super interesting cloud company. Deployment takes about a minute, unlike the absolute nightmare that is Google Cloud. They take Dockerfiles as well, something that I haven&amp;rsquo;t had any experience with until lately.&lt;/p&gt;
+
+&lt;p&gt;As this is the first blog post here, I just thought I&amp;rsquo;d lay out a bit of why I built this. Over the years I have accumulated a strange variety of skills, like:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Market Microstructure&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCTcsdFvTCGyJ8vSp3iHuTyg&#34;&gt;Improvisational Piano&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Corporate Finance&lt;/li&gt;
+&lt;li&gt;Econometrics&lt;/li&gt;
+&lt;li&gt;Programming&lt;/li&gt;
+&lt;li&gt;Lighting Design&lt;/li&gt;
+&lt;li&gt;Carpentry&lt;/li&gt;
+&lt;li&gt;Bookbinding&lt;/li&gt;
+&lt;li&gt;Machine Learning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some of those are finance, which is easily my favorite thing to study. At some point I&amp;rsquo;d lke to go back to graduate school and study for a PhD, but at the moment, I&amp;rsquo;m tired of living on student loans. Others are related to my previous career as a professional stagehand, lighting designer, entertainment electrician, and wrench monkey. The piano thing just sort of happened one day.&lt;/p&gt;
+
+&lt;p&gt;My undergraduate degree is in theater arts, and my master&amp;rsquo;s degree is in corporate finance, so it has always been very difficult to demonstrate to employers that I am (i) good at what they&amp;rsquo;re hiring for and (ii) interested in the subject.&lt;/p&gt;
+
+&lt;p&gt;To that end, I hope to produce a series of posts exploring a handful of the things I enjoy. More coming soon.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;$$ PV_n=FV_n\left(1+r\right)^n $$&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -58,11 +214,48 @@ As this is the first blog post here, I just thought I&amp;rsquo;d lay out a bit 
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
       
       <guid>/about/</guid>
-      <description>&amp;#8853; 
-&amp;#8853; It&amp;rsquo;s my jolly face!
-I play with code and pianos.
-I am a PhD student at the University of Oregon studying finance. I have a master&amp;rsquo;s in finance from the ICMA Centre at the Henley Business School (which itself is part of the University of Reading), and a BSc in Technical Theater from Southern Oregon University. I&amp;rsquo;m a developer for Turing.jl, a probabilistic programming tool.
-My interests are pretty broad in finance, but in general I tend to favor situations where technology is involed (with some classic asset pricing stuff too):</description>
+      <description>&lt;p&gt;&lt;label for=&#34;me&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
+&lt;input type=&#34;checkbox&#34; id=&#34;me&#34; class=&#34;margin-toggle&#34;/&gt;
+&lt;span class=&#34;marginnote&#34;&gt;
+&lt;img src=&#34;/profile.jpg&#34; alt=&#34;A picture of my face.&#34; /&gt;
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&#34;mn-example&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
+&lt;input type=&#34;checkbox&#34; id=&#34;mn-example&#34; class=&#34;margin-toggle&#34;/&gt;
+&lt;span class=&#34;marginnote&#34;&gt;It&amp;rsquo;s my jolly face!&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;I play with &lt;a href=&#34;https://www.github.com/cpfiffer&#34;&gt;code&lt;/a&gt; and &lt;a href=&#34;https://www.youtube.com/channel/UCTcsdFvTCGyJ8vSp3iHuTyg?view_as=subscriber&#34;&gt;pianos&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I am a PhD student at the &lt;a href=&#34;https://business.uoregon.edu/phd/concentrations/finance&#34;&gt;University of Oregon&lt;/a&gt; studying finance. I have a master&amp;rsquo;s in finance from the &lt;a href=&#34;http://www.icmacentre.ac.uk/&#34;&gt;ICMA Centre&lt;/a&gt; at the &lt;a href=&#34;http://www.henley.ac.uk/&#34;&gt;Henley Business School&lt;/a&gt; (which itself is part of the &lt;a href=&#34;https://www.reading.ac.uk/&#34;&gt;University of Reading&lt;/a&gt;), and a BSc in Technical Theater from &lt;a href=&#34;https://sou.edu/&#34;&gt;Southern Oregon University&lt;/a&gt;. I&amp;rsquo;m a developer for &lt;a href=&#34;https://turing.ml&#34;&gt;Turing.jl&lt;/a&gt;, a probabilistic programming tool.&lt;/p&gt;
+
+&lt;p&gt;My interests are pretty broad in finance, but in general I tend to favor situations where technology is involed (with some classic asset pricing stuff too):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Market microstructure&lt;/li&gt;
+&lt;li&gt;Cryptocurrency&lt;/li&gt;
+&lt;li&gt;AI in financial markets&lt;/li&gt;
+&lt;li&gt;Dynamic asset pricing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More computer science/statistics interests:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Probabilistic programming&lt;/li&gt;
+&lt;li&gt;Bayesian methods for big data&lt;/li&gt;
+&lt;li&gt;Reinforcement learning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Favorite programming languages:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://julialang.org/&#34;&gt;Julia&lt;/a&gt; because it&amp;rsquo;s fast and fun to write!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.rust-lang.org/en-US/&#34;&gt;Rust&lt;/a&gt; because someone told me I should learn C and I thought this was cooler.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; because I am a masochist.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.wolfram.com/mathematica/&#34;&gt;Mathematica&lt;/a&gt; because I forget how to take derivatives.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I do however flit between interests like a pixie, so this list is likely not current by the time you are reading it.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

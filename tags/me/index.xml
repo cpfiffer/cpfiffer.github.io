@@ -18,11 +18,48 @@
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
       
       <guid>/about/</guid>
-      <description>&amp;#8853; 
-&amp;#8853; It&amp;rsquo;s my jolly face!
-I play with code and pianos.
-I am a PhD student at the University of Oregon studying finance. I have a master&amp;rsquo;s in finance from the ICMA Centre at the Henley Business School (which itself is part of the University of Reading), and a BSc in Technical Theater from Southern Oregon University. I&amp;rsquo;m a developer for Turing.jl, a probabilistic programming tool.
-My interests are pretty broad in finance, but in general I tend to favor situations where technology is involed (with some classic asset pricing stuff too):</description>
+      <description>&lt;p&gt;&lt;label for=&#34;me&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
+&lt;input type=&#34;checkbox&#34; id=&#34;me&#34; class=&#34;margin-toggle&#34;/&gt;
+&lt;span class=&#34;marginnote&#34;&gt;
+&lt;img src=&#34;/profile.jpg&#34; alt=&#34;A picture of my face.&#34; /&gt;
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&#34;mn-example&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
+&lt;input type=&#34;checkbox&#34; id=&#34;mn-example&#34; class=&#34;margin-toggle&#34;/&gt;
+&lt;span class=&#34;marginnote&#34;&gt;It&amp;rsquo;s my jolly face!&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;I play with &lt;a href=&#34;https://www.github.com/cpfiffer&#34;&gt;code&lt;/a&gt; and &lt;a href=&#34;https://www.youtube.com/channel/UCTcsdFvTCGyJ8vSp3iHuTyg?view_as=subscriber&#34;&gt;pianos&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I am a PhD student at the &lt;a href=&#34;https://business.uoregon.edu/phd/concentrations/finance&#34;&gt;University of Oregon&lt;/a&gt; studying finance. I have a master&amp;rsquo;s in finance from the &lt;a href=&#34;http://www.icmacentre.ac.uk/&#34;&gt;ICMA Centre&lt;/a&gt; at the &lt;a href=&#34;http://www.henley.ac.uk/&#34;&gt;Henley Business School&lt;/a&gt; (which itself is part of the &lt;a href=&#34;https://www.reading.ac.uk/&#34;&gt;University of Reading&lt;/a&gt;), and a BSc in Technical Theater from &lt;a href=&#34;https://sou.edu/&#34;&gt;Southern Oregon University&lt;/a&gt;. I&amp;rsquo;m a developer for &lt;a href=&#34;https://turing.ml&#34;&gt;Turing.jl&lt;/a&gt;, a probabilistic programming tool.&lt;/p&gt;
+
+&lt;p&gt;My interests are pretty broad in finance, but in general I tend to favor situations where technology is involed (with some classic asset pricing stuff too):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Market microstructure&lt;/li&gt;
+&lt;li&gt;Cryptocurrency&lt;/li&gt;
+&lt;li&gt;AI in financial markets&lt;/li&gt;
+&lt;li&gt;Dynamic asset pricing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More computer science/statistics interests:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Probabilistic programming&lt;/li&gt;
+&lt;li&gt;Bayesian methods for big data&lt;/li&gt;
+&lt;li&gt;Reinforcement learning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Favorite programming languages:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://julialang.org/&#34;&gt;Julia&lt;/a&gt; because it&amp;rsquo;s fast and fun to write!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.rust-lang.org/en-US/&#34;&gt;Rust&lt;/a&gt; because someone told me I should learn C and I thought this was cooler.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; because I am a masochist.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.wolfram.com/mathematica/&#34;&gt;Mathematica&lt;/a&gt; because I forget how to take derivatives.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I do however flit between interests like a pixie, so this list is likely not current by the time you are reading it.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

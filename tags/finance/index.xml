@@ -18,8 +18,24 @@
       <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/16/the-rise-of-diy-quants/</guid>
-      <description>This post first appeared in the May 2017 edition of the Reading University Investment Society newspaper - you can find a copy of the whole paper here.
-Modern finance is a constantly evolving field. In the 1970s after Black-Scholes published their seminal paper, derivatives in their current form (for primitive derivatives are found as far back as in ancient Sumerian culture) became common and ubiquitous. Approximately ten years later, we saw the rise of the first quantitative powerhouse Renaissance Technologies, a firm that to this day makes absurd profits.</description>
+      <description>&lt;p&gt;&lt;strong&gt;This post first appeared in the May 2017 edition of the Reading University Investment Society newspaper - you can find a copy of the whole paper &lt;a href=&#34;https://www.dropbox.com/s/bn6kukgloae9sr9/May.pdf?dl=0&#34;&gt;here&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Modern finance is a constantly evolving field. In the 1970s after Black-Scholes published their seminal paper, derivatives in their current form (for primitive derivatives are found as far back as in ancient Sumerian culture) became common and ubiquitous. Approximately ten years later, we saw the rise of the first quantitative powerhouse Renaissance Technologies, a firm that to this day makes absurd profits. Even today, the rise of passive investing is driven by mathematics as firms construct smart-beta models and strive for mean-variance portfolio optimization.&lt;/p&gt;
+
+&lt;p&gt;But the past five years have seen another interesting development - the rise of DIY quants. Idle software engineers, physicists, students, hedge fund managers, and even yours truly have engaged in the construction of systematic and automated trading tools with free tools like Quantopian, Quandl, CloudQuant, Numerai, and many others. These platforms combine free data with programming and software development tools, and many offer tutorials on quantitative investment strategies and techniques.&lt;/p&gt;
+
+&lt;p&gt;Take Quantopian for example. In about ten minutes from creating an account, you can have a algorithmized strategy for mean-reversion up and running. You can even hook your algorithm up to two brokers for live trading, either Interactive Brokers or Robinhood. Quantopian offers minute-level equities data, as well as futures prices to trade on, all callable by an easy-to-manage API. Participants on the platform can place their algorithms in competitions, with the prize being capital awarded from Quantopian and its full deployment in the market.&lt;/p&gt;
+
+&lt;p&gt;You can couple your Quantopian strategy with Quandl&amp;rsquo;s vast array of core and alternative data, such as satellite imagery, oil tank storage levels, retailer email receipt data, and other custom datasets.  One could imagine a complex algorithm that locates all oil tankers currently shipping, weights the levels in reserve, and prices equities for oil and shipping as well as oil derivatives. In fact, it&amp;rsquo;s likely that some hedge fund somewhere in the world is already doing such a thing.&lt;/p&gt;
+
+&lt;p&gt;The world is becoming more accepting of this type of behavior. In some ways, it reflects global culture&amp;rsquo;s growing aversion to high finance, as we shift away from large banks and financial institutions and move to passive investing. In the same way, DIY quants are democratizing previously unavailable services and reclaiming sovereignty over their investments.&lt;/p&gt;
+
+&lt;p&gt;This type of investing wouldn&amp;rsquo;t have been able to occur even in the 2000s - few had the skills necessary to write the code, the computers were too slow, the digital infrastructure was lacking, and the data was prohibitively expensive. Python and other high-level languages (often condemned by institutional quantitative investors as being too slow for production) have risen in ubiquity. Even in the late 2000&amp;rsquo;s the difference in speed between Python and a faster language, like C or Fortran, was nearly insurmountable due to the slowness of the computers they ran on. Now, a budding math-geek can run a trading bot on a cloud server from a Chromebook, and utilize thousands of times more computational power than was used to send men to the moon. Lastly, the data is too expensive! In the past, someone who wanted to do what someone in their garage today could do for free would have to pay thousands of dollars to have CDs shipped to their house in order to model the data - now, all you need is a quick API call and you can have world-class data.&lt;/p&gt;
+
+&lt;p&gt;I will note that this type of investing cannot compete with true high-frequency trading outfits. Such firms pay millions to co-locate inside broker&amp;rsquo;s facilities to reduce latency, and often have the ability of paying near-zero explicit transaction costs. DIY quantitative investing should work on minute scale or longer. I personally have a portfolio management algorithm that simple performs mean-variance optimization and rebalances once a month, so I don&amp;rsquo;t have to think about my investments.&lt;/p&gt;
+
+&lt;p&gt;If you think you&amp;rsquo;d like to be a cog in the efficient market, go check out any of the quantitative investment sites! Try and find a signal that nobody else has found. If you do, give me a call – maybe I’ll invest.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -28,8 +44,170 @@ Modern finance is a constantly evolving field. In the 1970s after Black-Scholes 
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/01/credit-risk-logistic-regression/</guid>
-      <description>I thought I’d do a little bit of analysis to showcase some credit risk analysis, using logistic regression. I’ve pulled this sample loan data from a DataCamp course on credit risk. It’s a cool class, you should check it out if you have time. In a later post, I will try this same analysis with a neural network to see if it has better predictive capabilities.
-Here’s a look at the data.</description>
+      <description>
+
+
+&lt;p&gt;I thought I’d do a little bit of analysis to showcase some credit risk analysis, using &lt;strong&gt;logistic regression&lt;/strong&gt;. I’ve pulled this sample loan data from a DataCamp course on &lt;a href=&#34;https://www.datacamp.com/courses/introduction-to-credit-risk-modeling-in-r&#34;&gt;credit risk&lt;/a&gt;. It’s a cool class, you should check it out if you have time. In a later post, I will try this same analysis with a neural network to see if it has better predictive capabilities.&lt;/p&gt;
+&lt;p&gt;Here’s a look at the data. You can see we have all kinds of valuable information we can use in determining whether someone is likely to default - people with high rates and low credit scores are more likely to default, while people who own their homes and have had long term employment grades are less likely to default. We also have a column called &lt;code&gt;loan_status&lt;/code&gt;, which is a boolean value indicating whether that particular borrower has defaulted.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   loan_status loan_amnt int_rate grade emp_length home_ownership
+## 1           0      5000    10.65     B         10           RENT
+## 2           0      2400       NA     C         25           RENT
+## 3           0     10000    13.49     C         13           RENT
+## 4           0      5000       NA     A          3           RENT
+## 5           0      3000       NA     E          9           RENT
+## 6           0     12000    12.69     B         11            OWN
+##   annual_inc age
+## 1      24000  33
+## 2      12252  31
+## 3      49200  24
+## 4      36000  39
+## 5      48000  24
+## 6      75000  28&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;logistic-regression&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Logistic Regression&lt;/h1&gt;
+&lt;p&gt;If you’re unfamiliar with logistic regression, that’s alright. What it does (in broad strokes) is allow you to predict a value &lt;strong&gt;between 1 and 0&lt;/strong&gt;, and provide you with a degree of certainty. For example, if we ran a logistic regression on a bunch of variables, and then found relevant coefficients, we could use the features of a particular borrower to determine what level of risk they have. A lender could take appropriate measures with someone with a very low chance (0.02) of default by providing them with lower rates, or by simply not lending to someone with a very high chance of default (0.99).&lt;/p&gt;
+&lt;p&gt;Now we should tidy up some of the data and get rid of any rows with &lt;code&gt;NA&lt;/code&gt;s. There are more efficient ways of dealing with this problem, but for our purposes we only lose about 3,000 observations, bringing us to about 25,000 observations. This is enough by most measures to build a rudimentary predictive model.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Filter out rows with any NAs.
+data &amp;lt;- data[complete.cases(data),]
+head(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   loan_status loan_amnt int_rate grade emp_length home_ownership
+## 1           0      5000    10.65     B         10           RENT
+## 3           0     10000    13.49     C         13           RENT
+## 6           0     12000    12.69     B         11            OWN
+## 7           1      9000    13.49     C          0           RENT
+## 8           0      3000     9.91     B          3           RENT
+## 9           1     10000    10.65     B          3           RENT
+##   annual_inc age
+## 1      24000  33
+## 3      49200  24
+## 6      75000  28
+## 7      30000  22
+## 8      15000  22
+## 9     100000  28&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s split our dataset into two pieces, 60/40. This allows us to design a model with the 60% dataset and test it on the 40% dataset. If I was performing more exploratory analysis, I’d split the 40 in half, one for messing around in and the other for testing, but I’m pretty much skipping right to the modeling for now.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(9090)
+bound &amp;lt;- floor((nrow(data)/4)*3)
+data &amp;lt;- data[sample(nrow(data)),]
+train &amp;lt;- data[1:bound,]
+test &amp;lt;- data[(bound+1):nrow(data),]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now to the preliminary model. We can use the R’s built-in functions to handle this. See below a summary of the output.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;model &amp;lt;- glm(loan_status ~., family = binomial(link=&amp;#39;logit&amp;#39;), data = train)
+summary(model)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## glm(formula = loan_status ~ ., family = binomial(link = &amp;quot;logit&amp;quot;), 
+##     data = train)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -1.1467  -0.5358  -0.4416  -0.3374   3.3591  
+## 
+## Coefficients:
+##                       Estimate Std. Error z value Pr(&amp;gt;|z|)    
+## (Intercept)         -3.006e+00  2.151e-01 -13.976  &amp;lt; 2e-16 ***
+## loan_amnt           -2.241e-06  4.141e-06  -0.541  0.58839    
+## int_rate             9.058e-02  2.301e-02   3.936 8.29e-05 ***
+## gradeB               3.338e-01  1.084e-01   3.080  0.00207 ** 
+## gradeC               4.932e-01  1.569e-01   3.143  0.00167 ** 
+## gradeD               5.809e-01  1.995e-01   2.911  0.00360 ** 
+## gradeE               5.946e-01  2.505e-01   2.374  0.01760 *  
+## gradeF               8.550e-01  3.343e-01   2.558  0.01053 *  
+## gradeG               1.242e+00  4.367e-01   2.844  0.00446 ** 
+## emp_length           5.405e-03  3.655e-03   1.479  0.13920    
+## home_ownershipOTHER  7.172e-01  3.331e-01   2.153  0.03130 *  
+## home_ownershipOWN   -1.000e-01  9.608e-02  -1.041  0.29795    
+## home_ownershipRENT  -1.647e-02  5.329e-02  -0.309  0.75723    
+## annual_inc          -5.325e-06  7.722e-07  -6.896 5.36e-12 ***
+## age                 -5.048e-03  3.911e-03  -1.291  0.19685    
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 13297  on 19177  degrees of freedom
+## Residual deviance: 12761  on 19163  degrees of freedom
+## AIC: 12791
+## 
+## Number of Fisher Scoring iterations: 5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, we test our accuracy. How well does our model predict loan status? The below code spits out the accuracy when we test our model on the &lt;code&gt;test&lt;/code&gt; dataframe, and we get a result of 89%. Not bad!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit &amp;lt;- predict(model, newdata = test, type = &amp;quot;response&amp;quot;)
+fit &amp;lt;- ifelse(fit &amp;gt; 0.5, 1, 0)
+error &amp;lt;- mean(fit != test$loan_status)
+print(paste( &amp;quot;Accuracy is: &amp;quot;, 1 - error))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Accuracy is:  0.893477240732051&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This &lt;a href=&#34;https://datascienceplus.com/perform-logistic-regression-in-r/&#34;&gt;lovely blogpost&lt;/a&gt; recommends plotting the true positive vs. false positives. The code for that is below. The plot shows a nearly straight line, which means we really aren’t especially predictive - the output at the bottom of 0.66 similarly shows the same. We’d like this value to be closer to one to indicate predictive ability.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ROCR)
+p &amp;lt;- predict(model, newdata = test, type = &amp;quot;response&amp;quot;)
+pr &amp;lt;- prediction(p, test$loan_status)
+prf &amp;lt;- performance(pr, measure = &amp;quot;tpr&amp;quot;, x.measure = &amp;quot;fpr&amp;quot;)
+plot(prf)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-05-01-credit-risk-part-1_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;auc &amp;lt;- performance(pr, measure=&amp;quot;auc&amp;quot;)
+auc &amp;lt;- auc@y.values[[1]]
+auc&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.6606138&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But we’ve skipped a couple of important steps in modeling. The model summary shows a litany of variables that really aren’t that predictive; we need to take them out. We’re going to leave anything with a &lt;code&gt;.&lt;/code&gt; or any number of asterisks (&lt;code&gt;*&lt;/code&gt;) in, because they are significant. A 10% significant will suffice for me.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;model2 &amp;lt;- glm(loan_status ~ int_rate + grade + emp_length +
+                (home_ownership==&amp;#39;OTHER&amp;#39;) + annual_inc + age, 
+              family = binomial(link=&amp;#39;logit&amp;#39;), 
+              data = train)
+summary(model2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## glm(formula = loan_status ~ int_rate + grade + emp_length + (home_ownership == 
+##     &amp;quot;OTHER&amp;quot;) + annual_inc + age, family = binomial(link = &amp;quot;logit&amp;quot;), 
+##     data = train)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -1.1355  -0.5361  -0.4424  -0.3373   3.3724  
+## 
+## Coefficients:
+##                                 Estimate Std. Error z value Pr(&amp;gt;|z|)    
+## (Intercept)                   -3.030e+00  2.117e-01 -14.309  &amp;lt; 2e-16 ***
+## int_rate                       8.976e-02  2.300e-02   3.903 9.51e-05 ***
+## gradeB                         3.324e-01  1.082e-01   3.071  0.00213 ** 
+## gradeC                         4.950e-01  1.569e-01   3.155  0.00161 ** 
+## gradeD                         5.807e-01  1.994e-01   2.912  0.00359 ** 
+## gradeE                         5.941e-01  2.501e-01   2.375  0.01755 *  
+## gradeF                         8.522e-01  3.338e-01   2.553  0.01067 *  
+## gradeG                         1.230e+00  4.358e-01   2.822  0.00478 ** 
+## emp_length                     5.473e-03  3.593e-03   1.523  0.12767    
+## home_ownership == &amp;quot;OTHER&amp;quot;TRUE  7.319e-01  3.316e-01   2.208  0.02728 *  
+## annual_inc                    -5.386e-06  6.847e-07  -7.867 3.65e-15 ***
+## age                           -5.070e-03  3.911e-03  -1.296  0.19490    
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 13297  on 19177  degrees of freedom
+## Residual deviance: 12762  on 19166  degrees of freedom
+## AIC: 12786
+## 
+## Number of Fisher Scoring iterations: 5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now to test accuracy. It basically has yielded no meaningful change in predictive ability - but then again, that’s hard to do. All we’ve done is create a more parsimonious model in line with current thinking in statistics and econometrics.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit &amp;lt;- predict(model2, newdata = test, type = &amp;quot;response&amp;quot;)
+fit &amp;lt;- ifelse(fit &amp;gt; 0.5, 1, 0)
+error &amp;lt;- mean(fit != test$loan_status)
+print(paste( &amp;quot;Accuracy is: &amp;quot;, 1 - error))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Accuracy is:  0.893477240732051&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, we plot the cure we showed before. Again, no real difference, but we can feel better that we have a smaller model with less “junk” floating around.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ROCR)
+p &amp;lt;- predict(model2, newdata = test, type = &amp;quot;response&amp;quot;)
+pr &amp;lt;- prediction(p, test$loan_status)
+prf &amp;lt;- performance(pr, measure = &amp;quot;tpr&amp;quot;, x.measure = &amp;quot;fpr&amp;quot;)
+plot(prf)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-05-01-credit-risk-part-1_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;auc &amp;lt;- performance(pr, measure=&amp;quot;auc&amp;quot;)
+auc &amp;lt;- auc@y.values[[1]]
+auc&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.661003&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Thanks for taking the time to read this post. Check out later posts where I use neural networks to look at this same dataset. It’ll be fun for the whole family!&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
@@ -38,8 +216,18 @@ Here’s a look at the data.</description>
       <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/04/16/federal-funds-hike/</guid>
-      <description>This article first appeared in the Reading University Investment Society&amp;rsquo;s April edition on April 16th, 2017.
-Last month, the Federal Reserve raised the short-term interest rate target range by 0.25%, to a range of 0.75% to 1%. This is in line with the central bank’s “slow and steady” approach to rate increases after a decade of historically low interest rates, and is the third such rate increase since June of 2006.</description>
+      <description>&lt;p&gt;&lt;strong&gt;This article first appeared in the Reading University Investment Society&amp;rsquo;s  &lt;a href=&#34;https://www.dropbox.com/s/vicfm15cza2gt8u/RUIS-April.pdf?dl=0&#34;&gt;April edition&lt;/a&gt; on April 16th, 2017.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Last month, the Federal Reserve raised the short-term interest rate target range by 0.25%, to a range of 0.75% to 1%. This is in line with the central bank’s “slow and steady” approach to rate increases after a decade of historically low interest rates, and is the third such rate increase since June of 2006. The Federal Reserve has further signaled its intentions to complete at least two more quarter-point increases during 2017, with the median projection among Fed officials sitting at 1.4% by year-end. This reflects a positive outlook for the US economy, as wage and job growth continue to display robustness in the face of a volatile global market place. But how likely are rates to continue rising?&lt;/p&gt;
+
+&lt;p&gt;The impending and steady rate increases has caused a dramatic rise in bond issuance, as investors pile in to low rate debt securities. Companies sold a record-high amount of bonds in March to the tune of $414 billion, the Wall Street Journal reported earlier this week. This signals that the market believes the Fed’s intentions to raise rates, lending further evidence to the certainty of rate increases.&lt;/p&gt;
+
+&lt;p&gt;Perhaps a bigger indicator that rates will continue to raise steadily – and may even have an accelerated pace – is the split between US monetary and fiscal policy. As the Federal Reserve undertakes monetary tightening, the Trump administration and the Republican majority have indicated expansionary fiscal policy in preliminary budgets. This includes infrastructure spending, which Trump has stated could be as much as $1 trillion, as well as increased military and defense spending. Each of these are certain to increase money supply in the economy and drive inflation expectations, which may increase Federal Reserve rate pacing.&lt;/p&gt;
+
+&lt;p&gt;Thus, the likelihood of continued rate hikes seems high and potentially increasing. This could signal bad news for both personal income investors who will see the market value of their holdings drop, and institutional investors with actively managed bond funds who will struggle to find profitable investment opportunities. The global impacts will be significant, as the federal funds rate is tightly linked with other interest rates. In fact, one day after the Federal Reserve raised its rates a quarter percent, the People’s Bank of China kept its rates in lock step with its American counterpart.&lt;/p&gt;
+
+&lt;p&gt;The markets are headed towards the normalcy previous generations experienced, with 30-year interest rates above 3% and federal fund rate changes that nobody noticed. Now, when a rate hike is expected, it is talked about endlessly weeks before and after. This is good for savers and pension funds, but bond investors are going to suffer during the transition from almost-free money to rates I haven’t seen since I was 12.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -48,9 +236,20 @@ Last month, the Federal Reserve raised the short-term interest rate target range
       <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/04/16/iexs-crumbling-quote/</guid>
-      <description>This article first appeared in the Reading University Investment Society&amp;rsquo;s April edition on April 16th, 2017.
-The Investor’s Exchange, also referred to as IEX, came to prominence in 2014 after Michael Lewis’ book Flash Boys was released. IEX was designed as an exchange to protect lumbering buy side firms from high-frequency traders and other nimble market actors.
-Their first innovation was to treat what is referred to as stale quote arbitrage.</description>
+      <description>&lt;p&gt;&lt;strong&gt;This article first appeared in the Reading University Investment Society&amp;rsquo;s  &lt;a href=&#34;https://www.dropbox.com/s/vicfm15cza2gt8u/RUIS-April.pdf?dl=0&#34;&gt;April edition&lt;/a&gt; on April 16th, 2017.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Investor’s Exchange, also referred to as IEX, came to prominence in 2014 after Michael Lewis’ book Flash Boys was released. IEX was designed as an exchange to protect lumbering buy side firms from high-frequency traders and other nimble market actors.&lt;/p&gt;
+
+&lt;p&gt;Their first innovation was to treat what is referred to as stale quote arbitrage. In this type of arbitrage, a fast trader could detect when the best bid or offer had changed on one exchange, and then immediately go to another exchange and pick off a midpoint quote before the midpoint updated. To solve this problem, IEX famously built a box in a warehouse with a very long coil of fiber optic cable designed to introduce a 350-microsecond delay into quote updates. Any trader who could detect a midpoint quote before it updated on another exchange could not immediately post an order on IEX, because it would suffer a delay while the exchange updated the midpoint quotes.&lt;/p&gt;
+
+&lt;p&gt;IEX’s dedication to ensuring low transaction costs to its buy side clients is ceaseless, and it has published a new working paper about dealing with another type of arbitrage, which it calls “crumbling quote arbitrage”. The paper, written by Allison Bishop is entitled “&lt;a href=&#34;https://iextrading.com/docs/The%20Evolution%20of%20the%20Crumbling%20Quote%20Signal.pdf?utm_medium=email&amp;amp;utm_source=newsletter&amp;amp;utm_term=170411&amp;amp;utm_campaign=moneystuff&#34;&gt;The Evolution of the Crumbling Quote Signal&lt;/a&gt;” and details the exchange’s cunning way of dealing with an interesting problem.&lt;/p&gt;
+
+&lt;p&gt;Crumbling quotes refer to when the number of exchanges on the national best bid or offer is eroding over time as the market eats up posted volumes. This can and does happen in legitimate market trading, but some predatory firms may intentionally claim all posted volumes and have in place an order to take advantage of IEX’s delay.&lt;/p&gt;
+
+&lt;p&gt;The working paper is fascinating, as Bishop demonstrates IEX’s approach to predicting when a crumbling quote is likely to occur, and allowing orders pegged to the midpoint to exercise discretion when IEX’s “signal” is on. Their new rule was approved by the SEC for use in production, though it has yet to be fully installed exchange-wide.&lt;/p&gt;
+
+&lt;p&gt;IEX has been at the forefront of protecting its client’s interests, and this is simply the next step at the frontier of combating high frequency traders and other technologically advanced market participants. IEX has a powerful advantage over market predators, and that is that it – along with other exchanges – has access to both a greater quantity and quality of data that traders would usually have to pay thousands of dollars a month for. It will certainly be interesting to watch the development and competition between IEX and those it tries to protect its clients from.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
