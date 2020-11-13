@@ -1,0 +1,146 @@
+
+<span class="camerons_logo">
+      <span class = "blog_logo">
+        <h1 style="font-style: italic;"> Cameron's Blog </h1>
+         
+      </span>
+      <h2> Finance, statistics, data, and other trash </h2>
+      <h4><a href="/"> Blog </a> ∘ <a href="/about"> About </a> ∘ <a href="/links"> Links </a> ∘ <a href="https://github.com/cpfiffer"> Github </a></h4>
+      
+</span>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+<title>Cameron&#39;s Blog - Lameureax and Zhou (1996)</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Cameron&#39;s Blog">
+<meta name="generator" content="Hugo 0.74.3" />
+
+  
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/tuftesque.css">
+<style>
+body {
+  
+    background-color:  white;
+  
+}
+</style>
+
+
+  
+</head>
+
+<body>
+<div id="layout" class="pure-g">
+<article class="pure-u-1">
+<h1> Lameureax and Zhou (1996) </h1>
+
+
+
+
+
+<section><p><label for="lugano" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="lugano" class="margin-toggle"/>
+<span class="marginnote">Certainly there are lots of great <em>theoretical</em> finance papers that use some form of Bayesian analysis.
+I might even agrue that it&rsquo;s quite common! <a href="https://en.wikipedia.org/wiki/Bayesian_game">Bayesian games</a> are ways of analyzing
+lots of different scenarios. Bayesian updating is practically a requirement any time you expose your agents
+to some kind of signal. These wonderful papers and applications are not the point of this post, however.</span></p>
+
+<p>There aren&rsquo;t really that many great empirical Bayesian finance papers. I&rsquo;ve talked about why I think this is
+<a href="/2020/03/24/bayesian-econometrics/">a little bit</a>, but I think it ultimately comes down to the fact
+that finance has never <em>needed</em> good Bayesian empirics. We always have too much data!</p>
+
+<p>The big data fields of finance like market microstructure can easily have terabytes of data
+to grind through. Corporate finance can have gigabytes, easily, both due to wide and long data.
+Asset pricing is similar in data size, though often it is due to a large panel that is funamentally narrow.</p>
+
+<p>To top it off, most of our models of financial markets are too complex to permit closed-form solutions
+for Bayesian frameworks &ndash; normally you&rsquo;d have to devolve into numerical solutions, which doesn&rsquo;t seem to
+be that common. I can only speculate as to why. Perhaps finance academics don&rsquo;t have the skillsets,
+because Bayesian stuff can only be learned by pledging your first-born to the Great Posterior in the Sky,
+or maybe it&rsquo;s because there are always other &ldquo;good enough&rdquo; ways of estimating some parameter set. Who knows?</p>
+
+<p>The few papers that 1) do some kind of Bayesian estimation and 2) are published in top journals
+are lovely to read. My favorite such paper is
+<a href="https://academic.oup.com/rfs/article-abstract/9/4/1033/1579494">Lamoureux and Zhou (1996)</a>.</p>
+
+<p>Lamoureux and Zhou (1996) is the best kind of paper, in that it had the potential to lay an entire
+strand of literature to rest. I&rsquo;m speaking of course of the discussion that followed in the wake of
+<a href="https://www.sciencedirect.com/science/article/pii/0304405X88900207">Fama and French (1988)</a>, which claims
+that there is are two components of stock returns: a permanent random walk component, and a
+temporary, mean-reverting component.</p>
+
+<p>Fama and French (1988) suggests that there is a temporary component that dissapates after 3-5 years, which
+suggests that returns are predictable! If, for example, you knew the parameters of the mean-reverting component,
+you could sell when the temporary part is high, knowing that it will eventually revert back to normal.
+This is kind of a kooky thought if you&rsquo;ve got any kind of finance training &ndash; knowing where returns are
+going to go with any certainty feels like a violation of efficient markets.</p>
+
+<p>In fact, lots of papers came out of the woodworks to challenge Fama and French on their assertions
+for a litany of very good reasons. One good example is <a href="https://academic.oup.com/rfs/article/21/4/1577/1565342">Boudoukh et al. (2008)</a>,
+which notes that the Fama French (1988) results would obtain as a function of using
+&ldquo;persistant regressors&rdquo;.</p>
+
+<p>My favorite paper, Lamoureux and Zhou, has a much more elegant solution than that. Just estimate it, and see
+whether the model posterior supports the existence of a temporary component!</p>
+</section>
+<section>
+  <footer class="page-footer">
+    <hr>
+    ETH: 0x21f825eE35150F6e4f2A2dA55CC3b9cF567bd9Cc (<a href="https://etherscan.io/address/0x21f825eE35150F6e4f2A2dA55CC3b9cF567bd9Cc">Etherscan</a>)
+    
+		<ul class="page-footer-menu">
+		
+		</ul>
+
+  
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  <br>
+
+</footer>
+
+</section>
+</article>
+</div>
+</body>
+</html>
