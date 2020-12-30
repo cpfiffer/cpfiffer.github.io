@@ -7,80 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 25 Dec 2020 22:06:48 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2020 20:58:31 -0700</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>2020 Wrap-up</title>
-      <link>/2020/12/25/2020-wrap-up/</link>
-      <pubDate>Fri, 25 Dec 2020 22:06:48 -0800</pubDate>
-      
-      <guid>/2020/12/25/2020-wrap-up/</guid>
-      <description>&lt;p&gt;I like to try to write a year-end summary. I missed 2019 last year for various reasons,
-but this year feels like an especially important year.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s no secret that this year was more or less utter garbage. COVID-19 is the largest
-contributor by far, but there have been other issues:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;My home state of Oregon suffered the most devastating fire season
-&lt;a href=&#34;https://en.wikipedia.org/wiki/2020_Oregon_wildfires&#34;&gt;in recorded history&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;The (continued) police killings of people. Lots of people.&lt;/li&gt;
-&lt;li&gt;Systematic mismanagement of institutions that really need to be managed well.
-I&amp;rsquo;m looking at you, US government.&lt;/li&gt;
-&lt;li&gt;The loud and stupid in my country are getting louder and stupider.&lt;/li&gt;
-&lt;li&gt;Nobody gives a shit about truth or facts or objectivity, which sucks.&lt;/li&gt;
-&lt;li&gt;Donald.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Among many others.&lt;/p&gt;
-
-&lt;p&gt;But for me, this year was perhaps the worst I have experienced in my brief 27 years of life.
-Certainly there were high points, drowned as they were in stress, but they were too few
-and too short to offset the generalized shittiness of the year.&lt;/p&gt;
-
-&lt;p&gt;First and worst, I am getting a divorce after 7 years of marriage. I don&amp;rsquo;t want to talk too
-much about the details because they are nobody&amp;rsquo;s business but my wife and I, but
-it is an important life change that I need people to know about. I married
-young (20), so everyone who has met me knows me as a married man. It is a large part
-of my identity and I have been having difficulty in the past few months with trying to
-replace that part of me with something else.&lt;/p&gt;
-
-&lt;p&gt;I just want some folks to know so that I don&amp;rsquo;t have explain why I don&amp;rsquo;t seem to have
-any dogs anymore, or why I&amp;rsquo;m in a new apartment, or where anything is. It&amp;rsquo;s a big change.&lt;/p&gt;
-
-&lt;p&gt;Second, I have been struggling with depression, which is more or less new to me in any kind of
-significant way. I was fortunate enough to be free from depression and other
-mental disorders &amp;ndash; so fortunate I thought it due to my strength of will (like a jackass).
-Of course that is not true, however. Depression goes where it may and you have to deal
-with it when it shows up. I am indeed dealing with it, but it is a slow process made slower
-by COVID-19.&lt;/p&gt;
-
-&lt;p&gt;&lt;label for=&#34;dep&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
-&lt;input type=&#34;checkbox&#34; id=&#34;dep&#34; class=&#34;margin-toggle&#34;/&gt;
-&lt;span class=&#34;marginnote&#34;&gt;
-Lots of people who have not lived with some kind of mental disorder like anxiety or
-depression are often mistaken that it&amp;rsquo;s that person&amp;rsquo;s fault. It&amp;rsquo;s not. Get over yourself.
-Humans are not weird-ass science robots who control their feelings. There&amp;rsquo;s lots of complex
-stuff happening that you don&amp;rsquo;t know jack-shit about. Don&amp;rsquo;t be a dick if someone says they are
-depressed or anxious. Just help.
-&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Both of these two things have been the defining themes of my life for the year. Not only
-have I lost a cornerstone of my identity, but I also lack the motivation to find a new
-one. Nearly everything I do has suffered, from my academic research to my work on Turing,
-to various other projects that I tend to pick up here and there.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m okay though, before anyone is too worried. It&amp;rsquo;s been an awful year. Sometimes
-those happen. You just work through them and hope to come out on the other side a little dinged
-but still beautiful and proud.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s hoping to a path upwards and onwards. Here&amp;rsquo;s to hoping for a better year, a better me,
-a better you, a better government, a better world. Here&amp;rsquo;s to a better tomorrow.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Bayesian finance papers</title>
